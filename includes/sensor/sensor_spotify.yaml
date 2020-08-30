@@ -1,0 +1,57 @@
+#                                                 
+#    ####   #####    ####   #####  #  ######  #   # 
+#   #       #    #  #    #    #    #  #        # #  
+#    ####   #    #  #    #    #    #  #####     #   
+#        #  #####   #    #    #    #  #         #   
+#   #    #  #       #    #    #    #  #         #   
+#    ####   #        ####     #    #  #         #   
+#
+#   O que foi usado?
+#
+#     Sensor Template - https://www.home-assistant.io/integrations/template/                                               
+#
+#
+#   Como funciona?
+#     
+#     Esses sensores são usados na minha automação de start e gerenciamento do Spotify com Node-Red e a integração Spotcast (via HACS). 
+#     Com esses sensores coleto os dados dos media_player.spotify e com isso sei onde o Spotify Está tocando.
+#
+
+- platform: template
+  sensors:
+
+    spotify_rick_source:
+      friendly_name: "Spotify - Rick Source"
+      entity_id: sensor.time_full
+      icon_template: mdi:spotify
+      value_template: "{{ state_attr('media_player.spotify_ricardo_correia', 'source') }}"
+
+    spotify_evi_source:
+      friendly_name: "Spotify - Evi Source"
+      entity_id: sensor.time_full
+      icon_template: mdi:spotify
+      value_template: "{{ state_attr('media_player.spotify_evellin_rossi', 'source') }}"
+
+    spotify_rick_playing:
+      friendly_name: "Spotify - Rick Playing"
+      entity_id: sensor.time_full
+      icon_template: mdi:spotify
+      value_template: "{{ state_attr('media_player.spotify_ricardo_correia', 'media_title') }} - {{ state_attr('media_player.spotify_ricardo_correia', 'media_artist') }}"
+
+    spotify_evi_playing:
+      friendly_name: "Spotify - Evi Playing"
+      entity_id: sensor.time_full
+      icon_template: mdi:spotify
+      value_template: "{{ state_attr('media_player.spotify_evellin_rossi', 'media_title') }} - {{ state_attr('media_player.spotify_evellin_rossi', 'media_artist') }}"
+
+
+
+    # streaming_mini:
+    #   friendly_name: "Streaming Mini"
+    #   icon_template: mdi:cast-connected
+    #   value_template: "{{ state_attr('media_player.mini', 'app_name') }}"
+
+    # streaming_tv:
+    #   friendly_name: "Streaming TV"
+    #   icon_template: mdi:cast-connected
+    #   value_template: "{{ state_attr('media_player.tv', 'app_name') }}"

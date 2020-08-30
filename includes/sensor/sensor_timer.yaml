@@ -1,0 +1,122 @@
+
+# - platform: mqtt
+#   name: Var Timer - input_boolean.tv_quarto
+#   state_topic: "timer/input_boolean.tv_quarto"
+#   json_attributes_topic: "timer/input_boolean.tv_quarto/attributes"
+
+# - platform: mqtt
+#   name: Var Timer - group.all_lights
+#   state_topic: "timer/group.all_lights"
+#   json_attributes_topic: "timer/group.all_lights/attributes"
+
+# - platform: mqtt
+#   name: Var Timer - switch.ac_quarto
+#   state_topic: "timer/switch.ac_quarto"
+#   json_attributes_topic: "timer/switch.ac_quarto/attributes"
+
+# - platform: mqtt
+#   name: Var Timer - switch.tomada_estudio
+#   state_topic: "timer/switch.tomada_estudio"
+#   json_attributes_topic: "timer/switch.tomada_estudio/attributes"
+
+# - platform: mqtt
+#   name: Var Timer - input_boolean.mac_shutdown
+#   state_topic: "timer/input_boolean.mac_shutdown"
+#   json_attributes_topic: "timer/input_boolean.mac_shutdown/attributes"
+
+# - platform: mqtt
+#   name: Var Timer - input_boolean.pc_shutdown
+#   state_topic: "timer/input_boolean.pc_shutdown"
+#   json_attributes_topic: "timer/input_boolean.pc_shutdown/attributes"
+
+# - platform: mqtt
+#   name: Var Timer - group.all
+#   state_topic: "timer/group.all"
+#   json_attributes_topic: "timer/group.all/attributes"
+
+
+
+
+
+- platform: template
+  sensors:
+
+    timer_lampadas_news:
+      friendly_name: 'Timer - Lampadas'
+      unit_of_measurement: min
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}
+      {{ (((( states('sensor.var_timer_lampadas') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_lampadas.last_changed))) / 60) | round(0) }}
+      {% endif %}"
+
+
+
+
+    timer_tv_quarto:
+      friendly_name: 'Timer - TV do Quarto'
+      unit_of_measurement: min
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}
+      {{ ((((state_attr('sensor.timer_tv_quarto', 'timer') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_tv_quarto.last_changed))) / 60) | round(0) }}
+      {% endif %}"
+      attribute_templates:
+        timer: >-
+          {{ state_attr('sensor.timer_tv_quarto', 'timer')}}
+
+    timer_lampadas:
+      friendly_name: 'Timer - Lampadas'
+      unit_of_measurement: min
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}
+      {{ ((((state_attr('sensor.timer_lampadas', 'timer') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_lampadas.last_changed))) / 60) | round(0) }}
+      {% endif %}"
+      attribute_templates:
+        timer: >-
+          {{ state_attr('sensor.timer_lampadas', 'timer')}}
+
+    timer_ar_quarto:
+      friendly_name: 'Timer - Ar do Quarto'
+      unit_of_measurement: min
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}
+      {{ ((((state_attr('sensor.timer_ar_quarto', 'timer') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_ar_quarto.last_changed))) / 60) | round(0) }}
+      {% endif %}"
+      attribute_templates:
+        timer: >-
+          {{ state_attr('sensor.timer_ar_quarto', 'timer')}}
+
+    timer_estudio:
+      friendly_name: 'Timer - Estúdio'
+      unit_of_measurement: min
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}
+      {{ ((((state_attr('sensor.timer_estudio', 'timer') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_estudio.last_changed))) / 60) | round(0) }}
+      {% endif %}"
+      attribute_templates:
+        timer: >-
+          {{ state_attr('sensor.timer_estudio', 'timer')}}
+
+    timer_notebook:
+      friendly_name: 'Timer - Notebook'
+      unit_of_measurement: min
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}
+      {{ ((((state_attr('sensor.timer_notebook', 'timer') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_notebook.last_changed))) / 60) | round(0) }}
+      {% endif %}"
+      attribute_templates:
+        timer: >-
+          {{ state_attr('sensor.timer_notebook', 'timer')}}
+
+    timer_macbook:
+      friendly_name: 'Timer - Macbook'
+      unit_of_measurement: min
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}
+      {{ ((((state_attr('sensor.timer_macbook', 'timer') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_macbook.last_changed))) / 60) | round(0) }}
+      {% endif %}"
+      attribute_templates:
+        timer: >-
+          {{ state_attr('sensor.timer_macbook', 'timer')}}
+
+    timer_tudo:
+      friendly_name: 'Timer - Tudo'
+      unit_of_measurement: min
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}
+      {{ ((((state_attr('sensor.timer_tudo', 'timer') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_tudo.last_changed))) / 60) | round(0) }}
+      {% endif %}"
+      attribute_templates:
+        timer: >-
+          {{ state_attr('sensor.timer_tudo', 'timer')}}

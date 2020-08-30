@@ -1,0 +1,212 @@
+type: vertical-stack
+cards:
+
+  # Media Player Compact - Mini
+  - entity: media_player.mini
+    type: custom:mini-media-player
+    info: scroll
+    icon: mdi:speaker
+    artwork: cover
+    background: /local/images/bg_mini.png
+    scale: 1.2
+    idle_view:
+      when_idle: true
+      when_standby: true
+      when_paused: false
+    hide:
+      power: true
+      runtime: false
+      sound_mode: false
+      power_state: false
+      shuffle: true
+      icon: false
+      preogress: true
+      mute: true
+      volume: false
+      controls: true
+    tap_action:
+      action: more-info
+
+  # Botões
+  - type: horizontal-stack
+    cards:
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_play
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Voltar
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_previous
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Avançar
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_next
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Stop
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_stop
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+  - type: horizontal-stack
+    cards:
+
+      # Botão -30
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_menos30
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão -10
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_menos10
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão +10
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_mais10
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão +30
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_mais30
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+  - type: horizontal-stack
+    cards:
+
+      # Botão Volume Mute
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_mute
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Volume Menos
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_vol_menos
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Volume Mais
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_vol_mais
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Volume Máximo
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.mini_vol_max
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+  - type: horizontal-stack
+    cards:
+
+      # Botão Spotify Evi
+      - type: "custom:button-card"
+        entity: input_boolean.spotify_evi_mini
+        icon: mdi:spotify
+        name: Spotify Evi
+        tap_action:
+          action: call-service
+          service: script.turn_on
+          service_data:
+            entity_id: >
+              [[[
+                if (states['input_boolean.spotify_evi_mini'].state == "off")
+                  return "script.spotify_evi_start_mini";
+                return "script.spotify_evi_stop_mini";
+              ]]]
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+          icon:
+            - height: 40px
+          name:
+            - color: var(--disabled-color)
+
+      # Botão Spotify Rick
+      - type: "custom:button-card"
+        entity: input_boolean.spotify_rick_mini
+        icon: mdi:spotify
+        name: Spotify Rick
+        tap_action:
+          action: call-service
+          service: script.turn_on
+          service_data:
+            entity_id: >
+              [[[
+                if (states['input_boolean.spotify_rick_mini'].state == "off")
+                  return "script.spotify_rick_start_mini";
+                return "script.spotify_rick_stop_mini";
+              ]]]
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+          icon:
+            - height: 40px
+          name:
+            - color: var(--disabled-color)
+

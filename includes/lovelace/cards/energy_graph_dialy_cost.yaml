@@ -1,0 +1,24 @@
+type: custom:mini-graph-card
+name: Custo Diário
+# group_by: hour
+icon: mdi:cash-usd-outline
+style: |
+  ha-card {
+    margin: 0px 0px 10px 0px;
+  }
+lower_bound: 0
+points_per_hour: 6
+hours_to_show: 24
+line_width: 4
+hour24: true
+entities:
+  - entity: sensor.meter_geral_hoje
+    color: var(--graph-color)
+    name: Hoje
+  - entity: sensor.meter_geral_ontem
+    color: var(--light-primary-color)
+    name: Ontem
+    show_fill: true
+    show_line: true
+    show_points: true
+    show_legend: true

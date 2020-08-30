@@ -1,0 +1,128 @@
+#                                                  
+#   #    #    ##     ####    ####    ####    ####  
+#   #    #   #  #   #       #       #    #  #      
+#   ######  #    #   ####    ####   #    #   ####  
+#   #    #  ######       #       #  #    #       # 
+#   #    #  #    #  #    #  #    #  #    #  #    # 
+#   #    #  #    #   ####    ####    ####    ####  
+#                                                  
+#   O que foi usado?
+#
+#     Sensor Uptime - https://www.home-assistant.io/integrations/uptime/
+#     Sensor SQL - https://www.home-assistant.io/integrations/sql
+#     Sensor Template - https://www.home-assistant.io/integrations/sql
+#     Sensor Diskspace (Via HACS) - https://github.com/kuchel77/diskspace
+#     Sensor MQTT - https://www.home-assistant.io/integrations/sensor.mqtt/
+#
+
+# Sensor que calcula a quanto tempo o Home Assistante está rodando
+- platform: uptime
+  name: Servidor online
+  unit_of_measurement: hours
+
+# Sensor para coletar o tamanho do banco de dados Maria DB
+- platform: sql
+  db_url: !secret maria_db
+  scan_interval: 120
+  queries:
+    - name: Banco de dados
+      query: 'SELECT table_schema "database", Round(Sum(data_length + index_length) / 1048576, 1) "value" FROM information_schema.tables WHERE table_schema="homeassistant" GROUP BY table_schema;'
+      column: 'value'
+      unit_of_measurement: MB
+
+# Sensor para coletar valores sobre o uso do disco
+- platform: diskspace
+  name: Disco
+  path: "/"
+  unit_of_measure: "MB"
+
+
+
+- platform: template
+  sensors:
+
+# Sensor para deixar mais amigável o status das atualizações disponíveis no binary_sensor.updater
+    hassio_update:
+      friendly_name: "HassOS"
+      icon_template: mdi:update
+      value_template: '{% if is_state("binary_sensor.updater", "on") %} Atualização disponível
+      {% elif is_state("binary_sensor.updater", "off") %} Servidor atualizado
+      {% endif %}
+      '
+      attribute_templates:
+        Nova versão: >-
+          {{ state_attr('binary_sensor.updater','newest_version') }}
+        Release: >-
+          {{ state_attr('binary_sensor.updater','release_notes') }}
+
+# Automação Node-RED - Tempo de bot | Sensor final que faz o cálculo do tempo de bot
+    ha_restart:
+      friendly_name: 'Tempo do boot'
+      icon_template: mdi:cog-clockwise
+      value_template: >-
+        {% set start = (states('sensor.ha_time_start') | float()) | round(0, 'floor') %}
+        {% set stop = (states('sensor.ha_time_stop') | float()) | round(0, 'floor') %}
+        {% set base_sec = start - stop %}
+        {% set minutos = ((base_sec % 3600) / 60) | int %}
+        {% set segundos = base_sec % 60 %}
+        {% set horas = ((base_sec % 86400) / 3600) | int %}
+        {% set dias = (base_sec / 86400) | int %}
+        {%- if stop > start -%}
+        Atualizando  
+        {%- else -%}
+        {%- if minutos > 0 -%} 
+        {{ minutos }}m{{ segundos }}s
+        {%- else -%}
+        {{ segundos }}s
+        {%- endif -%}
+        {%- endif -%}
+
+    # Sensor para deixar mais amigável as atualizações disponíveis do HACS
+    hacs_update:
+      friendly_name: 'HACS'
+      icon_template: hacs:hacs
+      value_template: >-
+        {% if is_state('sensor.hacs', '0') %}
+        Repositórios atualizados
+        {% else %}
+        {% if is_state('sensor.hacs', '1') %}
+        {{ states('sensor.hacs') }} atualização 
+        {% else %}
+        {% if is_state('sensor.hacs', 'unknown') %}   
+        Coletando informações 
+        {% else %}
+        {{ states('sensor.hacs') }} atualizações 
+        {% endif %}
+        {% endif %} 
+        {% endif %}  
+      attribute_templates:
+        Repositórios: >-
+          {{ state_attr('sensor.hacs', 'repositories') }}
+
+    devices_on:
+      friendly_name: "Dispositivos ligados"
+      icon_template: mdi:devices
+      entity_id: sensor.time_full
+      value_template: >-
+          
+      attribute_templates:
+        devices: >-
+          {% set lights = states.light|selectattr('state','eq','on')|map(attribute='attributes.friendly_name')|list|join('\n') %}
+          {% set switchs = states.switch|selectattr('state','eq','on')|map(attribute='attributes.friendly_name')|list|join('\n') %}
+          {{ lights }}
+          {{ switchs }}  
+
+
+
+
+# Automação Node-RED - Tempo de bot | Sensor que recebe a hora em que o HA foi iniciado
+- platform: mqtt
+  name: HA Time start
+  state_topic: "ha/start"
+  json_attributes_topic: "ha/restart"
+
+# Automação Node-RED - Tempo de Boot | Sensor que recebe a hora em que o HA foi desligado
+- platform: mqtt
+  name: HA Time stop
+  state_topic: "ha/stop"
+

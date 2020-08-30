@@ -1,0 +1,312 @@
+
+
+
+
+
+########    ###    ########      ######  ########   #######  ######## #### ######## ##    ## 
+##      ## ##   ##     ##    ##    ## ##     ## ##     ##    ##     ##  ##        ##  ##  
+##     ##   ##  ##     ##    ##       ##     ## ##     ##    ##     ##  ##         ####   
+##    ##     ## ########      ######  ########  ##     ##    ##     ##  ######      ##    
+##    ######### ##     ##          ## ##        ##     ##    ##     ##  ##          ##    
+##    ##     ## ##     ##    ##    ## ##        ##     ##    ##     ##  ##          ##    
+##    ##     ## ########      ######  ##         #######     ##    #### ##          ##    
+
+title: Spotify
+path: painel_spotify
+icon: mdi:spotify
+cards:
+
+                                                    
+#####   #         ##    #   #  ######  #####    ####  
+#    #  #        #  #    # #   #       #    #  #      
+#    #  #       #    #    #    #####   #    #   ####  
+#####   #       ######    #    #       #####        # 
+#       #       #    #    #    #       #   #   #    # 
+#       ######  #    #    #    ######  #    #   ####  
+                                                    
+- type: horizontal-stack
+  cards:
+
+      # Ricardo
+      - type: media-control
+        entity: media_player.spotify_ricardo_correia
+      # Evellin
+      - type: media-control
+        entity: media_player.spotify_evellin_rossi
+
+                                                            
+####    ####   #    #  #####  #####    ####   #        ####  
+#    #  #    #  ##   #    #    #    #  #    #  #       #      
+#       #    #  # #  #    #    #    #  #    #  #        ####  
+#       #    #  #  # #    #    #####   #    #  #            # 
+#    #  #    #  #   ##    #    #   #   #    #  #       #    # 
+####    ####   #    #    #    #    #   ####   ######   ####  
+                                                            
+- type: horizontal-stack
+  cards:
+
+                        
+#####   #   ####   #    # 
+#    #  #  #    #  #   #  
+#    #  #  #       ####   
+#####   #  #       #  #   
+#   #   #  #    #  #   #  
+#    #  #   ####   #    # 
+                        
+    # Rick - Mute
+    - type: entity-button
+      entity: media_player.spotify_ricardo_correia
+      icon: mdi:volume-mute
+      name: Mute
+      tap_action:
+        action: call-service
+        service: media_player.volume_mute
+        service_data:
+          entity_id: media_player.spotify_ricardo_correia
+          is_volume_muted: true
+
+    # Rick - Vol -
+    - type: entity-button
+      entity: media_player.spotify_ricardo_correia
+      icon: mdi:volume-minus
+      name: Vol -
+      tap_action:
+        action: call-service
+        service: media_player.volume_down
+        service_data:
+          entity_id: media_player.spotify_ricardo_correia
+
+    # Rick - Vol +
+    - type: entity-button
+      entity: media_player.spotify_ricardo_correia
+      icon: mdi:volume-plus
+      name: Vol +
+      tap_action:
+        action: call-service
+        service: media_player.volume_up
+        service_data:
+          entity_id: media_player.spotify_ricardo_correia
+
+    # Rick - Vol Max
+    - type: entity-button
+      entity: media_player.spotify_ricardo_correia
+      icon: mdi:volume-high
+      name: Máximo
+      tap_action:
+        action: call-service
+        service: media_player.volume_set
+        service_data:
+          entity_id: media_player.spotify_ricardo_correia
+          volume_level: 1.0
+
+                
+######  #    #  # 
+#       #    #  # 
+#####   #    #  # 
+#       #    #  # 
+#        #  #   # 
+######    ##    # 
+                
+    # Evi - Mute
+    - type: entity-button
+      entity: media_player.spotify_evellin_rossi
+      icon: mdi:volume-mute
+      name: Mute
+      tap_action:
+        action: call-service
+        service: media_player.volume_mute
+        service_data:
+          entity_id: media_player.spotify_evellin_rossi
+          is_volume_muted: true
+
+    # Evi - Vol -
+    - type: entity-button
+      entity: media_player.spotify_evellin_rossi
+      icon: mdi:volume-minus
+      name: Vol -
+      tap_action:
+        action: call-service
+        service: media_player.volume_down
+        service_data:
+          entity_id: media_player.spotify_evellin_rossi
+
+    # Evi - Vol +
+    - type: entity-button
+      entity: media_player.spotify_evellin_rossi
+      icon: mdi:volume-plus
+      name: Vol +
+      tap_action:
+        action: call-service
+        service: media_player.volume_up
+        service_data:
+          entity_id: media_player.spotify_evellin_rossi
+
+    # Evi - Vol Max
+    - type: entity-button
+      entity: media_player.spotify_evellin_rossi
+      icon: mdi:volume-high
+      name: Máximo
+      tap_action:
+        action: call-service
+        service: media_player.volume_set
+        service_data:
+          entity_id: media_player.spotify_evellin_rossi
+          volume_level: 1.0
+
+
+                                                  
+#####   #    #  #####  #####   ####   #    #   ####  
+#    #  #    #    #      #    #    #  ##   #  #      
+#####   #    #    #      #    #    #  # #  #   ####  
+#    #  #    #    #      #    #    #  #  # #       # 
+#    #  #    #    #      #    #    #  #   ##  #    # 
+#####    ####     #      #     ####   #    #   ####  
+                                                  
+- type: horizontal-stack
+  cards:
+
+                        
+#####   #   ####   #    # 
+#    #  #  #    #  #   #  
+#    #  #  #       ####   
+#####   #  #       #  #   
+#   #   #  #    #  #   #  
+#    #  #   ####   #    # 
+                        
+    # Spotify Rick - Mini
+    - type: entity-button
+      entity: input_boolean.spotify_rick_mini
+      icon: mdi:spotify
+      name: Mini
+      tap_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_rick_start_mini
+      hold_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_rick_stop_mini
+
+    # Spotify Rick - TV
+    - type: entity-button
+      entity: input_boolean.spotify_rick_tv
+      icon: mdi:spotify
+      name: TV
+      tap_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_rick_start_tv
+      hold_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_rick_stop_tv
+
+    # Spotify Rick - Mac
+    - type: entity-button
+      entity: input_boolean.spotify_rick_mac
+      icon: mdi:spotify
+      name: Mac
+      tap_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_rick_start_mac
+      hold_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_rick_stop_mac
+
+    # Spotify Rick - Phone
+    - type: entity-button
+      entity: input_boolean.spotify_rick_phone
+      icon: mdi:spotify
+      name: J5
+      tap_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_rick_start_phone
+      hold_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_rick_stop_phone
+
+                
+######  #    #  # 
+#       #    #  # 
+#####   #    #  # 
+#       #    #  # 
+#        #  #   # 
+######    ##    # 
+                
+    # Spotify Evi - Mini
+    - type: entity-button
+      entity: input_boolean.spotify_evi_mini
+      icon: mdi:spotify
+      name: Mini
+      tap_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_evi_start_mini
+      hold_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_evi_stop_mini
+
+    # Spotify Evi - TV
+    - type: entity-button
+      entity: input_boolean.spotify_evi_tv
+      icon: mdi:spotify
+      name: TV
+      tap_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_evi_start_tv
+      hold_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_evi_stop_tv
+
+    # Spotify Evi - Mac
+    - type: entity-button
+      entity: input_boolean.spotify_evi_pc
+      icon: mdi:spotify
+      name: PC
+      tap_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_evi_start_pc
+      hold_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_evi_stop_pc
+
+    # Spotify Evi - Phone
+    - type: entity-button
+      entity: input_boolean.spotify_evi_phone
+      icon: mdi:spotify
+      name: iPhone
+      tap_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_evi_start_phone
+      hold_action:
+        action: call-service
+        service: script.turn_on
+        service_data:
+          entity_id: script.spotify_evi_stop_phone
+
+

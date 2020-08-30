@@ -1,0 +1,138 @@
+#                                          
+#   #    #  #####   #####  #  #    #  ###### 
+#   #    #  #    #    #    #  ##  ##  #      
+#   #    #  #    #    #    #  # ## #  #####  
+#   #    #  #####     #    #  #    #  #      
+#   #    #  #         #    #  #    #  #      
+#    ####   #         #    #  #    #  ###### 
+#                                          
+#   O que foi usado?
+#
+#     Sensor Template - https://www.home-assistant.io/integrations/template/                                               
+#
+#
+#   Como funciona?
+#     
+#     Uso o atributo "last_changed" e o tempo atual para calcular quanto tempo um dispositivo está ligado e exibir nos botões na interface.
+#     Com o template também faço uma série de operações para converter o tempo para o formato amigável de "Horas:Minutos".
+#
+
+- platform: template
+  sensors:
+
+# Sensor uptime - Luz do Estúdio
+    uptime_luz_do_estudio:
+      friendly_name: "Uptime - Luz do Estúdio"
+      icon_template: mdi:lightbulb-on-outline
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('light.luz_do_estudio', 'on') %}
+      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_estudio.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
+      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_estudio.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_estudio.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% else %}
+      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_estudio.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_estudio.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_estudio.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% endif %}
+      {% endif %}
+      {% endif %}"
+
+# Sensor uptime - Luz do Banheiro
+    uptime_luz_do_banheiro:
+      friendly_name: "Uptime - Luz do Banheiro"
+      icon_template: mdi:lightbulb-on-outline
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('light.luz_do_banheiro', 'on') %}
+      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_banheiro.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
+      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_banheiro.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_banheiro.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% else %}
+      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_banheiro.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_banheiro.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_banheiro.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% endif %}
+      {% endif %}
+      {% endif %}"
+
+# Sensor uptime - Luz do Quarto
+    uptime_luz_do_quarto:
+      friendly_name: "Uptime - Luz do Quarto"
+      icon_template: mdi:lightbulb-on-outline
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('light.luz_do_quarto', 'on') %}
+      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_quarto.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
+      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% else %}
+      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_quarto.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_do_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% endif %}
+      {% endif %}
+      {% endif %}"
+
+# Sensor uptime - Luz da Sala
+    uptime_luz_da_sala:
+      friendly_name: "Uptime - Luz da Sala"
+      icon_template: mdi:lightbulb-on-outline
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('light.luz_da_sala', 'on') %}
+      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_sala.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
+      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_sala.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_sala.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% else %}
+      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_sala.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_sala.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_sala.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% endif %}
+      {% endif %}
+      {% endif %}"
+
+# Sensor uptime - Luz da Cozinha
+    uptime_luz_da_cozinha:
+      friendly_name: "Uptime - Luz da Cozinha"
+      icon_template: mdi:lightbulb-on-outline
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('light.luz_da_cozinha', 'on') %}
+      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_cozinha.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
+      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_cozinha.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_cozinha.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% else %}
+      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_cozinha.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_cozinha.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.light.luz_da_cozinha.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% endif %}
+      {% endif %}
+      {% endif %}"
+
+# Sensor uptime - Tomada do estúdio
+    uptime_tomada_estudio:
+      friendly_name: "Uptime - Tomada Estúdio"
+      icon_template: mdi:power-plug
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('switch.tomada_estudio', 'on') %}
+      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.tomada_estudio.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
+      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.tomada_estudio.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.tomada_estudio.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% else %}
+      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.tomada_estudio.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.tomada_estudio.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.tomada_estudio.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% endif %}
+      {% endif %}
+      {% endif %}"
+
+# Sensor uptime - AC Quarto
+    uptime_ac_quarto:
+      friendly_name: "Uptime - AC Quarto"
+      icon_template: mdi:snowflake
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('switch.ac_quarto', 'on') %}
+      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ac_quarto.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
+      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ac_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ac_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% else %}
+      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ac_quarto.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ac_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ac_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% endif %}
+      {% endif %}
+      {% endif %}"
+
+# Sensor uptime - TV Quarto
+    uptime_tv_quarto:
+      friendly_name: "Uptime - TV Quarto"
+      icon_template: mdi:television
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('input_boolean.tv_quarto', 'on') %}
+      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.input_boolean.tv_quarto.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
+      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.input_boolean.tv_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.input_boolean.tv_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% else %}
+      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.input_boolean.tv_quarto.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.input_boolean.tv_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.input_boolean.tv_quarto.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% endif %}
+      {% endif %}
+      {% endif %}"
+
+# Sensor uptime - Server HassOS
+    uptime_server:
+      friendly_name: "Servidor online"
+      icon_template: mdi:clock-check-outline
+      value_template: "{% if ((states.sensor.servidor_online.state) | round(0, 'floor')) == 0 %}
+      {{ ((((states.sensor.servidor_online.state) | round(2) ) - ((states.sensor.servidor_online.state) | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% else %}
+      {{ ((states.sensor.servidor_online.state) | round(0, 'floor'))   }}h{{ ((((states.sensor.servidor_online.state) | round(2) ) - ((states.sensor.servidor_online.state) | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {% endif %}"
+
+
+

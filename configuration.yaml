@@ -1,0 +1,102 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+
+recorder: !include includes/recorder/recorder.yaml
+
+homeassistant:
+  customize: !include_dir_merge_named includes/customize/
+
+input_boolean: !include_dir_merge_named includes/input_boolean/
+input_number: !include_dir_merge_named includes/input_number/
+input_text: !include_dir_merge_named includes/input_text/
+input_select: !include_dir_merge_named includes/input_select/
+switch: !include_dir_merge_list includes/switch/
+group: !include_dir_merge_named includes/groups/
+script: !include_dir_merge_named includes/script/
+automation: !include_dir_merge_list includes/automation/
+utility_meter: !include_dir_merge_named includes/utility_meter/
+sensor: !include_dir_merge_list includes/sensor/
+binary_sensor: !include_dir_merge_list includes/binary_sensor/
+
+
+frontend:
+  themes: !include_dir_merge_named themes
+
+
+lovelace: !include lovelace.yaml
+device_tracker: !include_dir_merge_named includes/device_tracker/
+
+panel_iframe: !include_dir_merge_named includes/panel_iframe/
+
+
+### ##    ## ######## ########  ######   ########     ###  ######## ####  #######  ##    ##  ######  
+ #  ###   ##    ##    ##       ##    ##  ##     ##   ## ##    ##     ##  ##     ## ###   ## ##    ## 
+ #  ####  ##    ##    ##       ##        ##     ##  ##   ##   ##     ##  ##     ## ####  ## ##       
+ #  ## ## ##    ##    ######   ##   #### ########  ##     ##  ##     ##  ##     ## ## ## ##  ######  
+ #  ##  ####    ##    ##       ##    ##  ##   ##   #########  ##     ##  ##     ## ##  ####       ## 
+ #  ##   ###    ##    ##       ##    ##  ##    ##  ##     ##  ##     ##  ##     ## ##   ### ##    ## 
+### ##    ##    ##    ########  ######   ##     ## ##     ##  ##    ####  #######  ##    ##  ######  
+
+weather:
+  - platform: darksky
+    api_key: !secret darksky_key
+    mode: daily
+
+spotcast:
+  sp_dc: !secret spotify_rick_sp_dc
+  sp_key: !secret spotify_rick_sp_key
+  accounts:
+    rick:
+      sp_dc: !secret spotify_rick_sp_dc
+      sp_key: !secret spotify_rick_sp_key
+    evi:
+      sp_dc: !secret spotify_evi_sp_dc
+      sp_key: !secret spotify_evi_sp_key
+
+
+unified_remote_mac:
+  host: 192.168.0.17
+
+# unified_remote_pc:
+#   host: 192.168.0.56
+
+ifttt:
+  key: !secret ifttt_key
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+  - platform: watson_tts
+    watson_apikey: !secret watson_apikey
+    voice: pt-BR_IsabelaV3Voice
+
+  - platform: amazon_polly
+    aws_access_key_id: !secret aws_access_key_id
+    aws_secret_access_key: !secret aws_secret_access_key
+    text_type: ssml
+    voice: Ricardo
+    region_name: sa-east-1
+
+spotify:
+  client_id: !secret spotify_client_id
+  client_secret: !secret spotify_client_secret
+
+google:
+  client_id: !secret google_client_id
+  client_secret: !secret google_client_secret
+  track_new_calendar: true
+  
+speedtestdotnet:
+  server_id: 22060
+  scan_interval:
+    minutes: 30
+
+python_script:
+
+notify:
+  - name: whatsapp
+    platform: command_line
+    command: 'wget $(cat) -O /dev/null'

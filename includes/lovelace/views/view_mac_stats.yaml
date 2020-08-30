@@ -1,0 +1,43 @@
+##     ##  #######  ##     ## ######## 
+##     ## ##     ## ###   ### ##       
+##     ## ##     ## #### #### ##       
+######### ##     ## ## ### ## ######   
+##     ## ##     ## ##     ## ##       
+##     ## ##     ## ##     ## ##       
+##     ##  #######  ##     ## ######## 
+
+title: Estatísticas
+path: estatisticas
+panel: true
+icon: mdi:poll-box
+cards:
+
+  - type: custom:layout-card
+    layout: vertical
+    cards:
+    
+      # Speedtest
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/graph_speedtest.yaml
+
+      - break 
+
+      # Energy Graph - Title
+      - type: custom:mod-card
+        style: !include ../styles/mod_top.yaml
+        card:
+          !include ../cards/energy_title.yaml
+
+      # Energy Graph - Monthly Cost
+      - type: custom:mod-card
+        style: !include ../styles/mod_mid.yaml
+        card:
+          !include ../cards/energy_graph_monthly_cost.yaml
+
+      # Energy Table - Main
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/energy_tab_main.yaml

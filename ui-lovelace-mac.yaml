@@ -1,0 +1,37 @@
+##     ## ########    ###    ########  ######## ########  
+##     ## ##         ## ##   ##     ## ##       ##     ## 
+##     ## ##        ##   ##  ##     ## ##       ##     ## 
+######### ######   ##     ## ##     ## ######   ########  
+##     ## ##       ######### ##     ## ##       ##   ##   
+##     ## ##       ##     ## ##     ## ##       ##    ##  
+##     ## ######## ##     ## ########  ######## ##     ## 
+
+custom_header:
+  compact_mode: true
+  footer_mode: true
+  kiosk_mode: false
+  hide_header: false
+  hide_unused: true
+  hide_help: true
+  hide_config: true
+  default_tab_on_refresh: false
+  indicator_top: true
+  disable_sidebar: true
+
+
+
+
+##        #######  ##     ## ######## ##          ###     ######  ######## 
+##       ##     ## ##     ## ##       ##         ## ##   ##    ## ##       
+##       ##     ## ##     ## ##       ##        ##   ##  ##       ##       
+##       ##     ## ##     ## ######   ##       ##     ## ##       ######   
+##       ##     ##  ##   ##  ##       ##       ######### ##       ##       
+##       ##     ##   ## ##   ##       ##       ##     ## ##    ## ##       
+########  #######     ###    ######## ######## ##     ##  ######  ######## 
+
+title: Gactos Full
+views:
+  - !include includes/lovelace/views/view_mac_home.yaml
+  - !include includes/lovelace/views/view_mac_players.yaml
+  - !include includes/lovelace/views/view_mac_stats.yaml
+  - !include includes/lovelace/views/view_mac_hassos.yaml

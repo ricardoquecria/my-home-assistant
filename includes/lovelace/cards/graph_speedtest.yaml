@@ -1,0 +1,136 @@
+type: vertical-stack
+cards:
+
+  # Título
+  - type: 'custom:button-card'
+    layout: icon_name
+    name: Speedtest
+    icon: mdi:speedometer
+    label: >
+      [[[
+        if (states['input_boolean.speedtest_update'].state == "on")
+          return "TESTANDO";
+        return "ATUALIZAR";
+      ]]]
+    show_label: true
+    tap_action:
+      action: call-service
+      service: input_boolean.turn_on
+      service_data: 
+        entity_id: input_boolean.speedtest_update
+    styles:
+      grid:
+        - grid-template-areas: '"n l i"'
+        - grid-template-columns: 1fr 40% 20% 
+      icon:
+        - align-self: end
+        - color: var(--primary-color)
+        - height: 35px
+      card:
+        - padding: 5px
+        - height: 45px
+        - background: var(--ha-card-background)
+      name:
+        - color: var(--primary-text-color)
+        - justify-self: start
+        - padding-left: 10%
+        - font-weight: 400
+        - font-size: 20px
+      label:
+        - color: var(--paper-card-background-color)
+        - justify-self: end
+        - padding: 5px
+        - font-weight: 400
+        - border-radius: 6px
+        - font-weight: bold
+        - opacity: >
+            [[[
+              if (states['input_boolean.speedtest_update'].state == "on")
+                return "100%";
+              return "30%";
+            ]]]
+        # - border-style: solid
+        # - border-width: 3px
+        # - border-color: var(--primary-background-color)
+        - font-size: 14px
+        - background-color: >
+            [[[
+              if (states['input_boolean.speedtest_update'].state == "on")
+                return "var(--color3, var(--light-primary-color))";
+              return "var(--disabled-color)";
+            ]]]
+
+  # Speedtest Download
+  - type: custom:mini-graph-card
+    name: Download
+    style: |
+      ha-card {
+        height: 200px;
+      }
+    hours_to_show: 24
+    points_per_hour: 4
+    line_width: 4
+    hour24: true
+    lower_bound: 0
+    upper_bound: 240
+    entities:
+      - entity: sensor.speedtest_download
+        name: Mbit/s
+      - entity: sensor.speedtest_down_mb
+        name: MB/s
+        color: var(--light-primary-color)
+    show:
+      extrema: true
+      labels: true
+
+    color_thresholds:
+      - value: 0
+        color: var(--divider-color)
+      - value: 140
+        color: var(--graph-color)
+
+  - type: horizontal-stack
+    cards:
+
+    # Speedtest Upload
+    - type: custom:mini-graph-card
+      name: Upload
+      hours_to_show: 24
+      points_per_hour: 6
+      line_width: 6
+      hour24: true
+      lower_bound: 0
+      upper_bound: 30
+      entities:
+        - entity: sensor.speedtest_upload
+          name: Mbit/s
+        - entity: sensor.speedtest_up_mb
+          name: MB/s
+          color: var(--light-primary-color)
+      show:
+        labels: true
+      color_thresholds:
+        - value: 8
+          color: var(--divider-color)
+        - value: 18
+          color: var(--graph-color)
+
+    # Speedtest Ping
+    - type: custom:mini-graph-card
+      name: Ping
+      hours_to_show: 24
+      points_per_hour: 6
+      line_width: 6
+      hour24: true
+      lower_bound: 0
+      upper_bound: 100
+      entities:
+        - sensor.speedtest_ping
+      show:
+        labels: true
+      color_thresholds:
+        - value: 10
+          color: var(--graph-color)
+        - value: 60
+          color: var(--divider-color)
+

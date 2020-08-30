@@ -1,0 +1,33 @@
+type: vertical-stack
+cards:
+
+  # Título
+  - type: 'custom:button-card'
+    layout: icon_name
+    name: Dispositivos
+    icon: mdi:devices
+    styles:
+      grid:
+        - grid-template-areas: '"n i"'
+        - grid-template-columns: 1fr 20% 
+      icon:
+        - align-self: end
+        - color: var(--primary-color)
+        - height: 35px
+      card:
+        - padding: 5px
+        - height: 45px
+      name:
+        - color: var(--primary-text-color)
+        - justify-self: start
+        - padding-left: 10%
+        - font-weight: 400
+        - font-size: 20px
+
+  - type: custom:auto-entities
+    card:
+      type: entities
+    filter:
+      include:
+        - name: "Sensor *"
+        - entity_id: "binary_sensor.ping_*"

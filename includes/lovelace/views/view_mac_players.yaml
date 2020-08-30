@@ -1,0 +1,48 @@
+##     ##  #######  ##     ## ######## 
+##     ## ##     ## ###   ### ##       
+##     ## ##     ## #### #### ##       
+######### ##     ## ## ### ## ######   
+##     ## ##     ## ##     ## ##       
+##     ## ##     ## ##     ## ##       
+##     ##  #######  ##     ## ######## 
+
+title: Players
+path: players
+panel: true
+icon: mdi:speaker
+cards:
+
+  - type: custom:layout-card
+    layout: vertical
+    cards:
+      
+      # Player TV
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/player_tv.yaml
+
+      # Spotify - Evi
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/spotify_evi.yaml
+
+      - break
+
+
+      # Player Mini
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/player_mini.yaml
+
+      # Spotify - Rick
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/spotify_rick.yaml
+
+
+
+

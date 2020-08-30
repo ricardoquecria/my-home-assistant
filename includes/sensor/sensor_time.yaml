@@ -1,0 +1,61 @@
+######## #### ##     ## ######## 
+  ##     ##  ###   ### ##       
+  ##     ##  #### #### ##       
+  ##     ##  ## ### ## ######   
+  ##     ##  ##     ## ##       
+  ##     ##  ##     ## ##       
+  ##    #### ##     ## ######## 
+
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+
+
+# Sensor com contagem de segundos para atualizar outros sensores em tempo real
+- platform: mqtt
+  name: Time - Full
+  icon: mdi:clock-time-four
+  state_topic: "time/update"
+  json_attributes_topic: "time/update/attributes"
+  device_class: timestamp
+
+
+- platform: template
+  sensors:
+
+    date_full:
+      friendly_name: "Date - Full"
+      icon_template: mdi:calendar-today
+      entity_id: sensor.time
+      value_template: >-
+        {% set weekday = now().isoweekday() %}
+        {% set month = now().month %}
+        {% set year = now().year %}
+        {% set day = now().day %}
+
+        {% if weekday == 1 %}{% set weekday = 'Segunda' %}
+        {% elif weekday == 2 %}{% set weekday = 'Terça' %}
+        {% elif weekday == 3 %}{% set weekday = 'Quarta' %}
+        {% elif weekday == 4 %}{% set weekday = 'Quinta' %}
+        {% elif weekday == 5 %}{% set weekday = 'Sexta' %}
+        {% elif weekday == 6 %}{% set weekday = 'Sábado' %}
+        {% elif weekday == 7 %}{% set weekday = 'Domingo' %}
+        {% endif %}
+
+        {% if month == 1 %}{% set month = 'janeiro' %}
+        {% elif month == 2 %}{% set month = 'fevereiro' %}
+        {% elif month == 3 %}{% set month = 'março' %}
+        {% elif month == 4 %}{% set month = 'abril' %}
+        {% elif month == 5 %}{% set month = 'maio' %}
+        {% elif month == 6 %}{% set month = 'junho' %}
+        {% elif month == 7 %}{% set month = 'julho' %}
+        {% elif month == 8 %}{% set month = 'agosto' %}
+        {% elif month == 9 %}{% set month = 'setembro' %}
+        {% elif month == 10 %}{% set month = 'outubro' %}
+        {% elif month == 11 %}{% set month = 'novembro' %}
+        {% elif month == 12 %}{% set month = 'dezembro' %}
+        {% endif %}
+
+        {{ weekday }}, {{ day }} de {{ month }} de {{ year }}
+

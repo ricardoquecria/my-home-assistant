@@ -1,0 +1,27 @@
+  var_all_not_home:
+    name: var_all_not_home
+    icon: mdi:variable
+
+  var_rick_not_home:
+    name: var_rick_not_home
+    icon: mdi:variable
+
+  var_evi_not_home:
+    name: var_evi_not_home
+    icon: mdi:variable
+
+  var_bateria_iphone:
+    name: var_bateria_iphone
+    icon: mdi:variable
+
+  var_bateria_j5:
+    name: var_bateria_j5
+    icon: mdi:variable
+
+  var_ac_lock:
+    name: Trava do Ar-condicionado
+    icon: mdi:variable
+
+  var_speedtest:
+    name: var_speedtest
+    icon: mdi:variable

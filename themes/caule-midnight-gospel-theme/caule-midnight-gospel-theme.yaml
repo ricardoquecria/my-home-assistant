@@ -1,0 +1,319 @@
+#
+#      ######      ###     ##     ##  ##        ######## 
+#     ##    ##    ## ##    ##     ##  ##        ##       
+#     ##         ##   ##   ##     ##  ##        ##       
+#     ##        ##     ##  ##     ##  ##        ######   
+#     ##        #########  ##     ##  ##        ##       
+#     ##    ##  ##     ##  ##     ##  ##        ##       
+#      ######   ##     ##   #######   ########  ######## 
+#      _______ _________ ______   _       _________ _______          _________
+#     (       )\__   __/(  __  \ ( (    /|\__   __/(  ____ \|\     /|\__   __/
+#     | () () |   ) (   | (  \  )|  \  ( |   ) (   | (    \/| )   ( |   ) (   
+#     | || || |   | |   | |   ) ||   \ | |   | |   | |      | (___) |   | |   
+#     | |(_)| |   | |   | |   | || (\ \) |   | |   | | ____ |  ___  |   | |   
+#     | |   | |   | |   | |   ) || | \   |   | |   | | \_  )| (   ) |   | |   
+#     | )   ( |___) (___| (__/  )| )  \  |___) (___| (___) || )   ( |   | |   
+#     |/     \|\_______/(______/ |/    )_)\_______/(_______)|/     \|   )_(   
+#      _______  _______  _______  _______  _______  _       
+#     (  ____ \(  ___  )(  ____ \(  ____ )(  ____ \( \      
+#     | (    \/| (   ) || (    \/| (    )|| (    \/| (      
+#     | |      | |   | || (_____ | (____)|| (__    | |      
+#     | | ____ | |   | |(_____  )|  _____)|  __)   | |      
+#     | | \_  )| |   | |      ) || (      | (      | |      
+#     | (___) || (___) |/\____) || )      | (____/\| (____/\
+#     (_______)(_______)\_______)|/       (_______/(_______/
+#
+#     ########  ##     ##  ########  ##     ##  ######## 
+#        ##     ##     ##  ##        ###   ###  ##       
+#        ##     ##     ##  ##        #### ####  ##       
+#        ##     #########  ######    ## ### ##  ######   
+#        ##     ##     ##  ##        ##     ##  ##       
+#        ##     ##     ##  ##        ##     ##  ##       
+#        ##     ##     ##  ########  ##     ##  ######## 
+#
+#     Created by Ricardo Correia for the Home Assistant Brasil community
+#     Beta
+#
+#     I want to ask only 2 things for those who benefit from these themes:
+#
+#     1) Join the HABR community on Discord: ihabr.ml
+#     2) Follow my creative studio on instagram: caulecriativo.com
+#
+#     ricardo.art.br
+#     github.com/orickcorreia
+#
+#     Make good use of the themes =)
+#
+#
+
+Caule Midnight Gospel:
+
+  # Color palette
+  cyan: "#8be9fe"
+  yellow: "#f1fa8c"
+  pink: "#fb7ac6"
+  purple: "#bd93f9"
+  gray: "#5c6992"
+  bg1: "#282a36"
+  bg2: "#21212c"
+  dark: "#111111"
+  light: "#dde7ec"
+  white: "#FFFFFF"
+  red: "#cf365a"
+
+  # Change the value below 8px to 0px to remove the rounded corners
+  ha-card-border-radius: "10px"
+  ha-card-box-shadow: 'inset 0px 0px 0px 0px var(--divider-color)'
+  # lovelace-background: 'url("/hacsfiles/themes/caule-midnight-gospel-theme/bg.png") fixed'
+ 
+  # Main colors
+  primary-color: var(--pink) 
+  light-primary-color: var(--cyan)
+  graph-color: var(--primary-color)
+
+  # Backgrounds color
+  primary-background-color: var(--bg2)
+  secondary-background-color: var(--primary-background-color)
+  divider-color: var(--bg2)
+  disabled-color: var(--gray)
+
+  # Header colors
+  app-header-background-color: var(--bg1)
+  app-header-text-color: var(--light)
+  ch-active-tab-color: var(--light)
+  ch-all-tabs-color: var(--cyan)
+  ch-background: "var(--background-color)"
+  ch-notification-dot-color: "var(--yellow)"
+  ch-tab-indicator-color: var(--yellow)
+
+  # Dev text box
+  paper-dialog-background-color: var(--bg1)
+  paper-dialog-color: var(--yellow)
+
+  # Error color
+  error-color: var(--red)
+  error-state-color: 'var(--error-color)'
+
+ # Text colors
+  ha-card-header-color: var(--cyan) #Title card entities
+  primary-text-color: "#dde7ec"
+  secondary-text-color: var(--light-primary-color)
+  text-primary-color: var(--bg1)
+  disabled-text-color: var(--purple)
+
+  # Sidebar colors
+  sidebar-icon-color: var(--primary-color)
+  sidebar-text-color: var(--primary-text-color)
+  sidebar-selected-icon-color: var(--yellow)
+  sidebar-selected-text-color: var(--light)
+  sidebar-background-color:  var(--bg1)
+  sidebar-selected-background-color: var(--purple)
+  scrollbar-thumb-color: var(--cyan)
+
+  # Icons colors
+  state-icon-color: var(--disabled-color)
+  state-icon-active-color: var(--primary-color)
+  state-icon-unavailable-color: var(--primary-background-color)
+
+  # Settins and colors of Mini Media Player
+  mini-media-player-icon-color: var(--primary-color)
+  mini-media-player-accent-color: var(--yellow)
+  mini-media-player-progress-height: 8px
+  mini-media-player-button-color: var(--purple)
+
+  # Papers slider colors
+  paper-slider-knob-color: var(--yellow)
+  paper-slider-knob-start-color: var(--yellow)
+  paper-slider-pin-color: var(--purple)
+  paper-slider-active-color: var(--yellow)
+  paper-slider-container-color: var(--gray)
+  ha-paper-slider-pin-font-size: '25px'
+
+  # Labels colors
+  label-badge-background-color: var(--bg1)
+  label-badge-text-color: var(--yellow)
+  label-badge-blue: var(--cyan)
+  label-badge-green: var(--purple)
+  label-badge-red: var(--pink)
+  label-badge-yellow: var(-yellow)
+  label-badge-grey: var(--gray)
+
+  # Cards colors
+  ha-card-background: var(--bg1)
+  paper-card-background-color: var(--ha-card-background)
+  paper-listbox-background-color: var(--primary-background-color)
+
+  # Toggle button colors
+  switch-checked-color: var(--purple)
+  switch-unchecked-color: var(--yellow)
+  switch-checked-button-color: var(--purple)
+  switch-unchecked-button-color: var(--yellow)
+  switch-checked-track-color: var(--purple)
+  switch-unchecked-track-color: var(--dark)
+
+  # Table colors
+  table-row-background-color: var(--bg1)
+  table-row-alternative-background-color: var(--bg2)
+  card-background-color: var(--bg2)
+  data-table-background-color: var(--primary-background-color)
+
+  #Animated icons
+  weather-icon-clear-night: url("/hacsfiles/themes/caule-midnight-gospel-theme/clear-night.svg")
+  weather-icon-cloudy: url("/hacsfiles/themes/caule-midnight-gospel-theme/cloudy.svg")
+  weather-icon-fog: url("/hacsfiles/themes/caule-midnight-gospel-theme/fog.svg")
+  weather-icon-lightning: url("/hacsfiles/themes/caule-midnight-gospel-theme/lightning.svg")
+  weather-icon-lightning-rainy: url("/hacsfiles/themes/caule-midnight-gospel-theme/lightning-rainy.svg")
+  weather-icon-partlycloudy: url("/hacsfiles/themes/caule-midnight-gospel-theme/partlycloudy.svg")
+  weather-icon-pouring: url("/hacsfiles/themes/caule-midnight-gospel-theme/pouring.svg")
+  weather-icon-rainy: url("/hacsfiles/themes/caule-midnight-gospel-theme/rainy.svg")
+  weather-icon-hail: url("/hacsfiles/themes/caule-midnight-gospel-theme/hail.svg")
+  weather-icon-snowy: url("/hacsfiles/themes/caule-midnight-gospel-theme/snowy.svg")
+  weather-icon-snowy-rainy: url("/hacsfiles/themes/caule-midnight-gospel-theme/snowy-rainy.svg")
+  weather-icon-sunny: url("/hacsfiles/themes/caule-midnight-gospel-theme/sunny.svg")
+  weather-icon-windy: url("/hacsfiles/themes/caule-midnight-gospel-theme/windy.svg")
+  weather-icon-windy-variant: url("/hacsfiles/themes/caule-midnight-gospel-theme/windy-variant.svg")
+  weather-icon-exceptional: url("/hacsfiles/themes/caule-midnight-gospel-theme/exceptional.svg")
+
+  # HACS
+  hacs-badge-color: var(--primary-color)
+  link-text-color: var(--disabled-color)
+  markdown-code-background-color: var(--divider-color)
+  google-blue-500: var(--red)
+  accent-color: var(--yellow)
+  hacs-chip-color: var(--cyan)
+
+
+Caule Midnight Gospel Glass:
+
+  # Color palette
+  cyan: "#8be9fe"
+  yellow: "#f1fa8c"
+  pink: "#fb7ac6"
+  purple: "#bd93f9"
+  gray: "#5c6992"
+  bg1: "#282a36"
+  bg2: "#21212c"
+  dark: "#111111"
+  light: "#dde7ec"
+  white: "#FFFFFF"
+  red: "#cf365a"
+
+  # Change the value below 8px to 0px to remove the rounded corners
+  ha-card-border-radius: "10px"
+  ha-card-box-shadow: '0px 0px 0px 0px rgba(20, 20, 30, 0.4)'
+  lovelace-background: 'center / cover url("/hacsfiles/themes/caule-midnight-gospel-theme/bg1.jpg") fixed'
+
+  # Main colors
+  primary-color: var(--pink) 
+  light-primary-color: var(--cyan)
+  graph-color: var(--primary-color)
+
+  # Backgrounds color
+  primary-background-color: var(--bg2)
+  secondary-background-color: var(--primary-background-color)
+  divider-color: var(--bg2)
+  disabled-color: var(--gray)
+
+  # Header colors
+  app-header-background-color: var(--bg1)
+  app-header-text-color: var(--light)
+  ch-active-tab-color: var(--light)
+  ch-all-tabs-color: var(--cyan)
+  ch-background: 'center / cover no-repeat url("/hacsfiles/themes/caule-midnight-gospel-theme/bg2.jpg") fixed'
+  ch-notification-dot-color: "var(--yellow)"
+  ch-tab-indicator-color: var(--yellow)
+
+  # Dev text box
+  paper-dialog-background-color: var(--bg1)
+  paper-dialog-color: var(--yellow)
+
+  # Error color
+  error-color: var(--red)
+  error-state-color: 'var(--error-color)'
+
+ # Text colors
+  ha-card-header-color: var(--cyan) #Title card entities
+  primary-text-color: "#dde7ec"
+  secondary-text-color: var(--light-primary-color)
+  text-primary-color: var(--bg1)
+  disabled-text-color: var(--purple)
+
+  # Sidebar colors
+  sidebar-icon-color: var(--primary-color)
+  sidebar-text-color: var(--primary-text-color)
+  sidebar-selected-icon-color: var(--yellow)
+  sidebar-selected-text-color: var(--light)
+  scrollbar-thumb-color: var(--cyan)
+  sidebar-background-color:  var(--bg1)
+
+  # Icons colors
+  state-icon-color: var(--disabled-color)
+  state-icon-active-color: var(--primary-color)
+  state-icon-unavailable-color: var(--primary-background-color)
+
+  # Settins and colors of Mini Media Player
+  mini-media-player-icon-color: var(--primary-color)
+  mini-media-player-accent-color: var(--yellow)
+  mini-media-player-progress-height: 8px
+  # mini-media-player-button-color: var(--purple)
+
+  # Papers slider colors
+  paper-slider-knob-color: var(--yellow)
+  paper-slider-knob-start-color: var(--yellow)
+  paper-slider-pin-color: var(--purple)
+  paper-slider-active-color: var(--yellow)
+  paper-slider-container-color: var(--gray)
+  ha-paper-slider-pin-font-size: '25px'
+
+  # Labels colors
+  label-badge-background-color: var(--bg1)
+  label-badge-text-color: var(--yellow)
+  label-badge-blue: var(--cyan)
+  label-badge-green: var(--purple)
+  label-badge-red: var(--pink)
+  label-badge-yellow: var(-yellow)
+  label-badge-grey: var(--gray)
+
+  # Cards colors
+  ha-card-background: 'center / cover no-repeat url("/hacsfiles/themes/caule-midnight-gospel-theme/bg2.jpg") fixed'
+  paper-card-background-color: rgba(12,12,12,0.2)
+  paper-listbox-background-color: 'center / cover no-repeat url("/hacsfiles/themes/caule-midnight-gospel-theme/bg2.jpg") fixed'
+
+  # Toggle button colors
+  switch-checked-color: var(--purple)
+  switch-unchecked-color: var(--yellow)
+  switch-checked-button-color: var(--purple)
+  switch-unchecked-button-color: var(--yellow)
+  switch-checked-track-color: var(--purple)
+  switch-unchecked-track-color: var(--dark)
+
+  # Table colors
+  table-row-background-color: var(--bg1)
+  table-row-alternative-background-color: var(--bg2)
+  card-background-color: var(--bg1)
+  data-table-background-color: var(--primary-background-color)
+
+  #Animated icons
+  weather-icon-clear-night: url("/hacsfiles/themes/caule-midnight-gospel-theme/clear-night.svg")
+  weather-icon-cloudy: url("/hacsfiles/themes/caule-midnight-gospel-theme/cloudy.svg")
+  weather-icon-fog: url("/hacsfiles/themes/caule-midnight-gospel-theme/fog.svg")
+  weather-icon-lightning: url("/hacsfiles/themes/caule-midnight-gospel-theme/lightning.svg")
+  weather-icon-lightning-rainy: url("/hacsfiles/themes/caule-midnight-gospel-theme/lightning-rainy.svg")
+  weather-icon-partlycloudy: url("/hacsfiles/themes/caule-midnight-gospel-theme/partlycloudy.svg")
+  weather-icon-pouring: url("/hacsfiles/themes/caule-midnight-gospel-theme/pouring.svg")
+  weather-icon-rainy: url("/hacsfiles/themes/caule-midnight-gospel-theme/rainy.svg")
+  weather-icon-hail: url("/hacsfiles/themes/caule-midnight-gospel-theme/hail.svg")
+  weather-icon-snowy: url("/hacsfiles/themes/caule-midnight-gospel-theme/snowy.svg")
+  weather-icon-snowy-rainy: url("/hacsfiles/themes/caule-midnight-gospel-theme/snowy-rainy.svg")
+  weather-icon-sunny: url("/hacsfiles/themes/caule-midnight-gospel-theme/sunny.svg")
+  weather-icon-windy: url("/hacsfiles/themes/caule-midnight-gospel-theme/windy.svg")
+  weather-icon-windy-variant: url("/hacsfiles/themes/caule-midnight-gospel-theme/windy-variant.svg")
+  weather-icon-exceptional: url("/hacsfiles/themes/caule-midnight-gospel-theme/exceptional.svg")
+
+  # HACS
+  hacs-badge-color: var(--primary-color)
+  link-text-color: var(--disabled-color)
+  markdown-code-background-color: var(--divider-color)
+  google-blue-500: var(--red)
+  accent-color: var(--yellow)
+  hacs-chip-color: var(--cyan)

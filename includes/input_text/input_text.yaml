@@ -1,0 +1,9 @@
+  preco_kwh:
+    name: Preço do kWh
+    # initial: "0.905050"
+    icon: mdi:cash-usd-outline
+
+  teste:
+    name: Preço do kWh
+    initial: "04:20"
+    icon: mdi:cash-usd-outline

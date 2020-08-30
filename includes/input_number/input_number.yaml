@@ -1,0 +1,36 @@
+  timer_slider:
+    icon: mdi:timer
+    name: Temporizador
+    initial: 5
+    min: 5
+    max: 180
+    step: 5
+
+  delay_ui:
+    icon: mdi:timer-sand
+    name: HassOS - Delay UI
+    min: 0
+    max: 180000
+    step: 50
+    mode: box
+
+  teste:
+    icon: mdi:timer
+    name: Teste
+    min: 0
+    max: 180
+
+  meter_value:
+    icon: mdi:form-textbox-password
+    name: Insira o valor
+    min: 0
+    step: 0.01
+    max: 2000
+    mode: box
+
+  ciclo:
+    icon: mdi:calendar-sync
+    name: Fim do ciclo
+    min: 0
+    max: 31
+

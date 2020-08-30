@@ -1,0 +1,224 @@
+type: vertical-stack
+cards:
+
+
+  # Preço e Período
+  - type: horizontal-stack
+    cards:
+
+      # Preço kWh
+      - entity: input_text.preco_kwh
+        type: 'custom:button-card'
+        name: Preço do kWh
+        icon: mdi:cash-usd-outline
+        layout: icon_name_state2nd
+        show_icon: true
+        show_state: true
+        tap_action:
+          action: more-info
+        styles:
+          icon:
+            - color: var(--primary-color)
+            - height: 40px
+          card:
+            - padding: 0px
+            - height: 70px
+          name:
+            - font-weight: 500
+            - font-size: 14px
+          state:
+            - font-weight: 500
+            - font-size: 18px
+            - color: var(--primary-color)
+
+      # Período de Consumo
+      - entity: input_number.ciclo
+        type: 'custom:button-card'
+        layout: icon_name_state2nd
+        name: Ciclo mensal
+        label: >
+          [[[
+            var kwh = states['sensor.ciclo_energia'].state;
+            return kwh; 
+          ]]]
+        show_icon: true
+        show_label: true
+        show_state: false
+        styles:
+          icon:
+            - color: var(--primary-color)
+            - height: 40px
+          card:
+            - padding: 0px
+            - height: 70px
+          name:
+            - font-weight: 500
+            - font-size: 14px
+          label:
+            - font-weight: 500
+            - font-size: 18px
+            - color: var(--primary-color)
+
+  # Tags      
+  - type: horizontal-stack
+    cards:
+
+      - entity:  
+        name: Hoje
+        type: 'custom:button-card'
+        show_icon: false
+        style:
+          name:
+            - font-weight: 500
+            - font-size: 16px
+
+      - entity:  
+        name: Ontem
+        type: 'custom:button-card'
+        show_icon: false
+        style:
+          name:
+            - font-weight: 500
+            - font-size: 16px
+
+      - entity:  
+        name: Mês
+        type: 'custom:button-card'
+        show_icon: false
+        style:
+          name:
+            - font-weight: 500
+            - font-size: 16px
+
+      - entity:  
+        name: Anterior
+        type: 'custom:button-card'
+        show_icon: false
+        style:
+          name:
+            - font-weight: 500
+            - font-size: 16px
+
+  # Displays
+  - type: horizontal-stack
+    cards: 
+
+      # Geral - Hoje
+      - entity: sensor.meter_geral_hoje
+        type: 'custom:button-card'
+        name: >
+          [[[
+            var kwh = states['sensor.meter_geral_hoje'].state;
+            return kwh + ' kWh'; 
+          ]]]
+        label: >
+          [[[
+            var custo = states['sensor.meter_geral_hoje'].state * states['input_text.preco_kwh'].state;
+            return 'R$ ' + (custo.toFixed(2)); 
+          ]]]
+        show_icon: false
+        show_state: false
+        show_label: true
+        show_name: true
+        tap_action:
+          action: more-info
+        styles:
+          card:
+            - padding: 5px
+          label:
+            - font-weight: 500
+            - font-size: 17px
+            - color: var(--primary-color)
+          name:
+            - font-weight: 500
+            - font-size: 14px
+
+      # Geral - Ontem
+      - entity: sensor.meter_geral_ontem
+        type: 'custom:button-card'
+        name: >
+          [[[
+            var kwh = states['sensor.meter_geral_ontem'].state;
+            return kwh + ' kWh'; 
+          ]]]
+        label: >
+          [[[
+            var custo = states['sensor.meter_geral_ontem'].state * states['input_text.preco_kwh'].state;
+            return 'R$ ' + (custo.toFixed(2)); 
+          ]]]
+        show_icon: false
+        show_state: false
+        show_label: true
+        show_name: true
+        tap_action:
+          action: more-info
+        styles:
+          card:
+            - padding: 5px
+          label:
+            - font-weight: 500
+            - font-size: 17px
+            - color: var(--primary-color)
+          name:
+            - font-weight: 500
+            - font-size: 14px
+
+      # Geral - Mês
+      - entity: sensor.meter_geral_mes
+        type: 'custom:button-card'
+        name: >
+          [[[
+            var kwh = states['sensor.meter_geral_mes'].state;
+            return kwh + ' kWh'; 
+          ]]]
+        label: >
+          [[[
+            var custo = states['sensor.meter_geral_mes'].state * states['input_text.preco_kwh'].state;
+            return 'R$ ' + (custo.toFixed(2)); 
+          ]]]
+        show_icon: false
+        show_state: false
+        show_label: true
+        show_name: true
+        tap_action:
+          action: more-info
+        styles:
+          card:
+            - padding: 5px
+          label:
+            - font-weight: 500
+            - font-size: 17px
+            - color: var(--primary-color)
+          name:
+            - font-weight: 500
+            - font-size: 14px
+
+      # Geral - Anterior      
+      - entity: sensor.meter_geral_mes_anterior
+        type: 'custom:button-card'
+        name: >
+          [[[
+            var kwh = states['sensor.meter_geral_mes_anterior'].state;
+            return kwh + ' kWh'; 
+          ]]]
+        label: >
+          [[[
+            var custo = states['sensor.meter_geral_mes_anterior'].state * states['input_text.preco_kwh'].state;
+            return 'R$ ' + (custo.toFixed(2)); 
+          ]]]
+        show_icon: false
+        show_state: false
+        show_label: true
+        show_name: true
+        tap_action:
+          action: more-info
+        styles:
+          card:
+            - padding: 5px
+          label:
+            - font-weight: 500
+            - font-size: 17px
+            - color: var(--primary-color)
+          name:
+            - font-weight: 500
+            - font-size: 14px

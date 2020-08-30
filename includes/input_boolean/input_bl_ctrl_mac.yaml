@@ -1,0 +1,71 @@
+
+
+  mac_shutdown:
+    name: Macbook
+    initial: off
+    icon: mdi:power
+
+  mac_play:
+    name: Play
+    initial: off
+    icon: mdi:play-pause
+
+  mac_previous:
+    name: Voltar
+    initial: off
+    icon: mdi:skip-previous
+
+  mac_next:
+    name: Próxima
+    initial: off
+    icon: mdi:skip-next
+
+  mac_stop:
+    name: Stop
+    initial: off
+    icon: mdi:stop
+
+  mac_mute:
+    name: Mute
+    initial: off
+    icon: mdi:volume-off
+
+  mac_vol_menos:
+    name: Diminuir
+    initial: off
+    icon: mdi:volume-minus
+
+  mac_vol_mais:
+    name: Aumentar
+    initial: off
+    icon: mdi:volume-plus
+
+  mac_vol_max:
+    name: Máximo
+    initial: off
+    icon: mdi:volume-high
+
+  mac_restart:
+    name: Reiniciar
+    initial: off
+    icon: mdi:restart
+
+  mac_logout:
+    name: Logout
+    initial: off
+    icon: mdi:logout-variant
+
+  mac_monitor_off:
+    name: Desligar Monitor
+    initial: off
+    icon: mdi:monitor-off
+
+  mac_monitor_on:
+    name: Ligar Monitor
+    initial: off
+    icon: mdi:monitor
+
+  mac_open_tw:
+    name: Abrir TeamViewer
+    initial: off
+    icon: mdi:teamviewer

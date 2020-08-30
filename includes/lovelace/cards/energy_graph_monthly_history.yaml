@@ -1,0 +1,18 @@
+type: custom:mini-graph-card
+name: Histórico 30 dias
+icon: mdi:counter
+points_per_hour: 0.041666666666666666666666
+aggregate_func: last
+lower_bound: 0
+hours_to_show: 720
+hour24: true
+bar_spacing: 6
+show:
+  graph: bar
+style: |
+  ha-card {
+    height: 150px;
+  }
+entities:
+  - entity: sensor.meter_geral_ontem
+    color: var(--graph-color)

@@ -1,0 +1,20 @@
+id: map
+path: maps
+icon: mdi:map-marker-radius
+title: Map
+panel: true
+cards:
+
+  - type: custom:layout-card
+    layout: vertical
+    column_width: 100%, flex-grow
+    cards:
+      - !include ../cards/maps.yaml
+
+  # - type: conditional
+  #   conditions:
+  #     - entity: input_boolean.themes_mode
+  #       state: "off"
+
+  #   card:
+

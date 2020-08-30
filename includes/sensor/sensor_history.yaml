@@ -1,0 +1,106 @@
+#                                                    
+#   #    #  #   ####   #####   ####   #####   #   # 
+#   #    #  #  #         #    #    #  #    #   # #  
+#   ######  #   ####     #    #    #  #    #    #   
+#   #    #  #       #    #    #    #  #####     #   
+#   #    #  #  #    #    #    #    #  #   #     #   
+#   #    #  #   ####     #     ####   #    #    #   
+#                                                    
+#   O que foi usado?
+#
+#   Sensor History Stats - https://www.home-assistant.io/integrations/history_stats/
+#   Esse sensor calcula quanto tempo uma entidade permaneceu com um status determinado em um período de tempo especificado
+#   Quanto tempo o ar do quarto ficou ligado ontem, hoje, essa semana, mês passado? Esse é o sensor que vai responder essa pergunta.
+#
+
+# Sensor History - Tomada do Estúdio
+- platform: history_stats
+  name: History - Tomada Estúdio
+  entity_id: switch.tomada_estudio
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
+  # start: '{{ 0 }}'
+  # end: '{{ now() }}'
+
+# Sensor History - AC Quarto
+- platform: history_stats
+  name: History - AC Quarto
+  entity_id: switch.ac_quarto
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
+
+# Sensor History - TV Quarto
+- platform: history_stats
+  name: History - TV Quarto
+  entity_id: media_player.tv
+  state: 'playing'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
+
+# Sensor History - Luz do Banheiro
+- platform: history_stats
+  name: History - Luz do Banheiro
+  entity_id: light.luz_do_banheiro
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
+
+# Sensor History - Luz da Cozinha
+- platform: history_stats
+  name: History - Luz da Cozinha
+  entity_id: light.luz_da_cozinha
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
+
+# Sensor History - Luz do Estúdio
+- platform: history_stats
+  name: History - Luz do Estúdio
+  entity_id: light.luz_do_estudio
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
+
+# Sensor History - Luz do Quarto
+- platform: history_stats
+  name: History - Luz do Quarto
+  entity_id: light.luz_do_quarto
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
+
+# Sensor History - Luz da Sala
+- platform: history_stats
+  name: History - Luz da Sala
+  entity_id: light.luz_da_sala
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
+
+
+# Sensor template para agrupar os valores de todos os sensores historys das lampadas
+- platform: template
+  sensors:
+    history_all_lights:
+      friendly_name: "History - All Lights"
+      icon_template: mdi:chart-line
+      unit_of_measurement: 'h'
+      value_template: "{{ ( states('sensor.history_luz_do_estudio') | float () + states('sensor.history_luz_do_quarto') | float () + states('sensor.history_luz_do_banheiro') | float () + states('sensor.history_luz_da_sala') | float () + states('sensor.history_luz_da_cozinha') | float () ) | round(2) }}"
+
+
+    kwh_geral:
+      friendly_name: "kWh - Geral"
+      icon_template: mdi:chart-line
+      unit_of_measurement: 'kWh'
+      value_template: "{{ (states('sensor.meter_ac_quarto_hoje') | float()) + (states('sensor.meter_tv_quarto_hoje') | float()) + (states('sensor.meter_all_lights_hoje') | float()) + (states('sensor.meter_tomada_estudio_hoje') | float()) }}"
+

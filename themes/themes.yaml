@@ -1,0 +1,361 @@
+
+#     ######      ###     ##     ##  ##        ######## 
+#    ##    ##    ## ##    ##     ##  ##        ##       
+#    ##         ##   ##   ##     ##  ##        ##       
+#    ##        ##     ##  ##     ##  ##        ######   
+#    ##        #########  ##     ##  ##        ##       
+#    ##    ##  ##     ##  ##     ##  ##        ##       
+#     ######   ##     ##   #######   ########  ######## 
+#
+#    ########  ##     ##  ########  ##     ##  ########   ######      
+#       ##     ##     ##  ##        ###   ###  ##        ##    ##  
+#       ##     ##     ##  ##        #### ####  ##        ##           
+#       ##     #########  ######    ## ### ##  ######     ######     
+#       ##     ##     ##  ##        ##     ##  ##              ##    
+#       ##     ##     ##  ##        ##     ##  ##        ##    ##  
+#       ##     ##     ##  ########  ##     ##  ########   ######   
+#
+#
+#     Created by Ricardo Correia for the Home Assistant Brasil community
+#     There are 10 Main colors, totaling 40 different themes!
+#     Release 1.2
+#
+#     I want to ask only 2 things for those who benefit from these themes:
+#
+#     1) Join the HABR community on Discord: ihabr.ml
+#     2) Follow my creative studio on instagram: caulecriativo.com
+#
+#     ricardo.art.br
+#     github.com/orickcorreia
+#
+#     Make good use of the themes =)
+#
+#
+                                                                    
+
+Caule Dracula:
+
+  # Change the value below 8px to 0px to remove the rounded corners
+  ha-card-border-radius: 8px
+  # Color variables 
+  cyan: "#8be9fe"
+  yellow: "#f1fa8c"
+  pink: "#fb7ac6"
+  purple: "#bd93f9"
+  gray: "#5c6992"
+  bg1: "#282a36"
+  bg2: "#21212c"
+  dark: "#111111"
+  light: "#dde7ec"
+  white: "#FFFFFF"
+  red: "#FF0000"
+  # Main colors 
+
+  sidebar-background-color:  var(--bg1)
+#################################
+# TEXT
+#################################
+
+  primary-text-color: var(--light)
+  secondary-text-color: var(--cyan) # ajustar ainda
+  text-primary-color: var(--red)
+  disabled-text-color: var(--red)
+
+################################# 
+# MAIN INTERFACE COLORS
+#################################
+
+  primary-color: var(--red)
+  dark-primary-color: var(--purple)
+  light-primary-color: var(--yellow)
+  accent-color: var(--purple)
+  disabled-color: var(--gray)
+
+#################################
+ # BACKGROUND AND SIDEBAR
+#################################
+
+  ha-card-background: var(--bg1)  
+  card-background-color: var(--bg1)  
+  primary-background-color: var(--bg2)
+  secondary-background-color: var(--red)
+
+
+#################################
+# table lines around sidebar
+#################################
+
+  divider-color: var(--bg2)
+  scrollbar-thumb-color: var(--cyan)
+  error-color: var(--red)
+  error-state-color: 'var(--error-color)'
+
+#################################
+ # CARDS
+ #################################
+
+  ha-card-border-radius: "8px"
+  ha-card-box-shadow: 'inset 0px 0px 0px 0px var(--divider-color)'
+  ha-card-header-color: var(--cyan)
+
+#################################
+ # STATES AND BADGES
+ #################################
+
+  state-icon-active-color: var(--red)
+  state-icon-color: var(--yellow)
+  state-icon-unavailable-color: var(--bg2)
+
+
+
+################################# 
+# SIDEBAR MENU
+ #################################
+
+  sidebar-text-color: var(--light)
+  sidebar-icon-color: var(--pink)
+  sidebar-selected-icon-color: var(--cyan)
+  sidebar-selected-text-color: var(--light)
+  sidebar-selected-background-color: var(--purple)
+
+#################################
+ # CONTROLS  
+#################################
+
+  switch-checked-color: var(--yellow)
+  switch-unchecked-color: var(--gray)
+  switch-checked-button-color: var(--yellow)
+  switch-unchecked-button-color: var(--gray)
+  switch-checked-track-color: var(--dark)
+  switch-unchecked-track-color: var(--dark)
+  slider-color: var(--gray)
+  slider-secondary-color: var(--gray)
+  slider-bar-color: 'var(--disabled-text-color)'
+
+################################# 
+# FOR LABEL BADGE
+ #################################
+
+  label-badge-background-color: var(--red)
+  label-badge-text-color: var(--yellow)
+  label-badge-blue: var(--cyan)
+  label-badge-green: var(--purple)
+  label-badge-red: var(--pink)
+  label-badge-yellow: var(-yellow)
+  label-badge-grey: var(--gray)
+
+#################################
+# Paper-styles color.html dependency is stripped on build.
+# When a default paper-style color is used, it needs to be copied
+# from paper-styles/color.html to here.
+#################################
+
+  paper-grey-50: "rgba(0, 0, 0, 1)"
+  paper-grey-200: "rgba(0, 0, 0, 1)"
+  paper-grey-400: "rgba(0, 0, 0, 1)"
+
+#################################
+# for paper-spinner
+#################################
+
+  google-blue-500: "var(--make-blue)"
+  google-green-500:  "var(--make-green)"
+  google-red-500: "rgba(0, 0, 0, 1)"
+  google-yellow-500: "rgba(0, 0, 0, 1)"
+  paper-spinner-color: "rgba(0, 0, 0, 1)"
+
+#################################
+# for paper-slider
+#################################
+
+  paper-blue-400: "rgba(0, 0, 0, 1)"
+  paper-green-400: "rgba(0, 0, 0, 1)"
+  paper-orange-400: "rgba(0, 0, 0, 1)"
+
+#################################
+# opacity for dark text on a light background
+#################################
+
+  dark-divider-opacity: "1"
+  dark-disabled-opacity: '1' #or hint text or icon
+  dark-secondary-opacity: '1'
+  dark-primary-opacity: '1'
+
+#################################
+# opacity for light text on a dark background
+#################################
+
+  light-divider-opacity: "1"
+  light-disabled-opacity: '1' # or hint text or icon
+  light-secondary-opacity: '1'
+  light-primary-opacity: '1'
+
+#################################
+# derived colors, to keep existing themes mostly working
+#################################
+
+  paper-card-background-color: var(--ha-card-background)
+  paper-listbox-background-color: var(--primary-background-color)
+  paper-item-icon-active-color: var(--pink)
+  paper-item-icon-color: var(--disabled-color)
+  table-row-alternative-background-color: var(--bg2)
+  table-row-background-color: var(--bg1)
+
+#################################
+# set our slider style
+#################################
+
+  paper-slider-knob-color: var(--yellow)
+  paper-slider-knob-start-color: var(--yellow)
+  paper-slider-pin-color: var(--purple)
+  paper-slider-active-color: var(--yellow)
+  paper-slider-secondary-color: var(--red)
+  paper-slider-container-color: var(--red)
+  ha-paper-slider-pin-font-size: '25px'
+
+#################################
+# set data table style
+#################################
+
+  data-table-background-color: var(--primary-background-color)
+
+#################################
+# Change some parts in developer tools
+#################################
+
+  paper-dialog-background-color: var(--bg)
+  paper-dialog-color: var(--pink)
+
+#################################
+# rgb
+#################################
+
+  rgb-primary-color: var(--red)
+  rgb-accent-color: var(--red)
+  rgb-primary-text-color: var(--red)
+  rgb-secondary-text-color: var(--red)
+  rgb-text-primary-color: var(--red)
+
+#################################
+# mwc
+#################################
+
+  mdc-theme-primary: "rgba(0, 0, 0, 1)"
+  mdc-theme-secondary: 'var(--accent-color)'
+  mdc-theme-background: 'var(--primary-background-color)'
+  mdc-theme-surface: 'var(--paper-card-background-color, var(--card-background-color))'
+
+#################################
+# mwc text styles
+#################################
+
+  mdc-theme-on-primary: 'var(--pink)'
+  mdc-theme-on-secondary: 'var(--pink)'
+  mdc-theme-on-surface: 'var(--primary-text-color)'
+
+#################################
+# app header background color
+#################################
+
+  app-header-background-color: var(--bg1)
+  app-header-text-color: 'var(--pink)'
+  ch-active-tab-color: var(--white)
+  ch-all-tabs-color: var(--light)
+  ch-background: var(--white)
+  ch-notification-dot-color: "var(--yellow)"
+  ch-tab-indicator-color: var(--cyan)
+
+#################################
+#
+# UNKNOWN LINES
+#
+#################################
+
+  accent-medium-color: "rgba(0, 0, 0, 1)"
+
+  background-card-color: "rgba(0, 0, 0, 1)"
+  background-color-2: "rgba(0, 0, 0, 1)"
+
+
+# Controls the base (and accent) color hue (0-360) | 0=Red 60=Yellow 120=Green 180=Cyan 240=Blue 300=Magenta 360=Red
+  base-hue: "120"
+# Controls the saturation of the theme (0%-100%) | 0%=Grey 100%=Full Saturation
+  base-sat: "100%"
+
+  border-color: "rgba(0, 0, 0, 1)"
+
+
+  ha-label-badge-color: "rgba(0, 0, 0, 1)"
+
+  huesat: "var(--base-hue), var(--base-sat),"
+
+  iron-overlay-backdrop-background-color: "rgba(0, 0, 0, 1)"
+
+  label-badge-border-color: "rgba(0, 0, 0, 1)"
+
+  # make-disable: "rgba(0, 0, 0, 1)"
+  # make-carbon: "rgba(30,30,30,1)"
+  # make-light-carbon: "rgba(40,40,40,1)"
+  # make-grey: "rgba(150,150,150,1)"
+  # make-blue: "rgba(0,0,255,1)"
+  # make-green: "rgba(0,255,0,1)"
+  # make-orange: "rgba(255,127,0,1)"
+  # make-red: "rgba(255,0,0,1)"
+  # make-white: "rgba(255,255,255,1)"
+  # make-yellow: "rgba(255,255,0,1)"
+
+  paper-button-color:  "rgba(0, 0, 0, 1)"
+  paper-button-ink-color: "rgba(0, 0, 0, 1)"
+
+  paper-card-header-color: "rgba(0, 0, 0, 1)"
+
+  paper-dialog-button-color: "rgba(0, 0, 0, 1)"
+  primary-font-family: "Roboto" #Fonte carai
+  paper-font-body_-_font-family: "var(--primary-font-family)"
+  paper-font-body1_-_font-family: "var(--primary-font-family)"
+  # paper-font-body1_-_font-weight: "500"
+  paper-font-caption_-_font-family: "var(--primary-font-family)"
+  paper-font-common-base_-_font-family: "var(--primary-font-family)"
+  paper-font-headline_-_font-family: "var(--primary-font-family)"
+  # paper-font-headline_-_font-weight: "500"
+  # paper-font-headline_-_letter-spacing: "-0.5px"
+  paper-font-subhead_-_font-family: "var(--primary-font-family)"
+  paper-font-title_-_font-family: "var(--primary-font-family)"
+  paper-icon-button-active-color: "rgba(0, 0, 0, 1)"
+  paper-icon-button-inactive-color: "rgba(0, 0, 0, 1)"
+  paper-item-icon_-_color: "rgba(0, 0, 0, 1)"
+  paper-item-selected_-_background-color: "rgba(0, 0, 0, 1)"
+  paper-listbox-color: var(--primary-text-color)
+  paper-progress-secondary-color: "rgba(0, 0, 0, 1)"
+  paper-slider-disabled-active-color: "rgba(0, 0, 0, 1)"
+  paper-slider-disabled-secondary-color: "rgba(0, 0, 0, 1)"
+  paper-tabs-selection-bar-color: "rgba(0, 0, 0, 1)"
+  paper-toggle-button-checked-bar-color: "rgba(0, 0, 0, 1)"
+  paper-toggle-button-checked-button-color: "rgba(0, 0, 0, 1)"
+  paper-toggle-button-checked-ink-color: "rgba(0, 0, 0, 1)"
+  paper-toggle-button-unchecked-bar-color: "rgba(0, 0, 0, 1)"
+  paper-toggle-button-unchecked-button-color: "rgba(0, 0, 0, 1)"
+  paper-toggle-button-unchecked-ink-color: "rgba(0, 0, 0, 1)"
+
+  shadow-elevation-16dp_-_box-shadow: "inset 0px 0px 0px 4px hsl(var(--huesat) 28%)"
+  shadow-elevation-2dp_-_box-shadow: "inset 0px 0px 0px 4px hsl(var(--huesat) 18%)"
+
+  sidebar-text_-_background: "rgba(0, 0, 0, 1)"
+  sidebar-text_-_color: "rgba(0, 0, 0, 1)"
+
+  text-color: var(--red)
+  text-dark-color: var(--red)
+  text-medium-color: var(--red)
+  text-medium-light-color: var(--red)
+  
+
+
+  # # Shadown
+  # ha-card-box-shadow: 'inset 0px 0px 0px 0px var(--divider-color)'
+  # # HACS
+  # hacs-badge-color: var(--primary-color)
+  # link-text-color: var(--disabled-color)
+  # markdown-code-background-color: var(--divider-color)
+  # google-blue-500: var(--primary-color)
+  # accent-color: var(--disabled-color)
+  # hacs-chip-color: var(--primary-color)

@@ -1,0 +1,134 @@
+type: horizontal-stack
+cards:
+
+  # Mini
+  - type: 'custom:button-card'
+    entity: input_boolean.spotify_rick_mini
+    layout: icon_name
+    name: Mini
+    icon: mdi:spotify
+    size: 60%
+    tap_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: >
+          [[[
+            if (states['input_boolean.spotify_rick_mini'].state == "off")
+              return "script.spotify_rick_start_mini";
+            return "script.spotify_rick_stop_mini";
+          ]]]
+    styles:
+      grid:
+        - grid-template-areas: '"i n"'
+        - grid-template-columns: 40% 60%
+      icon:
+        - align-self: start
+        - height: 45px
+      card:
+        - padding: 5px 0px 5px 0px
+        - height: 45px
+      name:
+        - justify-self: end
+        - padding-right: 25%
+        - font-weight: 400
+        - font-size: 16px
+
+  # TV
+  - type: 'custom:button-card'
+    entity: input_boolean.spotify_rick_tv
+    layout: icon_name
+    name: TV
+    icon: mdi:spotify
+    size: 60%
+    tap_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: >
+          [[[
+            if (states['input_boolean.spotify_rick_tv'].state == "off")
+              return "script.spotify_rick_start_tv";
+            return "script.spotify_rick_stop_tv";
+          ]]]
+    styles:
+      grid:
+        - grid-template-areas: '"i n"'
+        - grid-template-columns: 40% 60%
+      icon:
+        - align-self: start
+        - height: 45px
+      card:
+        - padding: 5px 0px 5px 0px
+        - height: 45px
+      name:
+        - justify-self: end
+        - padding-right: 25%
+        - font-weight: 400
+        - font-size: 16px
+
+  # Mac
+  - type: 'custom:button-card'
+    entity: input_boolean.spotify_rick_mac
+    layout: icon_name
+    name: Mac
+    icon: mdi:spotify
+    size: 60%
+    tap_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: >
+          [[[
+            if (states['input_boolean.spotify_rick_mac'].state == "off")
+              return "script.spotify_rick_start_mac";
+            return "script.spotify_rick_stop_mac";
+          ]]]
+    styles:
+      grid:
+        - grid-template-areas: '"i n"'
+        - grid-template-columns: 40% 60%
+      icon:
+        - align-self: start
+        - height: 45px
+      card:
+        - padding: 5px 0px 5px 0px
+        - height: 45px
+      name:
+        - justify-self: end
+        - padding-right: 25%
+        - font-weight: 400
+        - font-size: 16px
+
+  # Note
+  - type: 'custom:button-card'
+    entity: input_boolean.spotify_evi_pc
+    layout: icon_name
+    name: Note
+    icon: mdi:spotify
+    size: 60%
+    tap_action:
+      action: call-service
+      service: script.turn_on
+      service_data:
+        entity_id: >
+          [[[
+            if (states['input_boolean.spotify_evi_pc'].state == "off")
+              return "script.spotify_evi_start_pc";
+            return "script.spotify_evi_stop_pc";
+          ]]]
+    styles:
+      grid:
+        - grid-template-areas: '"i n"'
+        - grid-template-columns: 40% 60%
+      icon:
+        - align-self: start
+        - height: 45px
+      card:
+        - padding: 5px 0px 5px 0px
+        - height: 45px
+      name:
+        - justify-self: end
+        - padding-right: 25%
+        - font-weight: 400
+        - font-size: 16px

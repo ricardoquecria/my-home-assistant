@@ -1,0 +1,108 @@
+          
+                                                    
+title: Painel - Players
+path: painel_players
+icon: mdi:television-play
+cards:
+                                                    
+- type: horizontal-stack
+  cards:
+
+    # TV do Quarto
+    - type: media-control
+      entity: media_player.tv
+
+    # Mini
+    - type: media-control
+      entity: media_player.mini
+
+                                                            
+####    ####   #    #  #####  #####    ####   #        ####  
+#    #  #    #  ##   #    #    #    #  #    #  #       #      
+#       #    #  # #  #    #    #    #  #    #  #        ####  
+#       #    #  #  # #    #    #####   #    #  #            # 
+#    #  #    #  #   ##    #    #   #   #    #  #       #    # 
+####    ####   #    #    #    #    #   ####   ######   ####  
+                                                            
+- type: horizontal-stack
+  cards:
+
+            
+#####  #    # 
+#    #    # 
+#    #    # 
+#    #    # 
+#     #  #  
+#      ##   
+            
+
+    # TV - Mute
+    - type: entity-button
+      entity: input_boolean.tv_mute
+      icon: mdi:volume-mute
+      name: Mute
+      tap_action:
+        action: toggle
+
+    # TV - Vol - 
+    - type: entity-button
+      entity: input_boolean.tv_vol_menos
+      icon: mdi:volume-minus
+      name: Vol -
+      tap_action:
+        action: toggle
+
+    # TV - Vol +
+    - type: entity-button
+      entity: input_boolean.tv_vol_mais
+      icon: mdi:volume-plus
+      name: Vol +
+      tap_action:
+        action: toggle
+        
+    # TV - Vol Max
+    - type: entity-button
+      entity: input_boolean.tv_vol_max
+      icon: mdi:volume-high
+      name: Máximo
+      tap_action:
+        action: toggle
+                  
+#    #  #  #    #  # 
+##  ##  #  ##   #  # 
+# ## #  #  # #  #  # 
+#    #  #  #  # #  # 
+#    #  #  #   ##  # 
+#    #  #  #    #  # 
+                  
+    # mini - Mute
+    - type: entity-button
+      entity: input_boolean.mini_mute
+      icon: mdi:volume-mute
+      name: Mute
+      tap_action:
+        action: toggle
+
+    # mini - Vol - 
+    - type: entity-button
+      entity: input_boolean.mini_vol_menos
+      icon: mdi:volume-minus
+      name: Vol -
+      tap_action:
+        action: toggle
+
+    # mini - Vol +
+    - type: entity-button
+      entity: input_boolean.mini_vol_mais
+      icon: mdi:volume-plus
+      name: Vol +
+      tap_action:
+        action: toggle
+        
+    # mini - Vol Max
+    - type: entity-button
+      entity: input_boolean.mini_vol_max
+      icon: mdi:volume-high
+      name: Máximo
+      tap_action:
+        action: toggle

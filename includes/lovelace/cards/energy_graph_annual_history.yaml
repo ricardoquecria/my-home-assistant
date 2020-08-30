@@ -1,0 +1,21 @@
+type: custom:mini-graph-card
+name: Histórico 12 meses
+icon: mdi:counter
+# group_by: date
+lower_bound: 0
+line_width: 4
+hours_to_show: 8640
+aggregate_func: last
+points_per_hour: 0.00138888888
+hour24: true
+bar_spacing: 6
+show:
+  graph: bar
+style: |
+  ha-card {
+    margin: 0px 0px 10px 0px;
+    height: 150px;
+  }
+entities:
+  - entity: sensor.meter_geral_mes_anterior
+    color: var(--graph-color)

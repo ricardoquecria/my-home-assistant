@@ -1,0 +1,92 @@
+type: vertical-stack
+cards:
+  # Sensores
+  - type: entities
+    style: |
+      :host {
+        --paper-item-icon-color: var(--primary-color);
+      }
+      ha-card {
+        padding: 0px 10px 0px 0px;
+      }
+    show_header_toggle: false
+    entities:
+      - sensor.uptime_server
+      - entity: sensor.ha_restart
+        name: Tempo de boot
+      - entity: sensor.disk_space_disco
+        name: Espaço disponível
+      - sensor.banco_de_dados
+      - entity: sensor.local_ip
+        name: IP do servidor
+      - binary_sensor.remote_ui
+      - sensor.hassio_update
+      - entity: sensor.hacs_update
+      - input_boolean.notify
+
+  # Server Buttons           
+  - type: horizontal-stack
+    cards:
+
+      - type: "custom:button-card"
+        entity: input_boolean.ha_restart
+        tap_action:
+          action: none
+        hold_action:
+          action: toggle
+        size: 70%
+        styles:
+          card:
+            - font-size: 12px
+            - height: 130px
+            - padding: 10px 5px 15px 5px
+
+
+      - type: "custom:button-card"
+        entity: input_boolean.ha_snapshot
+        tap_action:
+          action: none
+        hold_action:
+          action: toggle
+        size: 70%
+        styles:
+          card:
+            - font-size: 12px
+            - height: 130px
+            - padding: 10px 5px 15px 5px
+
+
+      - type: "custom:button-card"
+        entity: input_boolean.ha_group_reload
+        tap_action:
+          action: toggle
+        size: 70%
+        styles:
+          card:
+            - font-size: 12px
+            - height: 130px
+            - padding: 10px 5px 15px 5px
+
+
+      - type: "custom:button-card"
+        entity: input_boolean.ha_script_reload
+        tap_action:
+          action: toggle
+        size: 70%
+        styles:
+          card:
+            - font-size: 12px
+            - height: 130px
+            - padding: 10px 5px 15px 5px
+
+      - type: "custom:button-card"
+        entity: input_boolean.ha_inputs_reload
+        tap_action:
+          action: toggle
+        size: 65%
+        styles:
+          card:
+            - font-size: 12px
+            - height: 130px
+            - padding: 10px 5px 15px 5px
+

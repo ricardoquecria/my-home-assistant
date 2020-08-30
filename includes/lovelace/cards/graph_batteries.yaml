@@ -1,0 +1,92 @@
+type: vertical-stack
+cards:
+
+  # Título
+  - type: 'custom:button-card'
+    layout: icon_name
+    name: Baterias
+    icon: mdi:battery-charging-high
+    styles:
+      grid:
+        - grid-template-areas: '"n i"'
+        - grid-template-columns: 1fr 20% 
+      icon:
+        - align-self: end
+        - color: var(--primary-color)
+        - height: 35px
+      card:
+        - padding: 5px
+        - height: 45px
+      name:
+        - color: var(--primary-text-color)
+        - justify-self: start
+        - padding-left: 10%
+        - font-weight: 400
+        - font-size: 20px
+
+  # # Gráficos
+  - type: horizontal-stack
+    cards:
+
+      # Bateria Macbook
+      - type: custom:mini-graph-card
+        name: Mac
+        hours_to_show: 24
+        points_per_hour: 2
+        line_width: 10
+        font_size: 75
+        hour24: true
+        lower_bound: 0
+        upper_bound: 100
+        entities:
+          - sensor.battery_macbook
+        show:
+          labels: true
+        color_thresholds:
+          - value: 25
+            color: var(--divider-color)
+          - value: 80
+            color: var(--graph-color)
+
+      # Bateria J5
+      - type: custom:mini-graph-card
+        name: J5 Prime
+        hours_to_show: 24
+        points_per_hour: 2
+        line_width: 10
+        font_size: 75
+        hour24: true
+        lower_bound: 0
+        upper_bound: 100
+        entities:
+          - sensor.battery_rick_phone
+        show:
+          labels: true
+        color_thresholds:
+
+          - value: 25
+            color: var(--divider-color)
+          - value: 80
+            color: var(--graph-color)
+
+      # Bateria iPhone
+      - type: custom:mini-graph-card
+        name: iPhone
+        hours_to_show: 24
+        points_per_hour: 2
+        line_width: 10
+        font_size: 75
+        hour24: true
+        lower_bound: 0
+        upper_bound: 100
+        entities:
+          - sensor.battery_evi_phone
+        show:
+          labels: true
+        color_thresholds:
+          - value: 25
+            color: var(--divider-color)
+          - value: 80
+            color: var(--graph-color)
+
+

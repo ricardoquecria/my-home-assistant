@@ -1,0 +1,37 @@
+type: horizontal-stack
+cards:
+  - type: conditional
+    conditions:
+      - entity: input_boolean.themes_mode
+        state: "off"
+
+    card:
+      type: map
+      dark_mode: false
+      default_zoom: 15
+      entities:
+        - entity: zone.home
+        - entity: zone.comper
+        - entity: zone.atacadao
+        - entity: zone.unic
+        - entity: zone.arenapolis
+        - entity: person.evellin_rossi
+        - entity: person.ricardo_correia
+
+  - type: conditional
+    conditions:
+      - entity: input_boolean.themes_mode
+        state: "on"
+
+    card:
+      type: map
+      dark_mode: true
+      default_zoom: 15
+      entities:
+        - entity: zone.home
+        - entity: zone.comper
+        - entity: zone.atacadao
+        - entity: zone.unic
+        - entity: zone.arenapolis
+        - entity: person.evellin_rossi
+        - entity: person.ricardo_correia

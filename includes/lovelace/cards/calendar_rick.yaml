@@ -1,0 +1,69 @@
+type: 'custom:atomic-calendar-revive'
+entities:
+  - entity: calendar.pessoal
+    eventCalName: Pessoal
+    type: icon1
+    icon: 'mdi:check-circle'
+    color: "var(--primary-text-color)"
+
+  - entity: calendar.holidays_in_brazil
+    eventCalName: Feriado
+    type: holyday
+    icon: 'mdi:calendar-check'
+    color: var(--primary-color)
+
+# # Main setup
+name: Agenda
+defaultMode: Calendar
+enableModeChange: true
+maxDaysToShow: 90
+firstDayOfWeek: 1
+showLoader: false
+showDate: true
+# showMonth: true
+# showWeekDay: true
+showDeclined: true
+
+# Lang
+language: pt-br
+fullDayEventText: 'o dia todo'
+noEventsForNextDaysText: 'Sem registros na agenda.'
+noEventsForTodayText: 'Sem eventos na agenda para hoje.'
+dateFormat: 'dddd, D | MMM | HH[:]mm'
+
+# Style
+finishedEventFilter: grayscale(0%)
+finishedEventOpacity: 1
+# locationLinkColor: "var(--primary-color)"
+# locationTextSize: 90
+# locationIconColor: "var(--primary-color)"
+# eventBarColor: "#FFFF00"
+# dateColor: "var(--light-primary-color, var(--primary-color))"
+# dateSize: 90
+# timeColor: "var(--disabled-color)"
+# timeSize: 90
+# eventTitleColor: "var(--primary-text-color)"
+# eventTitleSize: 110
+# dayWrapperLineColor: "var(--primary-color)"
+# progressBarColor: "var(--primary-color)"
+# descColor: "var(--disabled-color)"
+# descSize: 90
+# eventCalNameColor: "var(--primary-color)"
+# eventCalNameSize: 80
+
+calGridFullBorder: false
+calGridBorder: 2
+# calDayColor: var(--primary-text-color)
+# calWeekDayColor: var(--primary-color)
+
+# # calEventIcon1Color: var(--primary-color)
+# # calEventIcon2Color: 
+# # calEventIcon3Color: 
+# # calEventHolidayColor: "#FF00FF"
+
+# # calEventSatColor: "rgba(125,125,125,0.1)"
+# # calEventSunColor: "rgba(125,125,125,0.2)"
+# # calActiveEventBackgroundColor: var(--light-primary-color)
+# # calDateColor: var(--disabled-color)
+# # defaultCalColor: "#FF0000"
+

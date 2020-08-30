@@ -1,0 +1,44 @@
+##     ## ########    ###    ########  ######## ########  
+##     ## ##         ## ##   ##     ## ##       ##     ## 
+##     ## ##        ##   ##  ##     ## ##       ##     ## 
+######### ######   ##     ## ##     ## ######   ########  
+##     ## ##       ######### ##     ## ##       ##   ##   
+##     ## ##       ##     ## ##     ## ##       ##    ##  
+##     ## ######## ##     ## ########  ######## ##     ## 
+
+custom_header:
+  compact_mode: true
+  footer_mode: true
+  kiosk_mode: false
+  hide_header: false
+  hide_unused: true
+  hide_help: true
+  hide_config: true
+  default_tab_on_refresh: false
+  indicator_top: true
+
+
+
+
+##        #######  ##     ## ######## ##          ###     ######  ######## 
+##       ##     ## ##     ## ##       ##         ## ##   ##    ## ##       
+##       ##     ## ##     ## ##       ##        ##   ##  ##       ##       
+##       ##     ## ##     ## ######   ##       ##     ## ##       ######   
+##       ##     ##  ##   ##  ##       ##       ######### ##       ##       
+##       ##     ##   ## ##   ##       ##       ##     ## ##    ## ##       
+########  #######     ###    ######## ######## ##     ##  ######  ######## 
+
+title: Gactos Master
+views:
+  - !include includes/lovelace/views/view_home.yaml
+  - !include includes/lovelace/views/view_controls.yaml
+  - !include includes/lovelace/views/view_spotify.yaml
+  - !include includes/lovelace/views/view_stats.yaml
+  - !include includes/lovelace/views/view_tools.yaml
+  - !include includes/lovelace/views/view_hassos.yaml
+  - !include includes/lovelace/views/view_maps.yaml
+  # - !include includes/lovelace/views/view_tab_control.yaml
+  # - !include includes/lovelace/views/view_tab_states.yaml
+  # - !include includes/lovelace/views/view_tab_players.yaml
+  # - !include includes/lovelace/views/view_tab_spotify.yaml
+

@@ -1,0 +1,22 @@
+type: custom:mini-graph-card
+name: Custo Mensal
+icon: mdi:cash-usd-outline
+aggregate_func: last
+points_per_hour: 0.06666666
+lower_bound: 0
+line_width: 4
+# show:
+#   graph: bar
+hours_to_show: 720
+hour24: true
+entities:
+  - entity: sensor.meter_geral_mes
+    color: var(--graph-color)
+    name: Mês atual
+  - entity: sensor.meter_tendence_mes_anterior
+    color: var(--light-primary-color)
+    name: Mês anterior
+    show_fill: true
+    show_line: true
+    show_points: true
+    show_legend: true

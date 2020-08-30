@@ -1,0 +1,124 @@
+title: Painel Coltrol
+path: painel_control
+icon: mdi:tablet-dashboard
+cards:
+
+- type: horizontal-stack
+  cards:
+
+    # Luz da Sala
+    - entity: light.luz_da_sala
+      icon: mdi:lightbulb-outline
+      name: Sala
+      tap_action:
+        action: toggle
+      type: entity-button
+
+    # Luz da Cozinha
+    - entity: light.luz_da_cozinha
+      icon: mdi:lightbulb-outline
+      name: Cozinha
+      tap_action:
+        action: toggle
+      type: entity-button
+
+    # Luz do Quarto
+    - entity: light.luz_do_quarto
+      icon: mdi:lightbulb-outline
+      name: Quarto
+      tap_action:
+        action: toggle
+      type: entity-button
+
+    # Luz do Estúdio
+    - entity: light.luz_do_estudio
+      icon: mdi:lightbulb-outline
+      name: Estúdio
+      tap_action:
+        action: toggle
+      type: entity-button
+
+    # Luz do Banheiro
+    - entity: light.luz_do_banheiro
+      icon: mdi:lightbulb-outline
+      name: Banheiro
+      tap_action:
+        action: toggle
+      type: entity-button
+
+
+
+
+- type: horizontal-stack
+  cards:
+
+    # Luz da Sala
+    - entity: switch.ac_quarto
+      icon: mdi:snowflake
+      name: Ar do quarto
+      tap_action:
+        action: toggle
+      type: entity-button
+
+    # Luz da Cozinha
+    - entity: switch.tv_quarto
+      icon: mdi:television
+      name: TV do Quarto
+      tap_action:
+        action: call-service
+        service: input_boolean.turn_on
+        service_data:
+          entity_id: switch.tv_quarto
+      hold_action:
+        action: call-service
+        service: input_boolean.turn_off
+        service_data:
+          entity_id: switch.tv_quarto
+      type: entity-button
+
+    # Luz do Quarto
+    - entity: switch.tomada_estudio
+      icon: mdi:power-plug
+      name: Estúdio
+      tap_action:
+        action: toggle
+      type: entity-button
+
+    # Luz do Estúdio
+    - entity: group.all
+      icon: mdi:power
+      name: Tudo
+      tap_action:
+        action: call-service
+        service: homeassistant.turn_on
+        service_data:
+          entity_id: group.all
+      hold_action:
+        action: more-info
+      type: entity-button
+
+    # Luz do Banheiro
+    - entity: light.luz_do_banheiro
+      icon: mdi:lightbulb-group-outline
+      name: Lampadas
+      tap_action:
+        action: toggle
+      type: entity-button
+
+- type: horizontal-stack
+  cards:
+    - type: entities
+      entities:
+        - entity: sensor.meter_geral_hoje
+          name: Hoje
+
+    - type: entities
+      entities:
+        - entity: sensor.meter_geral_ontem
+          name: Ontem
+
+    - type: entities
+      entities:
+        - entity: sensor.meter_geral_mes
+          name: Mês atual
+

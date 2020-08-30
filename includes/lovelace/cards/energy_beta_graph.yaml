@@ -1,0 +1,35 @@
+type: vertical-stack
+cards:
+
+  - type: custom:mini-graph-card
+    icon: mdi:cash-usd-outline
+    style: |
+      ha-card {
+        margin: 0px 0px 10px 0px;
+      }
+    lower_bound: 0
+    points_per_hour: 6
+    hours_to_show: 48
+    line_width: 4
+    hour24: true
+    entities: 
+      - entity: sensor.history_all_lights
+        color: var(--graph-color)
+
+  - type: custom:mini-graph-card
+    # group_by: hour
+    icon: mdi:cash-usd-outline
+    style: |
+      ha-card {
+        margin: 0px 0px 10px 0px;
+      }
+    lower_bound: 0
+    points_per_hour: 6
+    hours_to_show: 48
+    line_width: 4
+    hour24: true 
+    entities: 
+      - entity: sensor.history_tomada_estudio
+        color: var(--graph-color)
+
+

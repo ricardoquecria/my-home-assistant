@@ -1,0 +1,38 @@
+##     ## ########    ###    ########  ######## ########  
+##     ## ##         ## ##   ##     ## ##       ##     ## 
+##     ## ##        ##   ##  ##     ## ##       ##     ## 
+######### ######   ##     ## ##     ## ######   ########  
+##     ## ##       ######### ##     ## ##       ##   ##   
+##     ## ##       ##     ## ##     ## ##       ##    ##  
+##     ## ######## ##     ## ########  ######## ##     ## 
+
+custom_header:
+  compact_mode: true
+  footer_mode: true
+  kiosk_mode: false
+  hide_header: false
+  hide_unused: true
+  hide_help: true
+  hide_config: true
+  default_tab_on_refresh: false
+  indicator_top: true
+  exceptions:
+
+    - conditions:
+        user: Ricardo Correia
+      config:
+        disable_sidebar: false
+        hide_header: true
+
+
+##        #######  ##     ## ######## ##          ###     ######  ######## 
+##       ##     ## ##     ## ##       ##         ## ##   ##    ## ##       
+##       ##     ## ##     ## ##       ##        ##   ##  ##       ##       
+##       ##     ## ##     ## ######   ##       ##     ## ##       ######   
+##       ##     ##  ##   ##  ##       ##       ######### ##       ##       
+##       ##     ##   ## ##   ##       ##       ##     ## ##    ## ##       
+########  #######     ###    ######## ######## ##     ##  ######  ######## 
+
+title: Gactos Rick
+views:
+  - !include includes/lovelace/views/view_rick.yaml

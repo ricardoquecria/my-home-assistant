@@ -1,0 +1,142 @@
+type: horizontal-stack
+cards:
+
+  # Light - Luz da Sala
+  - entity: light.luz_da_sala
+    type: "custom:button-card"
+    icon: mdi:lightbulb-outline
+    label: >
+      [[[
+        if (states['light.luz_da_sala'].state == "on")
+          return states['sensor.uptime_luz_da_sala'].state;
+      ]]]
+    show_label: true
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+    name: Sala
+    size: 90%
+    state:
+      - value: "unavailable"
+        color: var(--primary-background-color)
+    styles:
+      label:
+        - font-size: 12px
+        - color: var(--light-primary-color)  
+      card:
+        - font-size: 16px
+        - height: 120px
+        - padding: 10px 5px 15px 5px
+
+  # Light - Luz da Cozinha
+  - entity: light.luz_da_cozinha
+    type: "custom:button-card"
+    icon: mdi:lightbulb-outline
+    label: >
+      [[[
+        if (states['light.luz_da_cozinha'].state == "on")
+          return states['sensor.uptime_luz_da_cozinha'].state;
+      ]]]
+    show_label: true
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+    name: Cozinha
+    size: 90%
+    state:
+      - value: "unavailable"
+        color: var(--primary-background-color)
+    styles:
+      label:
+        - font-size: 12px
+        - color: var(--light-primary-color)  
+      card:
+        - font-size: 16px
+        - height: 120px
+        - padding: 10px 5px 15px 5px
+
+  # Light - Luz do Quarto
+  - entity: light.luz_do_quarto
+    type: "custom:button-card"
+    icon: mdi:lightbulb-outline
+    label: >
+      [[[
+        if (states['light.luz_do_quarto'].state == "on")
+          return states['sensor.uptime_luz_do_quarto'].state;
+      ]]]
+    show_label: true
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+    name: Quarto
+    size: 90%
+    state:
+      - value: "unavailable"
+        color: var(--primary-background-color)
+    styles:
+      label:
+        - font-size: 12px
+        - color: var(--light-primary-color)  
+      card:
+        - font-size: 16px
+        - height: 120px
+        - padding: 10px 5px 15px 5px
+
+  # Light - Luz do Banheiro
+  - entity: light.luz_do_banheiro
+    type: "custom:button-card"
+    icon: mdi:lightbulb-outline
+    label: >
+      [[[
+        if (states['light.luz_do_banheiro'].state == "on")
+          return states['sensor.uptime_luz_do_banheiro'].state;
+      ]]]
+    show_label: true
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+    name: Banheiro
+    size: 90%
+    state:
+      - value: "unavailable"
+        color: var(--primary-background-color)
+    styles:
+      label:
+        - font-size: 12px
+        - color: var(--light-primary-color)  
+      card:
+        - font-size: 16px
+        - height: 120px
+        - padding: 10px 5px 15px 5px
+
+  # Light - Luz do Estúdio
+  - entity: light.luz_do_estudio
+    type: "custom:button-card"
+    icon: mdi:lightbulb-outline
+    label: >
+      [[[
+        if (states['light.luz_do_estudio'].state == "on")
+          return states['sensor.uptime_luz_do_estudio'].state;
+      ]]]
+    show_label: true
+    tap_action:
+      action: toggle
+    hold_action:
+      action: more-info
+    name: Estúdio
+    size: 90%
+    state:
+      - value: "unavailable"
+        color: var(--primary-background-color)
+    styles:
+      label:
+        - font-size: 12px
+        - color: var(--light-primary-color)  
+      card:
+        - font-size: 16px
+        - height: 120px
+        - padding: 10px 5px 15px 5px

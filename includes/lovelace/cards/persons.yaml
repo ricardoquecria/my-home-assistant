@@ -1,0 +1,40 @@
+type: horizontal-stack
+cards:
+
+  # Evellin
+  - type: custom:mod-card
+    style: |
+      ha-card {
+        margin: 0px 10px 0px 0px;
+      }
+    card: 
+      type: glance
+      style: |
+        :host {
+          --paper-item-icon-color: var(--primary-color);
+        font-weight: bold;
+        }
+      entities:
+        - entity: person.evellin_rossi
+
+        - entity: sensor.battery_evi_phone
+          name: iPhone
+
+  # Ricardo
+  - type: custom:mod-card
+    style: |
+      ha-card {
+        margin: 0px 0px 0px 10px;
+      }
+    card: 
+      type: glance
+      style: |
+        :host {
+          --paper-item-icon-color: var(--primary-color);
+        font-weight: bold;
+        }
+      entities:
+        - entity: person.ricardo_correia
+
+        - entity: sensor.battery_rick_phone
+          name: J5 Prime

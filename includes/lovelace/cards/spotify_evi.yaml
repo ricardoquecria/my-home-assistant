@@ -1,0 +1,218 @@
+type: vertical-stack
+cards:
+  - entity: media_player.spotify_evellin_rossi
+    name: Evellin
+    type: custom:mini-media-player
+    info: scroll
+    icon: mdi:spotify
+    artwork: cover
+    background: /local/images/bg_spotify.png
+    scale: 1.2
+    idle_view:
+      when_idle: true
+      when_standby: true
+      when_paused: false
+    hide:
+      power: true
+      runtime: false
+      sound_mode: false
+      power_state: false
+      shuffle: false
+    shortcuts:
+      hide_when_off: true
+      columns: 2 # Max buttons per row
+      buttons:
+        # Start predefined playlist
+        - icon: mdi:spotify
+          type: playlist
+          name: Indie | Evi
+          id: spotify:playlist:5QJRcjB07w2h73ADwwV9kC
+          
+        - icon: mdi:spotify
+          type: playlist
+          name: Aesthetic Life | Evi
+          id: spotify:playlist:6xAEjPZ0UHpWMmTVfyYclU
+          
+        - icon: mdi:spotify
+          type: playlist
+          name: Nossa Playlist | Evi
+          id: spotify:playlist:1wkUavzcTs2RaZ8TnY7sCf
+          
+        - icon: mdi:spotify
+          type: playlist
+          name: Emo 4ever | Evi
+          id: spotify:playlist:36fm5fAUhGUiauUMOg6Tjx
+          
+        - icon: mdi:spotify
+          type: playlist
+          name: Sinestesia | Evi
+          id: spotify:playlist:4WHKzgSze8ySv1ETECdC4E
+          
+        - icon: mdi:spotify
+          type: playlist
+          name: Descobertas | Evi
+          id: spotify:playlist:37i9dQZEVXcMcjakuusPXI
+          
+        - icon: mdi:spotify
+          type: playlist
+          name: Good Vibes | Evi
+          id: spotify:playlist:213SDFNqqh8B939jFo4Hl5
+          
+        - icon: mdi:spotify
+          type: playlist
+          name: Hehehehe | Evi
+          id: spotify:playlist:4N6LmnKDFWFhVv7eQ3SUVM
+          
+        - icon: mdi:spotify
+          type: playlist
+          name: Rock n Roll Baby | Evi
+          id: spotify:playlist:5wwqjVYFakMx56KPRxs7Y1
+
+        - icon: mdi:spotify
+          type: playlist
+          name: Mais tocadas Mundo
+          id: spotify:playlist:37i9dQZEVXbMDoHDwVN2tF
+
+  # Spotify Buttons
+  - type: horizontal-stack
+    cards:
+
+      # Mini
+      - type: custom:mod-card
+        card:
+          type: 'custom:button-card'
+          entity: input_boolean.spotify_evi_mini
+          layout: icon_name
+          name: Mini
+          icon: mdi:spotify
+          size: 60%
+          tap_action:
+            action: call-service
+            service: script.turn_on
+            service_data:
+              entity_id: >
+                [[[
+                  if (states['input_boolean.spotify_evi_mini'].state == "off")
+                    return "script.spotify_evi_start_mini";
+                  return "script.spotify_evi_stop_mini";
+                ]]]
+          styles:
+            grid:
+              - grid-template-areas: '"i n"'
+              - grid-template-columns: 40% 60%
+            icon:
+              - align-self: start
+              - height: 45px
+            card:
+              - padding: 5px 0px 5px 0px
+              - height: 45px
+            name:
+              - justify-self: end
+              - padding-right: 25%
+              - font-weight: 400
+              - font-size: 16px
+
+      # TV
+      - type: custom:mod-card
+        card:
+          type: 'custom:button-card'
+          entity: input_boolean.spotify_evi_tv
+          layout: icon_name
+          name: TV
+          icon: mdi:spotify
+          size: 60%
+          tap_action:
+            action: call-service
+            service: script.turn_on
+            service_data:
+              entity_id: >
+                [[[
+                  if (states['input_boolean.spotify_evi_tv'].state == "off")
+                    return "script.spotify_evi_start_tv";
+                  return "script.spotify_evi_stop_tv";
+                ]]]
+          styles:
+            grid:
+              - grid-template-areas: '"i n"'
+              - grid-template-columns: 40% 60%
+            icon:
+              - align-self: start
+              - height: 45px
+            card:
+              - padding: 5px 0px 5px 0px
+              - height: 45px
+            name:
+              - justify-self: end
+              - padding-right: 25%
+              - font-weight: 400
+              - font-size: 16px
+
+      # PC
+      - type: custom:mod-card
+        card:
+          type: 'custom:button-card'
+          entity: input_boolean.spotify_evi_pc
+          layout: icon_name
+          name: Note
+          icon: mdi:spotify
+          size: 60%
+          tap_action:
+            action: call-service
+            service: script.turn_on
+            service_data:
+              entity_id: >
+                [[[
+                  if (states['input_boolean.spotify_evi_pc'].state == "off")
+                    return "script.spotify_evi_start_pc";
+                  return "script.spotify_evi_stop_pc";
+                ]]]
+          styles:
+            grid:
+              - grid-template-areas: '"i n"'
+              - grid-template-columns: 40% 60%
+            icon:
+              - align-self: start
+              - height: 45px
+            card:
+              - padding: 5px 0px 5px 0px
+              - height: 45px
+            name:
+              - justify-self: end
+              - padding-right: 25%
+              - font-weight: 400
+              - font-size: 16px
+
+      # iPhone
+      - type: custom:mod-card
+        card:
+          type: 'custom:button-card'
+          entity: input_boolean.spotify_evi_phone
+          layout: icon_name
+          name: iPhone
+          icon: mdi:spotify
+          size: 60%
+          tap_action:
+            action: call-service
+            service: script.turn_on
+            service_data:
+              entity_id: >
+                [[[
+                  if (states['input_boolean.spotify_evi_phone'].state == "off")
+                    return "script.spotify_evi_start_phone";
+                  return "script.spotify_evi_stop_phone";
+                ]]]
+          styles:
+            grid:
+              - grid-template-areas: '"i n"'
+              - grid-template-columns: 40% 60%
+            icon:
+              - align-self: start
+              - height: 45px
+            card:
+              - padding: 5px 0px 5px 0px
+              - height: 45px
+            name:
+              - justify-self: end
+              - padding-right: 25%
+              - font-weight: 400
+              - font-size: 16px

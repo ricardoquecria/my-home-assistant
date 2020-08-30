@@ -1,0 +1,30 @@
+
+- url: /local/atomic-calendar-revive.js
+  type: module
+
+# - url: http://192.168.0.17:8000/dist/atomic-calendar-revive.js?v1
+#   type: module
+
+- url: /hacsfiles/lovelace-card-mod/card-mod.js
+  type: module
+
+- url: /hacsfiles/button-card/button-card.js
+  type: module
+
+- url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
+  type: module
+
+- url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
+  type: module
+
+- url: /hacsfiles/custom-header/custom-header.js
+  type: module
+
+- url: /hacsfiles/lovelace-minimalist-card/minimalist-card.js
+  type: js
+
+- url: /hacsfiles/lovelace-layout-card/layout-card.js
+  type: module
+
+- url: /hacsfiles/lovelace-auto-entities/auto-entities.js
+  type: module

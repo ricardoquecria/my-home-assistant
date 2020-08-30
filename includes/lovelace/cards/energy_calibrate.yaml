@@ -1,0 +1,114 @@
+type: vertical-stack
+cards:
+
+  # Título
+  - type: 'custom:button-card'
+    layout: icon_name
+    name: Calibrador dos medidores
+    icon: mdi:tune
+    styles:
+      grid:
+        - grid-template-areas: '"n i"'
+        - grid-template-columns: 1fr 20% 
+      icon:
+        - align-self: end
+        - color: var(--primary-color)
+        - height: 35px
+      card:
+        - padding: 5px
+        - height: 45px
+      name:
+        - color: var(--primary-text-color)
+        - justify-self: start
+        - padding-left: 10%
+        - font-weight: 400
+        - font-size: 20px
+
+  # Calibrador
+  - type: entities
+    style: |
+      :host {
+        --paper-item-icon-color: var(--primary-color);
+      }
+      ha-card {
+        padding: 0px 10px 0px 0px;
+      }
+    show_header_toggle: false
+    entities:
+      - input_select.meter
+      - input_number.meter_value
+
+  - type: horizontal-stack
+    cards:
+
+      # kWh ou Real
+      - type: 'custom:button-card'
+        entity: input_boolean.meter_kwh_or_real
+        layout: icon_name
+        name: kWh
+        label: R$
+        show_label: true
+        icon: >
+          [[[
+            if (states['input_boolean.meter_kwh_or_real'].state == "on")
+              return "mdi:toggle-switch";
+            return "mdi:toggle-switch-off";
+          ]]]
+        size: 100%
+        tap_action:
+          action: toggle
+
+        styles:
+          grid:
+            - grid-template-areas: '"n i l"'
+            - grid-template-columns: 35% 30% 35% 
+          icon:
+            - align-self: middle
+            - height: 80px
+            - color: var(--primary-color)
+          card:
+            - padding: 0px 0px 0px 0px
+            - height: 45px
+          name:
+            - justify-content: end
+            - padding-left: 12%
+            - font-weight: 400
+            - font-size: 16px
+          label:
+            - justify-content: start
+            - padding-right: 12%
+            - font-weight: 400
+            - font-size: 16px
+
+      # Calibrar
+      - type: 'custom:button-card'
+        entity: input_boolean.meter_set
+        layout: icon_name
+        name: Calibrar
+        show_label: false
+        icon: >
+          [[[
+            if (states['input_boolean.meter_set'].state == "on")
+              return "mdi:toggle-switch";
+            return "mdi:toggle-switch-off";
+          ]]]
+        size: 100%
+        tap_action:
+          action: toggle
+
+        styles:
+          grid:
+            - grid-template-areas: '"n i"'
+            - grid-template-columns: 60% 40% 
+          icon:
+            - align-self: end
+            - height: 80px
+            - padding-right: 18%
+          card:
+            - padding: 0px 5px 0px 5px
+            - height: 45px
+          name:
+            - justify-self: start
+            - padding-left: 12%
+            - font-weight: 400
+            - font-size: 16px

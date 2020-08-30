@@ -1,0 +1,11 @@
+  themes_mode:
+    name: Light < > Dark
+    icon: mdi:theme-light-dark
+
+  themes_black:
+    name: Modo Black
+    icon: mdi:brightness-1
+
+  themes_mode_auto:
+    name: Modo automático
+    icon: mdi:autorenew

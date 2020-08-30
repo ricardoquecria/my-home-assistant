@@ -1,0 +1,68 @@
+
+  tv_quarto:
+    name: TV
+    icon: mdi:television
+
+  tv_play:
+    name: Play
+    initial: off
+    icon: mdi:play-pause
+
+  tv_previous:
+    name: Voltar
+    initial: off
+    icon: mdi:skip-previous
+
+  tv_next:
+    name: Próxima
+    initial: off
+    icon: mdi:skip-next
+
+  tv_stop:
+    name: Stop
+    initial: off
+    icon: mdi:stop
+
+
+
+  tv_menos30:
+    name: "-30"
+    initial: off
+    icon: mdi:rewind-30
+
+  tv_menos10:
+    name: "-10"
+    initial: off
+    icon: mdi:rewind-10
+
+  tv_mais10:
+    name: "+10"
+    initial: off
+    icon: mdi:fast-forward-10
+
+  tv_mais30:
+    name: "+30"
+    initial: off
+    icon: mdi:fast-forward-30
+
+
+
+  tv_mute:
+    name: Mute
+    initial: off
+    icon: mdi:volume-off
+
+  tv_vol_menos:
+    name: Diminuir
+    initial: off
+    icon: mdi:volume-minus
+
+  tv_vol_mais:
+    name: Aumentar
+    initial: off
+    icon: mdi:volume-plus
+
+  tv_vol_max:
+    name: Máximo
+    initial: off
+    icon: mdi:volume-high

@@ -1,0 +1,29 @@
+#                                                                      
+#    ####   #####   ######  ######  #####   #####  ######   ####   ##### 
+#   #       #    #  #       #       #    #    #    #       #         #   
+#    ####   #    #  #####   #####   #    #    #    #####    ####     #   
+#        #  #####   #       #       #    #    #    #            #    #   
+#   #    #  #       #       #       #    #    #    #       #    #    #   
+#    ####   #       ######  ######  #####     #    ######   ####     #   
+#                                                                      
+#   O que foi usado?
+#
+#     Sensor Template - https://www.home-assistant.io/integrations/sql
+#
+
+- platform: template
+  sensors:
+
+# Sensor para converter a taxa de download de Megabits em Megabytes
+    speedtest_down_mb:
+      friendly_name: "Speedtest Download MB/s"
+      icon_template: mdi:speedometer
+      unit_of_measurement: 'MB/s'
+      value_template: "{{(states('sensor.speedtest_download') | float / 8) | round(2)}}"
+
+# Sensor para converter a taxa de upload de Megabits em Megabytes
+    speedtest_up_mb:
+      friendly_name: "Speedtest Upload MB/s"
+      icon_template: mdi:speedometer
+      unit_of_measurement: 'MB/s'
+      value_template: "{{(states('sensor.speedtest_upload') | float / 8) | round(2)}}"

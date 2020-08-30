@@ -1,0 +1,41 @@
+  - platform: template
+    switches:
+
+      macbook:
+        friendly_name: MacBook
+        icon_template: "mdi:laptop-mac"
+        value_template: "{% if state_attr('device_tracker.macbook', 'device_status') != 'offline'%}{% set state = true %}{% endif %}{{ state }}"
+        turn_on:
+          service: input_boolean.turn_on
+          data:
+            entity_id: input_boolean.mac_shutdown
+        turn_off:
+          service: input_boolean.turn_off
+          data:
+            entity_id: input_boolean.mac_shutdown
+
+      notebook:
+        friendly_name: Notebook
+        icon_template: "mdi:laptop"
+        value_template: "{% if states('sensor.servidor_online') | float() > 0 %}{% set state = true %}{% endif %}{{ state }}"
+        turn_on:
+          service: input_boolean.turn_on
+          data:
+            entity_id: input_boolean.pc_shutdown
+        turn_off:
+          service: input_boolean.turn_off
+          data:
+            entity_id: input_boolean.pc_shutdown
+
+      tv_quarto:
+        friendly_name: TV do Quarto
+        icon_template: "mdi:television"
+        value_template: "{{ is_state('input_boolean.tv_quarto', 'on') }}"
+        turn_on:
+          service: input_boolean.turn_on
+          data:
+            entity_id: input_boolean.tv_quarto
+        turn_off:
+          service: input_boolean.turn_off
+          data:
+            entity_id: input_boolean.tv_quarto

@@ -1,0 +1,5 @@
+type: custom:minimalist-card
+title: Home Assistant
+entity_primary: sensor.time_full
+entity_secondary: sensor.date_full
+

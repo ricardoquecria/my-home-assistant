@@ -1,0 +1,749 @@
+#
+#      ######      ###     ##     ##  ##        ######## 
+#     ##    ##    ## ##    ##     ##  ##        ##       
+#     ##         ##   ##   ##     ##  ##        ##       
+#     ##        ##     ##  ##     ##  ##        ######   
+#     ##        #########  ##     ##  ##        ##       
+#     ##    ##  ##     ##  ##     ##  ##        ##       
+#      ######   ##     ##   #######   ########  ######## 
+#      _______ _________ ______   _       _________ _______          _________
+#     (       )\__   __/(  __  \ ( (    /|\__   __/(  ____ \|\     /|\__   __/
+#     | () () |   ) (   | (  \  )|  \  ( |   ) (   | (    \/| )   ( |   ) (   
+#     | || || |   | |   | |   ) ||   \ | |   | |   | |      | (___) |   | |   
+#     | |(_)| |   | |   | |   | || (\ \) |   | |   | | ____ |  ___  |   | |   
+#     | |   | |   | |   | |   ) || | \   |   | |   | | \_  )| (   ) |   | |   
+#     | )   ( |___) (___| (__/  )| )  \  |___) (___| (___) || )   ( |   | |   
+#     |/     \|\_______/(______/ |/    )_)\_______/(_______)|/     \|   )_(   
+#      _______  _______  _______  _______  _______  _       
+#     (  ____ \(  ___  )(  ____ \(  ____ )(  ____ \( \      
+#     | (    \/| (   ) || (    \/| (    )|| (    \/| (      
+#     | |      | |   | || (_____ | (____)|| (__    | |      
+#     | | ____ | |   | |(_____  )|  _____)|  __)   | |      
+#     | | \_  )| |   | |      ) || (      | (      | |      
+#     | (___) || (___) |/\____) || )      | (____/\| (____/\
+#     (_______)(_______)\_______)|/       (_______/(_______/
+#
+#     ########  ##     ##  ########  ##     ##  ######## 
+#        ##     ##     ##  ##        ###   ###  ##       
+#        ##     ##     ##  ##        #### ####  ##       
+#        ##     #########  ######    ## ### ##  ######   
+#        ##     ##     ##  ##        ##     ##  ##       
+#        ##     ##     ##  ##        ##     ##  ##       
+#        ##     ##     ##  ########  ##     ##  ######## 
+#
+#     Created by Ricardo Correia for the Home Assistant Brasil community
+#     Beta
+#
+#     I want to ask only 2 things for those who benefit from these themes:
+#
+#     1) Join the HABR community on Discord: ihabr.ml
+#     2) Follow my creative studio on instagram: caulecriativo.com
+#
+#     ricardo.art.br
+#     github.com/orickcorreia
+#
+#     Make good use of the themes =)
+#
+#
+
+
+
+Caule Evi:
+
+  # Color palette
+  color1: "#3C5E7D"
+  color2: "#5D8CA8"
+  # color3: "#F4D2B4"
+  # color4: "#000000" 
+  # color5: "#000000"
+  bg: "#EAE1DF"
+  card: '#D0B4A7'
+  side: "#242526"
+  line: "#D1D1D9"
+  text1: "#4F4A49"
+  text2: "#EAE1DF"
+  disabled: "#968D89"
+  error: "#cf365a"
+
+  # Change the value below 8px to 0px to remove the rounded corners
+  ha-card-border-radius: "10px"
+  ha-card-box-shadow: 'inset 0px 0px 0px 0px var(--divider-color)'
+  # lovelace-background: 'linear-gradient(135deg, #141415 0%, #141415 100%)'
+ 
+  # Main colors
+  primary-color: var(--color1) # Menus ativo de configurações, hacs e supervisor - links profile - bg player - bolinha slide light - botões
+  light-primary-color: var(--color3, var(--color2)) # avatar profile
+  graph-color: var(--color1) # graph line
+  primary-background-color: var(--bg) # bgs em todas páginas, menos em tabelas - bg do logo
+  divider-color: var(--line) # linhas de divisão do sidebar
+  disabled-color: var(--disabled) # core de icones de interruptores desativados + sensores
+  ha-card-background: var(--card) # Cores dos cards gerais - Cor do background do profile
+  card-background-color: var(--card) # background da sidebar + header das configurações, supervisor e HACS
+
+  # Header colors
+  app-header-background-color: var(--card) # header de todas as páginas, menos das configurações
+  app-header-text-color: var(--text1)  # Titulos de headers
+  ch-active-tab-color: var(--text1) # Texto ou icone da tab ativa
+  ch-all-tabs-color: var(--bg, var(--color1)) # Todas as tabs
+  ch-background: var(--card) # header apenas dos dashboards
+  ch-notification-dot-color: var(--color3, var(--color1))  # Bolinha de notificação no celular
+  ch-tab-indicator-color: var(--color3, var(--color1))  # Indicador do menu header
+
+  # Sidebar colors
+  sidebar-icon-color: var(--color1) # icons da barra lateral - seta pra voltar a página - Lupa HACS - Icon opções HASCS
+  sidebar-text-color: var(--text1)  # Textos da barra lateral - Textos do menu header Configurações
+  sidebar-selected-icon-color: var(--color1) # Icone selecionado na barra lateral
+  sidebar-selected-text-color: var(--color1) # Texto selecionado na barra lateral
+  sidebar-background-color:  var(--card)
+  scrollbar-thumb-color: var(--color2) # Scrollbar da barra lateral
+
+  # Icons colors
+  state-icon-color: var(--disabled) # Icones desligados - Icones de gráficos - icones sensores glance
+  state-icon-active-color: var(--color1) # Apenas entidades ativadas
+  state-icon-unavailable-color: var(--bg) # Apenas entidades desativadas
+
+  # Toggle button colors
+  switch-checked-color: var(--color1, var(--color2)) # Cor do circulo transparente que aparece ao redor do botão
+  switch-unchecked-color: var(--color3, var(--color2)) # Cor do circulo transparente que aparece ao redor do botão
+  switch-checked-button-color: var(--color1, var(--color2)) # Botão ativo
+  switch-checked-track-color: var(--color1, var(--color2)) # Trilha do botão ativo
+  switch-unchecked-button-color: var(--color3, var(--color2)) # Botão inativo
+  switch-unchecked-track-color: var(--color3, var(--color2))  # Trilha do botão inativo
+
+ # Text colors
+  primary-text-color: var(--text1) # Tem que ser em hexadecimal - Principais textos - Linhas de tabelas - Clogo - Iniciais RC - Icones token
+  secondary-text-color: var(--color1) # Textos secundários - Icones list configurações - Detalhes do input_select, input_number, 
+  ha-card-header-color: var(--text1)  #Title card entities
+  text-primary-color: var(--text2) # Numero de notificações - Tags de categorias, checkbox e novidades no HACS - Player
+  disabled-text-color: var(--color3, var(--disabled)) # Linha slider Lights - Setinha input select - icones desativados - checkbox lista entidades
+
+  # Papers slider colors
+  paper-slider-knob-color: var(--color1) # Bolinha slider
+  paper-slider-knob-start-color: var(--paper-slider-knob-color) # Bolinha slider no começo
+  paper-slider-pin-color: var(--color3, var(--disabled)) # Background do pin que aparece quando desloca o slider
+  paper-slider-active-color: var(--paper-slider-knob-color)  # Cor da linha ativa do slider
+  paper-slider-container-color: var(--color3, var(--disabled)) # Cor da linha desativada do slider
+
+  # Settins and colors of Mini Media Player
+  mini-media-player-icon-color: var(--color1) # Icone principal em modo standby
+  mini-media-player-accent-color: var(--color3, var(--color2)) # Barra de progresso e icone de power
+  mini-media-player-progress-height: 8px # Altura da barra de progresso
+  # mini-media-player-button-color: var(--color3, var(--color2)) # Botões complementares
+
+  # Gauge colors
+  label-badge-blue: var(--color3, var(--color2)) # Cores do gounge - Cor da borda dos badges de binary-sensor
+  label-badge-green: var(--color3, var(--color2)) # Cores do gounge
+  label-badge-red: var(--color1) # Cores do gounge - Cor da borda dos badges de sensores
+  label-badge-yellow: var(--color2) # Cores do gounge
+
+  # Labels colors
+  label-badge-background-color: var(--card) # Bg interno dos badges
+  label-badge-text-color: var(--text1) # Textos e icones dentro dos badges 
+
+  # Table colors
+  table-row-background-color: var(--card) # Cor 1 da tabela de ferramentas do desenvolver
+  table-row-alternative-background-color: var(--bg) # Cor 2 da tabela de ferramentas do desenvolver
+  data-table-background-color: var(--bg) # Tablela de lista de entidades, dispositivos, etc.
+
+  # More Details color
+  secondary-background-color: var(--color3, var(--color2)) # Mouse hover lista
+
+  # More Cards colors
+  paper-card-background-color: var(--card) # antigo background dos cards
+  paper-listbox-background-color: var(--bg) #Lista do input select - lista no card de integrações - 
+
+  # Dev text box
+  paper-dialog-background-color: var(--card) # background do numero de linhas DEV
+  paper-dialog-color: var(--color1) # cor do text do numero de linhas DEV
+  paper-tab-ink: var(--color3, var(--color1)) # cor do overlay ao clicar
+
+  # Error color
+  error-color: var(--error) # Botões de SAIR - 
+  error-state-color: var(--error)
+
+  # HACS
+  hacs-badge-color: var(--color3, var(--color2))
+  link-text-color: var(--color3, var(--color2)) # Links dentro do HACS
+  markdown-code-background-color: var(--bg) # Caixa de código dentro dos repositórios do HACS
+  google-blue-500: var(--color1) # Borda de Novo repositório
+  accent-color: var(--color3, var(--color2))
+  hacs-chip-color: var(--color1) # Tag com categoria HACS
+
+  #Animated icons
+  weather-icon-clear-night: url("/hacsfiles/themes/caule-theme-test/clear-night.svg")
+  weather-icon-cloudy: url("/hacsfiles/themes/caule-theme-test/cloudy.svg")
+  weather-icon-fog: url("/hacsfiles/themes/caule-theme-test/fog.svg")
+  weather-icon-lightning: url("/hacsfiles/themes/caule-theme-test/lightning.svg")
+  weather-icon-lightning-rainy: url("/hacsfiles/themes/caule-theme-test/lightning-rainy.svg")
+  weather-icon-partlycloudy: url("/hacsfiles/themes/caule-theme-test/partlycloudy.svg")
+  weather-icon-pouring: url("/hacsfiles/themes/caule-theme-test/pouring.svg")
+  weather-icon-rainy: url("/hacsfiles/themes/caule-theme-test/rainy.svg")
+  weather-icon-hail: url("/hacsfiles/themes/caule-theme-test/hail.svg")
+  weather-icon-snowy: url("/hacsfiles/themes/caule-theme-test/snowy.svg")
+  weather-icon-snowy-rainy: url("/hacsfiles/themes/caule-theme-test/snowy-rainy.svg")
+  weather-icon-sunny: 'url("/hacsfiles/themes/caule-theme-test/sunny.svg")'
+  weather-icon-windy: url("/hacsfiles/themes/caule-theme-test/windy.svg")
+  weather-icon-windy-variant: url("/hacsfiles/themes/caule-theme-test/windy-variant.svg")
+  weather-icon-exceptional: url("/hacsfiles/themes/caule-theme-test/exceptional.svg")
+
+
+Caule Facebook:
+
+  # Color palette
+  color1: "#2D88FF"
+  color2: "#80C6FF"
+  # color3: "#F4D2B4"
+  # color4: "#000000" 
+  # color5: "#000000"
+  bg: "#18191A"
+  card: 'linear-gradient(135deg, #242526 0%, #18191A 100%)'
+  side: "#242526"
+  line: "#3A3B3C"
+  text1: "#A7AAAF"
+  text2: "#616365"
+  disabled: "#B0B3B8"
+  error: "#cf365a"
+
+  # Change the value below 8px to 0px to remove the rounded corners
+  ha-card-border-radius: "10px"
+  ha-card-box-shadow: 'inset 0px 0px 0px 0px var(--divider-color)'
+  # lovelace-background: 'linear-gradient(135deg, #141415 0%, #141415 100%)'
+ 
+  # Main colors
+  primary-color: var(--color1) # Menus ativo de configurações, hacs e supervisor - links profile - bg player - bolinha slide light - botões
+  light-primary-color: var(--color3, var(--color2)) # avatar profile
+  graph-color: var(--color1) # graph line
+  primary-background-color: var(--bg) # bgs em todas páginas, menos em tabelas - bg do logo
+  divider-color: var(--line) # linhas de divisão do sidebar
+  disabled-color: var(--disabled) # core de icones de interruptores desativados + sensores
+  ha-card-background: var(--card) # Cores dos cards gerais - Cor do background do profile
+  card-background-color: var(--bg) # background da sidebar + header das configurações, supervisor e HACS
+
+  # Header colors
+  app-header-background-color: var(--card) # header de todas as páginas, menos das configurações
+  app-header-text-color: var(--text1)  # Titulos de headers
+  ch-active-tab-color: var(--text1) # Texto ou icone da tab ativa
+  ch-all-tabs-color: var(--color3, var(--color1)) # Todas as tabs
+  ch-background: var(--card) # header apenas dos dashboards
+  ch-notification-dot-color: var(--color3, var(--color1))  # Bolinha de notificação no celular
+  ch-tab-indicator-color: var(--color3, var(--color1))  # Indicador do menu header
+
+  # Sidebar colors
+  sidebar-icon-color: var(--disabled) # icons da barra lateral - seta pra voltar a página - Lupa HACS - Icon opções HASCS
+  sidebar-text-color: var(--text1)  # Textos da barra lateral - Textos do menu header Configurações
+  sidebar-selected-icon-color: var(--color1) # Icone selecionado na barra lateral
+  sidebar-selected-text-color: var(--color1) # Texto selecionado na barra lateral
+  sidebar-background-color:  var(--side)
+  scrollbar-thumb-color: var(--color2) # Scrollbar da barra lateral
+
+  # Icons colors
+  state-icon-color: var(--disabled) # Icones desligados - Icones de gráficos - icones sensores glance
+  state-icon-active-color: var(--color1) # Apenas entidades ativadas
+  state-icon-unavailable-color: var(--bg) # Apenas entidades desativadas
+
+  # Toggle button colors
+  switch-checked-color: var(--color1, var(--color2)) # Cor do circulo transparente que aparece ao redor do botão
+  switch-unchecked-color: var(--color3, var(--color2)) # Cor do circulo transparente que aparece ao redor do botão
+  switch-checked-button-color: var(--color1, var(--color2)) # Botão ativo
+  switch-checked-track-color: var(--color1, var(--color2)) # Trilha do botão ativo
+  switch-unchecked-button-color: var(--color3, var(--color2)) # Botão inativo
+  switch-unchecked-track-color: var(--color3, var(--color2))  # Trilha do botão inativo
+
+ # Text colors
+  primary-text-color: var(--text1) # Tem que ser em hexadecimal - Principais textos - Linhas de tabelas - Clogo - Iniciais RC - Icones token
+  secondary-text-color: var(--color1) # Textos secundários - Icones list configurações - Detalhes do input_select, input_number, 
+  ha-card-header-color: var(--text1)  #Title card entities
+  text-primary-color: var(--text2) # Numero de notificações - Tags de categorias, checkbox e novidades no HACS - Player
+  disabled-text-color: var(--color3, var(--disabled)) # Linha slider Lights - Setinha input select - icones desativados - checkbox lista entidades
+
+  # Papers slider colors
+  paper-slider-knob-color: var(--color1) # Bolinha slider
+  paper-slider-knob-start-color: var(--paper-slider-knob-color) # Bolinha slider no começo
+  paper-slider-pin-color: var(--color3, var(--disabled)) # Background do pin que aparece quando desloca o slider
+  paper-slider-active-color: var(--paper-slider-knob-color)  # Cor da linha ativa do slider
+  paper-slider-container-color: var(--color3, var(--disabled)) # Cor da linha desativada do slider
+
+  # Settins and colors of Mini Media Player
+  mini-media-player-icon-color: var(--color1) # Icone principal em modo standby
+  mini-media-player-accent-color: var(--color3, var(--color2)) # Barra de progresso e icone de power
+  mini-media-player-progress-height: 8px # Altura da barra de progresso
+  # mini-media-player-button-color: var(--color3, var(--color2)) # Botões complementares
+
+  # Gauge colors
+  label-badge-blue: var(--color3, var(--color2)) # Cores do gounge - Cor da borda dos badges de binary-sensor
+  label-badge-green: var(--color3, var(--color2)) # Cores do gounge
+  label-badge-red: var(--color1) # Cores do gounge - Cor da borda dos badges de sensores
+  label-badge-yellow: var(--color2) # Cores do gounge
+
+  # Labels colors
+  label-badge-background-color: var(--card) # Bg interno dos badges
+  label-badge-text-color: var(--text1) # Textos e icones dentro dos badges 
+
+  # Table colors
+  table-row-background-color: var(--card) # Cor 1 da tabela de ferramentas do desenvolver
+  table-row-alternative-background-color: var(--bg) # Cor 2 da tabela de ferramentas do desenvolver
+  data-table-background-color: var(--bg) # Tablela de lista de entidades, dispositivos, etc.
+
+  # More Details color
+  secondary-background-color: var(--color3, var(--color2)) # Mouse hover lista
+
+  # More Cards colors
+  paper-card-background-color: var(--bg) # antigo background dos cards
+  paper-listbox-background-color: var(--bg) #Lista do input select - lista no card de integrações - 
+
+  # Dev text box
+  paper-dialog-background-color: var(--card) # background do numero de linhas DEV
+  paper-dialog-color: var(--color1) # cor do text do numero de linhas DEV
+  paper-tab-ink: var(--color3, var(--color1)) # cor do overlay ao clicar
+
+  # Error color
+  error-color: var(--error) # Botões de SAIR - 
+  error-state-color: var(--error)
+
+  # HACS
+  hacs-badge-color: var(--color3, var(--color2))
+  link-text-color: var(--color3, var(--color2)) # Links dentro do HACS
+  markdown-code-background-color: var(--bg) # Caixa de código dentro dos repositórios do HACS
+  google-blue-500: var(--color1) # Borda de Novo repositório
+  accent-color: var(--color3, var(--color2))
+  hacs-chip-color: var(--color1) # Tag com categoria HACS
+
+  #Animated icons
+  weather-icon-clear-night: url("/hacsfiles/themes/caule-theme-test/clear-night.svg")
+  weather-icon-cloudy: url("/hacsfiles/themes/caule-theme-test/cloudy.svg")
+  weather-icon-fog: url("/hacsfiles/themes/caule-theme-test/fog.svg")
+  weather-icon-lightning: url("/hacsfiles/themes/caule-theme-test/lightning.svg")
+  weather-icon-lightning-rainy: url("/hacsfiles/themes/caule-theme-test/lightning-rainy.svg")
+  weather-icon-partlycloudy: url("/hacsfiles/themes/caule-theme-test/partlycloudy.svg")
+  weather-icon-pouring: url("/hacsfiles/themes/caule-theme-test/pouring.svg")
+  weather-icon-rainy: url("/hacsfiles/themes/caule-theme-test/rainy.svg")
+  weather-icon-hail: url("/hacsfiles/themes/caule-theme-test/hail.svg")
+  weather-icon-snowy: url("/hacsfiles/themes/caule-theme-test/snowy.svg")
+  weather-icon-snowy-rainy: url("/hacsfiles/themes/caule-theme-test/snowy-rainy.svg")
+  weather-icon-sunny: 'url("/hacsfiles/themes/caule-theme-test/sunny.svg")'
+  weather-icon-windy: url("/hacsfiles/themes/caule-theme-test/windy.svg")
+  weather-icon-windy-variant: url("/hacsfiles/themes/caule-theme-test/windy-variant.svg")
+  weather-icon-exceptional: url("/hacsfiles/themes/caule-theme-test/exceptional.svg")
+
+
+Caule Sunset Pastel:
+
+  # Color palette
+  color1: "#F38D8F"
+  color2: "#F2B8A3"
+  color3: "#F4D2B4"
+  color4: "#000000" 
+  color5: "#000000"
+  bg: "#2D6074"
+  card: "#2E6A7C"
+  line: "#2E6A7C"
+  text1: "#C5E9EF"
+  text2: "#E8F7F9"
+  disabled: "#609FAD"
+  error: "#cf365a"
+
+  # Change the value below 8px to 0px to remove the rounded corners
+  ha-card-border-radius: "10px"
+  ha-card-box-shadow: 'inset 0px 0px 0px 0px var(--divider-color)'
+  # lovelace-background: 'linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)' # Background com gradient
+ 
+  # Main colors
+  primary-color: var(--color1) # Menus ativo de configurações, hacs e supervisor - links profile - bg player - bolinha slide light - botões
+  light-primary-color: var(--color3, var(--color2)) # avatar profile
+  graph-color: var(--color1) # graph line
+  primary-background-color: var(--bg) # bgs em todas páginas, menos em tabelas - bg do logo
+  divider-color: var(--line) # linhas de divisão do sidebar
+  disabled-color: var(--disabled) # core de icones de interruptores desativados + sensores
+  ha-card-background: var(--card) # Cores dos cards gerais - Cor do background do profile
+  card-background-color: var(--bg) # background da sidebar + header das configurações, supervisor e HACS
+
+  # Header colors
+  app-header-background-color: var(--card) # header de todas as páginas, menos das configurações
+  app-header-text-color: var(--text2)  # Titulos de headers
+  ch-active-tab-color: var(--text2) # Texto ou icone da tab ativa
+  ch-all-tabs-color: var(--color3) # Todas as tabs
+  ch-background: var(--color1) # header apenas dos dashboards
+  ch-notification-dot-color: var(--color3, var(--color1))  # Bolinha de notificação no celular
+  ch-tab-indicator-color: var(--color3, var(--color1))  # Indicador do menu header
+
+  # Sidebar colors
+  sidebar-icon-color: var(--color1) # icons da barra lateral - seta pra voltar a página - Lupa HACS - Icon opções HASCS
+  sidebar-text-color: var(--text1)  # Textos da barra lateral - Textos do menu header Configurações
+  sidebar-selected-icon-color: var(--color3) # Icone selecionado na barra lateral
+  sidebar-selected-text-color: var(--color2) # Texto selecionado na barra lateral
+  sidebar-background-color:  var(--card)
+  scrollbar-thumb-color: var(--color2) # Scrollbar da barra lateral
+
+  # Icons colors
+  state-icon-color: var(--disabled) # Icones desligados - Icones de gráficos - icones sensores glance
+  state-icon-active-color: var(--color1) # Apenas entidades ativadas
+  state-icon-unavailable-color: var(--bg) # Apenas entidades desativadas
+
+  # Toggle button colors
+  switch-checked-color: var(--color1, var(--color2)) # Cor do circulo transparente que aparece ao redor do botão
+  switch-unchecked-color: var(--color3, var(--color2)) # Cor do circulo transparente que aparece ao redor do botão
+  switch-checked-button-color: var(--color1, var(--color2)) # Botão ativo
+  switch-checked-track-color: var(--color1, var(--color2)) # Trilha do botão ativo
+  switch-unchecked-button-color: var(--color3, var(--color2)) # Botão inativo
+  switch-unchecked-track-color: var(--color3, var(--color2))  # Trilha do botão inativo
+
+ # Text colors
+  primary-text-color: var(--text1) # Tem que ser em hexadecimal - Principais textos - Linhas de tabelas - Clogo - Iniciais RC - Icones token
+  secondary-text-color: var(--color1) # Textos secundários - Icones list configurações - Detalhes do input_select, input_number, 
+  ha-card-header-color: var(--text1)  #Title card entities
+  text-primary-color: var(--text2) # Numero de notificações - Tags de categorias, checkbox e novidades no HACS - Player
+  disabled-text-color: var(--color3, var(--disabled)) # Linha slider Lights - Setinha input select - icones desativados - checkbox lista entidades
+
+  # Papers slider colors
+  paper-slider-knob-color: var(--color1) # Bolinha slider
+  paper-slider-knob-start-color: var(--paper-slider-knob-color) # Bolinha slider no começo
+  paper-slider-pin-color: var(--color2, var(--disabled)) # Background do pin que aparece quando desloca o slider
+  paper-slider-active-color: var(--paper-slider-knob-color)  # Cor da linha ativa do slider
+  paper-slider-container-color: var(--color3, var(--disabled)) # Cor da linha desativada do slider
+
+  # Settins and colors of Mini Media Player
+  mini-media-player-icon-color: var(--color1) # Icone principal em modo standby
+  mini-media-player-accent-color: var(--color3, var(--color2)) # Barra de progresso e icone de power
+  mini-media-player-progress-height: 8px # Altura da barra de progresso
+  # mini-media-player-button-color: var(--color3, var(--color2)) # Botões complementares
+
+  # Gauge colors
+  label-badge-blue: var(--color3, var(--color2)) # Cores do gounge - Cor da borda dos badges de binary-sensor
+  label-badge-green: var(--color3, var(--color2)) # Cores do gounge
+  label-badge-red: var(--color1) # Cores do gounge - Cor da borda dos badges de sensores
+  label-badge-yellow: var(--color2) # Cores do gounge
+
+  # Labels colors
+  label-badge-background-color: var(--card) # Bg interno dos badges
+  label-badge-text-color: var(--text1) # Textos e icones dentro dos badges 
+
+  # Table colors
+  table-row-background-color: var(--card) # Cor 1 da tabela de ferramentas do desenvolver
+  table-row-alternative-background-color: var(--bg) # Cor 2 da tabela de ferramentas do desenvolver
+  data-table-background-color: var(--bg) # Tablela de lista de entidades, dispositivos, etc.
+
+  # More Details color
+  secondary-background-color: var(--color3, var(--color2)) # Mouse hover lista
+
+  # More Cards colors
+  paper-card-background-color: var(--ha-card-background) # antigo background dos cards
+  paper-listbox-background-color: var(--bg) #Lista do input select - lista no card de integrações - 
+
+  # Dev text box
+  paper-dialog-background-color: var(--card) # background do numero de linhas DEV
+  paper-dialog-color: var(--color1) # cor do text do numero de linhas DEV
+  paper-tab-ink: var(--color3, var(--color1)) # cor do overlay ao clicar
+
+  # Error color
+  error-color: var(--error) # Botões de SAIR - 
+  error-state-color: var(--error)
+
+  # HACS
+  hacs-badge-color: var(--color3, var(--color2))
+  link-text-color: var(--color3, var(--color2)) # Links dentro do HACS
+  markdown-code-background-color: var(--bg) # Caixa de código dentro dos repositórios do HACS
+  google-blue-500: var(--color1) # Borda de Novo repositório
+  accent-color: var(--color3, var(--color2))
+  hacs-chip-color: var(--color1) # Tag com categoria HACS
+
+  #Animated icons
+  weather-icon-clear-night: url("/hacsfiles/themes/caule-theme-test/clear-night.svg")
+  weather-icon-cloudy: url("/hacsfiles/themes/caule-theme-test/cloudy.svg")
+  weather-icon-fog: url("/hacsfiles/themes/caule-theme-test/fog.svg")
+  weather-icon-lightning: url("/hacsfiles/themes/caule-theme-test/lightning.svg")
+  weather-icon-lightning-rainy: url("/hacsfiles/themes/caule-theme-test/lightning-rainy.svg")
+  weather-icon-partlycloudy: url("/hacsfiles/themes/caule-theme-test/partlycloudy.svg")
+  weather-icon-pouring: url("/hacsfiles/themes/caule-theme-test/pouring.svg")
+  weather-icon-rainy: url("/hacsfiles/themes/caule-theme-test/rainy.svg")
+  weather-icon-hail: url("/hacsfiles/themes/caule-theme-test/hail.svg")
+  weather-icon-snowy: url("/hacsfiles/themes/caule-theme-test/snowy.svg")
+  weather-icon-snowy-rainy: url("/hacsfiles/themes/caule-theme-test/snowy-rainy.svg")
+  weather-icon-sunny: 'url("/hacsfiles/themes/caule-theme-test/sunny.svg")'
+  weather-icon-windy: url("/hacsfiles/themes/caule-theme-test/windy.svg")
+  weather-icon-windy-variant: url("/hacsfiles/themes/caule-theme-test/windy-variant.svg")
+  weather-icon-exceptional: url("/hacsfiles/themes/caule-theme-test/exceptional.svg")
+
+
+Caule Purple Green:
+
+  # Color palette
+  color1: "#9B44C7"
+  color2: "#c892e7"
+  color3: "#45C73A"
+  color4: "#FF0000" 
+  color5: "#FF0000"
+  bg: "#EDEDED"
+  card: "#FAFAFA"
+  disabled: "#7B777F"
+  line: "#E6E5E401"
+  text1: "#7B777F"
+  text2: "#EDEDED"
+  error: "#cf365a"
+
+  # Change the value below 8px to 0px to remove the rounded corners
+  ha-card-border-radius: "10px"
+  ha-card-box-shadow: 'inset 0px 0px 0px 0px var(--divider-color)'
+  # lovelace-background: 'linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)' # Background com gradient
+ 
+  # Main colors
+  primary-color: var(--color1) # Menus ativo de configurações, hacs e supervisor - links profile - bg player - bolinha slide light - botões
+  light-primary-color: var(--color3, var(--color2)) # avatar profile
+  graph-color: var(--color1) # graph line
+  primary-background-color: var(--bg) # bgs em todas páginas, menos em tabelas - bg do logo
+  divider-color: var(--line) # linhas de divisão do sidebar
+  disabled-color: var(--disabled) # core de icones de interruptores desativados + sensores
+  ha-card-background: var(--card) # Cores dos cards gerais - Cor do background do profile
+
+  # Header colors
+  app-header-background-color: var(--card) # header de todas as páginas, menos das configurações
+  app-header-text-color: var(--text1)  # Titulos de headers
+  ch-active-tab-color: var(--text1) # Texto ou icone da tab ativa
+  ch-all-tabs-color: var(--color1) # Todas as tabs
+  ch-background: var(--card) # header apenas dos dashboards
+  ch-notification-dot-color: var(--color3, var(--color1))  # Bolinha de notificação no celular
+  ch-tab-indicator-color: var(--color3, var(--color1))  # Indicador do menu header
+
+  # Sidebar colors
+  sidebar-icon-color: var(--disabled) # icons da barra lateral - seta pra voltar a página - Lupa HACS - Icon opções HASCS
+  sidebar-text-color: var(--text1)  # Textos da barra lateral - Textos do menu header Configurações
+  sidebar-selected-icon-color: var(--color1) # Icone selecionado na barra lateral
+  sidebar-selected-text-color: var(--color1) # Texto selecionado na barra lateral
+  sidebar-background-color:  var(--card)
+  scrollbar-thumb-color: var(--color3) # Scrollbar da barra lateral
+  card-background-color: var(--bg) # background da sidebar + header das configurações, supervisor e HACS
+
+  # Icons colors
+  state-icon-color: var(--disabled) # Icones desligados - Icones de gráficos - icones sensores glance
+  state-icon-active-color: var(--color1) # Apenas entidades ativadas
+  state-icon-unavailable-color: var(--bg) # Apenas entidades desativadas
+
+  # Toggle button colors
+  switch-checked-color: var(--color1, var(--color2)) # Cor do circulo transparente que aparece ao redor do botão
+  switch-unchecked-color: var(--color3, var(--color2)) # Cor do circulo transparente que aparece ao redor do botão
+  switch-checked-button-color: var(--color1, var(--color2)) # Botão ativo
+  switch-checked-track-color: var(--color1, var(--color2)) # Trilha do botão ativo
+  switch-unchecked-button-color: var(--color3, var(--color2)) # Botão inativo
+  switch-unchecked-track-color: var(--color3, var(--color2))  # Trilha do botão inativo
+
+ # Text colors
+  primary-text-color: var(--text1) # Tem que ser em hexadecimal - Principais textos - Linhas de tabelas - Clogo - Iniciais RC - Icones token
+  secondary-text-color: var(--color1) # Textos secundários - Icones list configurações - Detalhes do input_select, input_number, 
+  ha-card-header-color: var(--text1)  #Title card entities
+  text-primary-color: var(--text2) # Numero de notificações - Tags de categorias, checkbox e novidades no HACS - Player
+  disabled-text-color: var(--color3, var(--disabled)) # Linha slider Lights - Setinha input select - icones desativados - checkbox lista entidades
+
+  # Papers slider colors
+  paper-slider-knob-color: var(--color1) # Bolinha slider
+  paper-slider-knob-start-color: var(--paper-slider-knob-color) # Bolinha slider no começo
+  paper-slider-pin-color: var(--color3, var(--disabled)) # Background do pin que aparece quando desloca o slider
+  paper-slider-active-color: var(--paper-slider-knob-color)  # Cor da linha ativa do slider
+  paper-slider-container-color: var(--color3, var(--disabled)) # Cor da linha desativada do slider
+
+  # Settins and colors of Mini Media Player
+  mini-media-player-icon-color: var(--color1) # Icone principal em modo standby
+  mini-media-player-accent-color: var(--color3, var(--color2)) # Barra de progresso e icone de power
+  mini-media-player-progress-height: 8px # Altura da barra de progresso
+  # mini-media-player-button-color: var(--color3, var(--color2)) # Botões complementares
+
+  # Gauge colors
+  label-badge-blue: var(--color3, var(--color2)) # Cores do gounge - Cor da borda dos badges de binary-sensor
+  label-badge-green: var(--color3, var(--color2)) # Cores do gounge
+  label-badge-red: var(--color1) # Cores do gounge - Cor da borda dos badges de sensores
+  label-badge-yellow: var(--color2) # Cores do gounge
+
+  # Labels colors
+  label-badge-background-color: var(--card) # Bg interno dos badges
+  label-badge-text-color: var(--text1) # Textos e icones dentro dos badges 
+
+  # Table colors
+  table-row-background-color: var(--card) # Cor 1 da tabela de ferramentas do desenvolver
+  table-row-alternative-background-color: var(--bg) # Cor 2 da tabela de ferramentas do desenvolver
+  data-table-background-color: var(--bg) # Tablela de lista de entidades, dispositivos, etc.
+
+  # More Details color
+  secondary-background-color: var(--color3, var(--color2)) # Mouse hover lista
+
+  # More Cards colors
+  paper-card-background-color: var(--ha-card-background) # antigo background dos cards
+  paper-listbox-background-color: var(--bg) #Lista do input select - lista no card de integrações - 
+
+  # Dev text box
+  paper-dialog-background-color: var(--card) # background do numero de linhas DEV
+  paper-dialog-color: var(--color1) # cor do text do numero de linhas DEV
+  paper-tab-ink: var(--color3, var(--color1)) # cor do overlay ao clicar
+
+  # Error color
+  error-color: var(--error) # Botões de SAIR - 
+  error-state-color: var(--error)
+
+  # HACS
+  hacs-badge-color: var(--color3, var(--color2))
+  link-text-color: var(--color3, var(--color2)) # Links dentro do HACS
+  markdown-code-background-color: var(--bg) # Caixa de código dentro dos repositórios do HACS
+  google-blue-500: var(--color1) # Borda de Novo repositório
+  accent-color: var(--color3, var(--color2))
+  hacs-chip-color: var(--color1) # Tag com categoria HACS
+
+  #Animated icons
+  weather-icon-clear-night: url("/hacsfiles/themes/caule-theme-test/clear-night.svg")
+  weather-icon-cloudy: url("/hacsfiles/themes/caule-theme-test/cloudy.svg")
+  weather-icon-fog: url("/hacsfiles/themes/caule-theme-test/fog.svg")
+  weather-icon-lightning: url("/hacsfiles/themes/caule-theme-test/lightning.svg")
+  weather-icon-lightning-rainy: url("/hacsfiles/themes/caule-theme-test/lightning-rainy.svg")
+  weather-icon-partlycloudy: url("/hacsfiles/themes/caule-theme-test/partlycloudy.svg")
+  weather-icon-pouring: url("/hacsfiles/themes/caule-theme-test/pouring.svg")
+  weather-icon-rainy: url("/hacsfiles/themes/caule-theme-test/rainy.svg")
+  weather-icon-hail: url("/hacsfiles/themes/caule-theme-test/hail.svg")
+  weather-icon-snowy: url("/hacsfiles/themes/caule-theme-test/snowy.svg")
+  weather-icon-snowy-rainy: url("/hacsfiles/themes/caule-theme-test/snowy-rainy.svg")
+  weather-icon-sunny: 'url("/hacsfiles/themes/caule-theme-test/sunny.svg")'
+  weather-icon-windy: url("/hacsfiles/themes/caule-theme-test/windy.svg")
+  weather-icon-windy-variant: url("/hacsfiles/themes/caule-theme-test/windy-variant.svg")
+  weather-icon-exceptional: url("/hacsfiles/themes/caule-theme-test/exceptional.svg")
+  
+
+Caule Bkp:
+
+  # Color palette
+  cyan: "#8be9fe"
+  yellow: "#f1fa8c"
+  pink: "#fb7ac6"
+  purple: "#bd93f9"
+  gray: "#5c6992"
+  bg1: "#282a36"
+  bg2: "#21212c"
+  dark: "#111111"
+  light: "#dde7ec"
+  white: "#FFFFFF"
+  red: "#cf365a"
+
+
+
+  # Change the value below 8px to 0px to remove the rounded corners
+  ha-card-border-radius: "10px"
+  ha-card-box-shadow: 'inset 0px 0px 0px 0px var(--divider-color)'
+# repeating-linear-gradient(angle | to side-or-corner, color-stop1, color-stop2, ...)
+
+
+  # lovelace-background: 'linear-gradient(to right, #ffecd2 0%, #fcb69f 100%)'
+ 
+  # Main colors
+  primary-color: var(--check) # Menus ativo de configurações, hacs e supervisor - links profile - bg player - bolinha slide light - botões
+  light-primary-color: var(--check) # avatar profile
+  graph-color: var(--check) # graph line
+
+  # Backgrounds color
+  primary-background-color: var(--check) # bgs em todas páginas, menos em tabelas - bg do logo
+  secondary-background-color: "#00FF00" # Mouse hover lista
+  divider-color: var(--check) # linhas de divisão do sidebar
+  disabled-color: var(--check) # core de icones de interruptores desativados + sensores
+
+  # Header colors
+  app-header-background-color: var(--check) # header de todas as páginas, menos das configurações
+  app-header-text-color: var(--chek)  # Titulos de headers
+  ch-active-tab-color: var(--check) # Tab ativa
+  ch-all-tabs-color: var(--check) # Todas as tabs
+  ch-background: var(--check) # header apenas dos dashboards
+  ch-notification-dot-color: var(--check) # Bolinha de notificação no celular
+  ch-tab-indicator-color: var(--check) # Indicador do menu header
+
+  # Dev text box
+  paper-dialog-background-color: var(--check) # background do numero de linhas DEV
+  paper-dialog-color: var(--check) # cor do text do numero de linhas DEV
+
+  # Error color
+  error-color: "#FF00FF" # Botões de SAIR - 
+  error-state-color: '#FFFF00'
+
+ # Text colors
+  ha-card-header-color: var(--check) #Title card entities
+  primary-text-color: "#000000" # Tem que ser em hexadecimal - Principais textos - Linhas de tabelas - Clogo - Iniciais RC - Icones token
+  secondary-text-color: var(--check) # Textos secundários - Icones list configurações - Detalhes do input_select, input_number, 
+  text-primary-color: var(--check) # Numero de notificações - Tags de categorias, checkbox e novidades no HACS - Player
+  disabled-text-color: "#0000FF" # Linha slider Lights - Setinha input select - icones desativados - checkbox lista entidades
+
+  # Sidebar colors
+  sidebar-icon-color: var(--check) # icons da barra lateral - seta pra voltar a página - Lupa HACS - Icon opções HASCS
+  sidebar-text-color: var(--check)  # Textos da barra lateral - Textos do menu header Configurações
+  sidebar-selected-icon-color: var(--check) # Icone selecionado na barra lateral
+  sidebar-selected-text-color: var(--check) # Texto selecionado na barra lateral
+  scrollbar-thumb-color: var(--check) # Scrollbar da barra lateral
+
+  # Icons colors
+  state-icon-color: var(--check) # Icones desligados - Icones de gráficos - icones sensores glance
+  state-icon-active-color: var(--check) # Apenas entidades ativadas
+  state-icon-unavailable-color: var(--check) # Apenas entidades desativadas
+
+  # Settins and colors of Mini Media Player
+  mini-media-player-icon-color: var(--check) # Icone principal 
+  mini-media-player-accent-color: var(--check) # Barra de progresso e icone de power
+  mini-media-player-progress-height: 8px # Altura da barra de progresso
+  mini-media-player-button-color: var(--check) # Botões complementares
+
+
+
+
+  # Papers slider colors
+  paper-slider-knob-color: var(--check) # Bolinha slider
+  paper-slider-knob-start-color: var(--paper-slider-knob-color) # Bolinha slider no começo
+  paper-slider-pin-color: var(--check) # Background do pin que aparece quando desloca o slider
+  paper-slider-active-color: var(--check) # Cor da linha ativa do slider
+  paper-slider-container-color: var(--check) # Cor da linha desativada do slider
+
+  # Labels colors
+  label-badge-background-color: var(--bg1) # Bg interno dos badges
+  label-badge-text-color: var(--check) # Textos e icones dentro dos badges 
+
+  # Gauge colors
+  label-badge-blue: var(--check) # Cores do gounge - Cor da borda dos badges de binary-sensor
+  label-badge-green: var(--check) # Cores do gounge
+  label-badge-red: var(--checki) # Cores do gounge - Cor da borda dos badges de sensores
+  label-badge-yellow: var(--check) # Cores do gounge
+
+  # Cards colors
+  ha-card-background: var(--bg1) # Cores dos cards gerais - Cor do background do profile
+  paper-card-background-color: var(--ha-card-background) # antigo background dos cards
+  paper-listbox-background-color: var(--check) #Lista do input select - lista no card de integrações - 
+
+  # Toggle button colors
+  switch-checked-color: var(--check) # Cor do circulo transparente que aparece ao redor do botão
+  switch-unchecked-color: var(--check) # Cor do circulo transparente que aparece ao redor do botão
+  switch-checked-button-color: var(--check) # Botão ativo
+  switch-checked-track-color: var(--check) # Trilha do botão ativo
+  switch-unchecked-button-color: var(--check) # Botão inativo
+  switch-unchecked-track-color: var(--check)  # Trilha do botão inativo
+
+  # Table colors
+  table-row-background-color: var(--bg1) # Cor 1 da tabela de ferramentas do desenvolver
+  table-row-alternative-background-color: var(--bg2) # Cor 2 da tabela de ferramentas do desenvolver
+  card-background-color: var(--bg2) # background da sidebar + header das configurações, supervisor e HACS
+  data-table-background-color: var(--bg2) # Tablela de lista de entidades, dispositivos, etc.
+
+
+  # HACS
+  hacs-badge-color: "#FF00FF" #
+  link-text-color: var(--check) # Links dentro do HACS
+  markdown-code-background-color: var(--check) # Caixa de código dentro dos repositórios do HACS
+  google-blue-500: var(--bg2) # Borda de Novo repositório
+  accent-color: var(--check) 
+  hacs-chip-color: var(--check) # Tag com categoria HACS
+
+
+
+  #Animated icons
+  weather-icon-clear-night: url("/hacsfiles/themes/caule-theme-test/clear-night.svg")
+  weather-icon-cloudy: url("/hacsfiles/themes/caule-theme-test/cloudy.svg")
+  weather-icon-fog: url("/hacsfiles/themes/caule-theme-test/fog.svg")
+  weather-icon-lightning: url("/hacsfiles/themes/caule-theme-test/lightning.svg")
+  weather-icon-lightning-rainy: url("/hacsfiles/themes/caule-theme-test/lightning-rainy.svg")
+  weather-icon-partlycloudy: url("/hacsfiles/themes/caule-theme-test/partlycloudy.svg")
+  weather-icon-pouring: url("/hacsfiles/themes/caule-theme-test/pouring.svg")
+  weather-icon-rainy: url("/hacsfiles/themes/caule-theme-test/rainy.svg")
+  weather-icon-hail: url("/hacsfiles/themes/caule-theme-test/hail.svg")
+  weather-icon-snowy: url("/hacsfiles/themes/caule-theme-test/snowy.svg")
+  weather-icon-snowy-rainy: url("/hacsfiles/themes/caule-theme-test/snowy-rainy.svg")
+  weather-icon-sunny: 'url("/hacsfiles/themes/caule-theme-test/sunny.svg")'
+  weather-icon-windy: url("/hacsfiles/themes/caule-theme-test/windy.svg")
+  weather-icon-windy-variant: url("/hacsfiles/themes/caule-theme-test/windy-variant.svg")
+  weather-icon-exceptional: url("/hacsfiles/themes/caule-theme-test/exceptional.svg")
+

@@ -1,0 +1,23 @@
+title: Spotify
+path: spotify
+panel: true
+icon: mdi:spotify
+cards:
+
+  - type: custom:layout-card
+    layout: vertical
+    cards:
+    
+      # Spotify - Evi
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/spotify_evi.yaml
+
+      - break
+
+      # Spotify - Rick
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/spotify_rick.yaml

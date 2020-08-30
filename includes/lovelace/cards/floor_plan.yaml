@@ -1,0 +1,103 @@
+type: picture-elements
+image: '/local/images/planta_apto.png'
+elements:
+
+  - type: state-icon
+    icon: mdi:desktop-classic
+    tap_action: none
+    hold_action:
+      action: call-service
+      service: input_boolean.turn_off
+      service_data:
+        entity_id: input_boolean.pc_shutdown
+    entity: input_boolean.pc_shutdown
+    style:
+      top: 56%
+      left: 29%
+
+  - type: state-icon
+    icon: mdi:laptop-mac
+    tap_action: none
+    hold_action:
+      action: call-service
+      service: input_boolean.turn_off
+      service_data:
+        entity_id: input_boolean.mac_shutdown
+    entity: input_boolean.mac_shutdown
+    style:
+      top: 65%
+      left: 29%
+
+  - type: state-icon
+    tap_action:
+      action: call-service
+      service: input_boolean.turn_on
+      service_data:
+        entity_id: input_boolean.tv_quarto
+    hold_action:
+      action: call-service
+      service: input_boolean.turn_off
+      service_data:
+        entity_id: input_boolean.tv_quarto
+    entity: input_boolean.tv_quarto
+    style:
+      top: 21%
+      left: 34%
+
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: switch.tomada_estudio
+    style:
+      top: 72%
+      left: 29%
+
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: switch.ac_quarto
+    style:
+      top: 9%
+      left: 34%
+
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: light.luz_do_quarto
+    style:
+      top: 25%
+      left: 24%
+
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: light.luz_do_banheiro
+    style:
+      top: 15%
+      left: 47%
+
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: light.luz_da_cozinha
+    style:
+      top: 70%
+      left: 50%
+
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: light.luz_da_sala
+    style:
+      top: 30%
+      left: 72%
+      
+  - type: state-icon
+    tap_action:
+      action: toggle
+    entity: light.luz_do_estudio
+    style:
+      top: 60%
+      left: 18%
+
+

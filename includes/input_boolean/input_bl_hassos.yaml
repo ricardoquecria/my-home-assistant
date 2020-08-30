@@ -1,0 +1,38 @@
+  ha_start:
+    name: HassOS
+    icon: mdi:home-assistant
+    initial: off
+
+  ha_restart:
+    name: Restart Server
+    icon: mdi:restart
+    initial: off
+
+  ha_snapshot:
+    name: Snapshot
+    icon: mdi:cloud-upload
+    initial: off
+
+  ha_group_reload:
+    name: Group Reload
+    icon: mdi:google-circles-communities
+    initial: off
+
+  ha_inputs_reload:
+    name: Inputs Reload
+    icon: mdi:video-input-component
+    initial: off
+
+  ha_script_reload:
+    name: Script Reload
+    icon: mdi:script-text-outline
+    initial: off
+
+  test:
+    name: Test
+    icon: mdi:power
+    initial: off
+
+  notify:
+    name: Notificações
+    icon: mdi:bell

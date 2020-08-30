@@ -1,0 +1,25 @@
+  orion_acordando:
+    name: Orion - Acordando
+    initial: off
+    icon: mdi:atom
+
+  orion_plantas:
+    name: Orion - Regar plantas
+    initial: off
+    icon: mdi:leaf
+
+  orion_speedtest:
+    name: Orion - Speedtest
+    initial: off
+    icon: mdi:speedometer
+
+  orion_jantar_quarto:
+    name: Orion - Jantar no quarto
+    initial: off
+    icon: mdi:bed-king-outline
+
+  orion_dormir:
+    name: Orion - Dormir
+    initial: off
+    icon: mdi:bed-outline
+

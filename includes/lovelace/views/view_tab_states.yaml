@@ -1,0 +1,122 @@
+
+title: Painel States
+path: painel_states
+icon: mdi:weather-cloudy
+cards:
+
+
+  - type: weather-forecast
+    entity: weather.dark_sky
+    secondary_info_attribute: humidity
+    show_forecast: true
+    name: Cuiabá - MT
+
+  - type: horizontal-stack
+    cards:
+
+      - type: entities
+        entities:
+          - entity: light.luz_do_quarto
+          - entity: light.luz_do_estudio
+          - entity: light.luz_do_banheiro
+          - entity: light.luz_da_cozinha
+          - entity: light.luz_da_sala
+          - entity: group.all_lighs
+          - entity: sensor.thenull
+            name: "   "
+            icon: "mdi"
+          - entity: switch.ac_quarto
+            icon: mdi:fan
+          - entity: switch.tomada_estudio
+            icon: mdi:power-plug
+          - entity: group.all
+            icon: mdi:power
+          - entity: input_boolean.tv_quarto
+          - entity: input_boolean.pc_shutdown
+          - entity: input_boolean.mac_shutdown
+          
+
+
+      - type: entities
+        entities:
+          - entity: sensor.speedtest_download
+            name: Download
+          - entity: sensor.speedtest_upload
+            name: Upload
+          - entity: sensor.speedtest_ping
+            name: Ping
+          - entity: input_boolean.speedtest_update
+            name: Fazer teste
+
+          - entity: sensor.thenull
+            name: "   "
+            icon: "mdi"
+          - entity: sensor.custo_energia_hoje
+            name: Hoje
+          - entity: sensor.custo_energia_ontem
+            name: Ontem
+          - entity: sensor.custo_energia_mes_atual
+            name: Mês atual
+          - entity: sensor.custo_energia_mes_anterior
+            name: Mês anterior
+          - entity: sensor.thenull
+            name: "   "
+            icon: "mdi"
+
+
+  - type: horizontal-stack
+    cards:
+
+
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.meter_geral_hoje
+          - sensor.meter_geral_ontem
+          - sensor.meter_geral_mes
+          - sensor.meter_geral_mes_anterior
+
+
+
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.meter_tomada_estudio_hoje
+          - sensor.meter_tomada_estudio_ontem
+          - sensor.meter_tomada_estudio_mes
+          - sensor.meter_tomada_estudio_mes_anterior
+
+
+  - type: horizontal-stack
+    cards:
+
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.meter_ac_quarto_hoje
+          - sensor.meter_ac_quarto_ontem
+          - sensor.meter_ac_quarto_mes
+          - sensor.meter_ac_quarto_mes_anterior
+
+
+
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.meter_tv_quarto_hoje
+          - sensor.meter_tv_quarto_ontem
+          - sensor.meter_tv_quarto_mes
+          - sensor.meter_tv_quarto_mes_anterior
+
+
+  - type: horizontal-stack
+    cards:
+
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.meter_all_lights_hoje
+          - sensor.meter_all_lights_ontem
+          - sensor.meter_all_lights_mes
+          - sensor.meter_all_lights_mes_anterior
+

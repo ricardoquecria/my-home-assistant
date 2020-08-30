@@ -1,0 +1,61 @@
+all_lights:
+  name: Group - Lampadas
+  icon: mdi:lightbulb-group-outline
+  entities:
+    - light.luz_da_cozinha
+    - light.luz_da_sala
+    - light.luz_do_banheiro
+    - light.luz_do_estudio
+    - light.luz_do_quarto
+
+all_lights_quarto:
+  name: Group - Lampadas, menos quarto
+  icon: mdi:lightbulb-group-outline
+  entities:
+    - light.luz_da_cozinha
+    - light.luz_da_sala
+    - light.luz_do_banheiro
+    - light.luz_do_estudio
+
+
+all_persons:
+  name: Group - Pessoas
+  entities:
+    - person.evelli_rossi
+    - person.ricardo_correia
+
+tracker_evellin:
+  name: Group - Tracker Evellin
+  icon: mdi:tooltip-account
+  entities:
+    - device_tracker.evellin_mac_track
+    - device_tracker.iphone_de_evellin_rossi
+
+
+tracker_ricardo:
+  name: Group - Tracker Ricardo
+  icon: mdi:tooltip-account
+  entities:
+    - device_tracker.ricardo_mac_track
+    - device_tracker.ricardo_j5
+
+
+all:
+  name: Group - Tudo
+  entities:
+    - light.luz_da_cozinha
+    - light.luz_da_sala
+    - light.luz_do_banheiro
+    - light.luz_do_estudio
+    - light.luz_do_quarto
+    - switch.ac_quarto
+    - switch.estudio
+    - input_boolean.tv_quarto
+    
+all_players:
+  name: Group - All Players
+  entities:
+    - media_player.mini
+    - media_player.tv
+    - media_player.som_da_casa
+    - media_player.spotify_ricardo_correia

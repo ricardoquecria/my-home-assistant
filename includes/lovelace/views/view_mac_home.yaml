@@ -1,0 +1,55 @@
+##     ##  #######  ##     ## ######## 
+##     ## ##     ## ###   ### ##       
+##     ## ##     ## #### #### ##       
+######### ##     ## ## ### ## ######   
+##     ## ##     ## ##     ## ##       
+##     ## ##     ## ##     ## ##       
+##     ##  #######  ##     ## ######## 
+
+title: Home
+path: home
+panel: true
+icon: mdi:home-circle
+cards:
+
+  - type: custom:layout-card
+    layout: vertical
+    cards:
+    
+
+      # Weather
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/weather.yaml
+
+      # Lights
+      - type: custom:mod-card
+        style: !include ../styles/mod_top.yaml
+        card:
+          !include ../cards/lights.yaml
+
+      # Switchs
+      - type: custom:mod-card
+        style: !include ../styles/mod_bot.yaml
+        card:
+          !include ../cards/switchs.yaml
+
+      - break
+
+      # Relogio
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/clock.yaml
+
+      # Calendar
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/calendar_works.yaml
+
+
+
+
+

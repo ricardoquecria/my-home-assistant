@@ -1,0 +1,40 @@
+
+###     ######  ########  ######   ######   #######  ########  ####  #######   ######  
+## ##   ##    ## ##       ##    ## ##    ## ##     ## ##     ##  ##  ##     ## ##    ## 
+##   ##  ##       ##       ##       ##       ##     ## ##     ##  ##  ##     ## ##       
+##     ## ##       ######    ######   ######  ##     ## ########   ##  ##     ##  ######  
+######### ##       ##             ##       ## ##     ## ##   ##    ##  ##     ##       ## 
+##     ## ##    ## ##       ##    ## ##    ## ##     ## ##    ##   ##  ##     ## ##    ## 
+##     ##  ######  ########  ######   ######   #######  ##     ## ####  #######   ######  
+
+title: Acessórios
+path: acessorios
+icon: mdi:timer
+panel: true
+cards:
+ 
+  - type: custom:layout-card
+    layout: vertical
+    cards:
+    
+      # Theme Selector v2
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/theme_selector_v2.yaml
+
+      - break
+
+      # Timer v1
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/timer_v1.yaml
+
+      # - break
+
+      # # Timer v1
+      # - type: custom:mod-card
+      #   style: !include ../styles/mod_all.yaml
+      #   card:
+      #     !include ../cards/energy_beta.yaml

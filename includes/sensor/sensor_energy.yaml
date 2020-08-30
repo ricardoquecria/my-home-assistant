@@ -1,0 +1,60 @@
+
+- platform: template
+  sensors:
+
+
+    ciclo_energia:
+      friendly_name: "Ciclo"
+      icon_template: mdi:calendar-sync
+      value_template: >-
+        {% if (states.sensor.time.state) | float == 0 %}
+        {% set ciclo = states('input_number.ciclo') | float() | round(0) %} 
+        {% set mes = now().month %}
+        {% set dia = now().day %}
+        {% if mes == 4 or mes == 6 or mes == 9 or mes == 11 %}
+        {% set intervalo = 30 %}
+        {% elif mes == 2 %}
+        {% set intervalo = 28 %}
+        {% else %}
+        {% set intervalo = 31 %}
+        {% endif %}
+        {% if dia > ciclo and ciclo < intervalo %}
+        {% set periodo = dia - ciclo %}
+        {% elif dia < ciclo and ciclo < intervalo %}
+        {% set periodo = dia + (intervalo - ciclo) %}
+        {% elif dia == ciclo %}
+        {% set periodo = intervalo %}
+        {% endif %}
+        {{ periodo }}º dia
+        {% endif %}
+      attribute_templates:
+        periodo: >-
+          {% if (states.sensor.time.state) | float == 0 %}
+          {% set ciclo = states('input_number.ciclo') | float() | round(0) %} 
+          {% set mes = now().month %}
+          {% set dia = now().day %}
+          {% if mes == 4 or mes == 6 or mes == 9 or mes == 11 %}
+          {% set intervalo = 30 %}
+          {% elif mes == 2 %}
+          {% set intervalo = 28 %}
+          {% else %}
+          {% set intervalo = 31 %}
+          {% endif %}
+          {% if dia > ciclo and ciclo < intervalo %}
+          {% set periodo = dia - ciclo %}
+          {% elif dia < ciclo and ciclo < intervalo %}
+          {% set periodo = dia + (intervalo - ciclo) %}
+          {% elif dia == ciclo %}
+          {% set periodo = intervalo %}
+          {% endif %}
+          {{ periodo }}
+          {% endif %}
+          
+    meter_tendence_mes_anterior:
+      friendly_name: "Meter - Tendence - Mês anterior"
+      entity_id: sensor.time
+      icon_template: mdi:cash-usd-outline
+      unit_of_measurement: 'kWh'
+      value_template: "{{ ((states('sensor.meter_geral_mes_anterior') | float() / 30) * state_attr('sensor.ciclo_energia','periodo') | float()) | round(2)}}"
+
+

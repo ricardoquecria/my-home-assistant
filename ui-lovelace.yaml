@@ -1,0 +1,15 @@
+##        #######  ##     ## ######## ##          ###     ######  ######## 
+##       ##     ## ##     ## ##       ##         ## ##   ##    ## ##       
+##       ##     ## ##     ## ##       ##        ##   ##  ##       ##       
+##       ##     ## ##     ## ######   ##       ##     ## ##       ######   
+##       ##     ##  ##   ##  ##       ##       ######### ##       ##       
+##       ##     ##   ## ##   ##       ##       ##     ## ##    ## ##       
+########  #######     ###    ######## ######## ##     ##  ######  ######## 
+
+title: Gactos Painel
+views:
+  - !include includes/lovelace/views/view_tab_control.yaml
+  - !include includes/lovelace/views/view_tab_states.yaml
+  - !include includes/lovelace/views/view_tab_players.yaml
+  - !include includes/lovelace/views/view_tab_spotify.yaml
+

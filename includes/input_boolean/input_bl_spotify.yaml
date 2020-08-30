@@ -1,0 +1,39 @@
+  spotify_rick_phone:
+    name: Spotify Rick no Celular
+    initial: off
+    icon: mdi:spotify
+
+  spotify_rick_mac:
+    name: Spotify Rick no Mac
+    initial: off
+    icon: mdi:spotify
+
+  spotify_rick_tv:
+    name: Spotify Rick na TV
+    initial: off
+    icon: mdi:spotify
+    
+  spotify_rick_mini:
+    name: Spotify Rick no Mini
+    initial: off
+    icon: mdi:spotify
+
+  spotify_evi_mini:
+    name: Spotify Evi no Mini
+    initial: off
+    icon: mdi:spotify
+
+  spotify_evi_tv:
+    name: Spotify Evi na TV
+    initial: off
+    icon: mdi:spotify
+
+  spotify_evi_pc:
+    name: Spotify Evi no PC
+    initial: off
+    icon: mdi:spotify
+
+  spotify_evi_phone:
+    name: Spotify Evi no iPhone
+    initial: off
+    icon: mdi:spotify

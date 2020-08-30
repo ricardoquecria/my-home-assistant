@@ -1,0 +1,62 @@
+
+  mini_play:
+    name: Play
+    initial: off
+    icon: mdi:play-pause
+
+  mini_previous:
+    name: Voltar
+    initial: off
+    icon: mdi:skip-previous
+
+  mini_next:
+    name: Próxima
+    initial: off
+    icon: mdi:skip-next
+
+  mini_stop:
+    name: Stop
+    initial: off
+    icon: mdi:stop
+
+
+
+  mini_menos30:
+    name: "-30"
+    initial: off
+    icon: mdi:rewind-30
+
+  mini_menos10:
+    name: "-10"
+    initial: off
+    icon: mdi:rewind-10
+
+  mini_mais10:
+    name: "+10"
+    initial: off
+    icon: mdi:fast-forward-10
+
+  mini_mais30:
+    name: "+30"
+    initial: off
+    icon: mdi:fast-forward-30
+
+  mini_mute:
+    name: Mute
+    initial: off
+    icon: mdi:volume-off
+
+  mini_vol_menos:
+    name: Diminuir
+    initial: off
+    icon: mdi:volume-minus
+
+  mini_vol_mais:
+    name: Aumentar
+    initial: off
+    icon: mdi:volume-plus
+
+  mini_vol_max:
+    name: Máximo
+    initial: off
+    icon: mdi:volume-high

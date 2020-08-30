@@ -1,0 +1,70 @@
+
+  pc_play:
+    name: Play
+    initial: off
+    icon: mdi:play-pause
+
+  pc_previous:
+    name: Voltar
+    initial: off
+    icon: mdi:skip-previous
+
+  pc_next:
+    name: Próxima
+    initial: off
+    icon: mdi:skip-next
+
+  pc_stop:
+    name: Stop
+    initial: off
+    icon: mdi:stop
+
+  pc_mute:
+    name: Mute
+    initial: off
+    icon: mdi:volume-off
+
+  pc_vol_menos:
+    name: Diminuir
+    initial: off
+    icon: mdi:volume-minus
+
+  pc_vol_mais:
+    name: Aumentar
+    initial: off
+    icon: mdi:volume-plus
+
+  pc_vol_max:
+    name: Máximo
+    initial: off
+    icon: mdi:volume-high
+
+  pc_restart:
+    name: Reiniciar
+    initial: off
+    icon: mdi:restart
+
+  pc_shutdown:
+    name: PC
+    initial: off
+    icon: mdi:power
+
+  pc_logout:
+    name: Logout
+    initial: off
+    icon: mdi:logout-variant
+
+  pc_monitor_off:
+    name: Desligar Monitor
+    initial: off
+    icon: mdi:monitor-off
+
+  pc_monitor_on:
+    name: Ligar Monitor
+    initial: off
+    icon: mdi:monitor
+
+  pc_open_tw:
+    name: Abrir TeamViewer
+    initial: off
+    icon: mdi:teamviewer

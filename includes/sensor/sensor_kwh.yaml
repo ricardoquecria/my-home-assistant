@@ -1,0 +1,149 @@
+#                           
+#   #    #  #    #  #    # 
+#   #   #   #    #  #    # 
+#   ####    #    #  ###### 
+#   #  #    # ## #  #    # 
+#   #   #   ##  ##  #    # 
+#   #    #  #    #  #    # 
+#
+#   O que foi usado?
+#
+#     Sensor Template - https://www.home-assistant.io/integrations/template/
+#
+#
+#   Como funciona?
+#
+#     Por enquanto eu ainda não tenho nenhum dispositivo que realmente calcule o meu consumo de energia (e nem sei se vou ter depois disso que construí).
+#     O kWh é uma obtido através da seguinte equação: kWh = (Potência em Watts / 1000) x (Tempo de utilização)
+#     1) Potencia em Watts: Cada equipamento tem sua potência. Isso vem descrito em muitos equipamentos, mas é fácil encontrar na internet.
+#     2) Tempo de utilização: Utilizo os Sensores History Stats para contar quanto tempo um dispositivo ficou ligado hoje, ontem, esse mês e no mês anterior.
+#     3) Essa divisão por 1000 dá equação é apenas para converter Kilowatts para Watts.
+#     
+#     Extra: Para saber quanto vai custar esse consumo em reais é só multiplicar o consumo em kWh pelo preço do kWh que vem na sua conta de energia.
+#   
+
+
+
+    # kwh_tomada_estudio:
+    #   friendly_name: "kWh - Tomada Estúdio"
+    #   icon_template: mdi:timeline-clock-outline
+    #   unit_of_measurement: 'kWh'
+    #   value_template: "{{ states('sensor.kwh_base_tomada_estudio') }}"
+
+    # kwh_ac_quarto:
+    #   friendly_name: "kWh - AC Quarto"
+    #   icon_template: mdi:timeline-clock-outline
+    #   unit_of_measurement: 'kWh'
+    #   value_template: "{{ states('sensor.kwh_base_ac_quarto') }}"
+
+    # kwh_all_lights:
+    #   friendly_name: "kWh - All Lights"
+    #   icon_template: mdi:timeline-clock-outline
+    #   unit_of_measurement: 'kWh'
+    #   value_template: "{{ states('sensor.kwh_base_all_lights') }}"
+
+    # kwh_tv_quarto:
+    #   friendly_name: "kWh - TV Quarto"
+    #   icon_template: mdi:timeline-clock-outline
+    #   unit_of_measurement: 'kWh'
+    #   value_template: "{{ states('sensor.kwh_base_tv_quarto') }}"
+
+    # kwh_geral:
+    #   friendly_name: "kWh - Geral"
+    #   icon_template: mdi:timeline-clock-outline
+    #   unit_of_measurement: 'kWh'
+    #   value_template: "{{ states('sensor.kwh_base_geral') }}"
+
+
+# - platform: integration
+#   source: sensor.kwh_base_tomada_estudio
+#   name: kwh_tomada_estudio
+#   unit: kWh
+
+# - platform: integration
+#   source: sensor.kwh_base_ac_quarto
+#   name: kwh_ac_quarto
+#   unit: kWh
+
+# - platform: integration
+#   source: sensor.kwh_base_all_lights
+#   name: kwh_all_lights
+#   unit: kWh
+
+# - platform: integration
+#   source: sensor.kwh_base_tv_quarto
+#   name: kwh_tv_quarto
+#   unit: kWh
+
+# - platform: integration
+#   source: sensor.kwh_base_geral
+#   name: kwh_geral
+#   unit: kWh
+
+# - platform: integration
+#   source: sensor.kwh_base_tomada_estudio
+#   name: kwh2_tomada_estudio
+#   unit: kWh
+#   method: left
+
+# - platform: integration
+#   source: sensor.kwh_base_ac_quarto
+#   name: kwh2_ac_quarto
+#   unit: kWh
+#   method: left
+
+# - platform: integration
+#   source: sensor.kwh_base_all_lights
+#   name: kwh2_all_lights
+#   unit: kWh
+#   method: left
+
+# - platform: integration
+#   source: sensor.kwh_base_tv_quarto
+#   name: kwh2_tv_quarto
+#   unit: kWh
+#   method: left
+
+# - platform: integration
+#   source: sensor.kwh_base_geral
+#   name: kwh2_geral
+#   unit: kWh
+#   method: left
+
+
+
+# - platform: mqtt
+#   name: kWh - TV Quarto
+#   state_topic: "energy/kwh_tv_quarto"
+#   json_attributes_topic: "energy/kwh_tv_quarto/attributes"
+#   unit_of_measurement: 'kWh'
+#   device_class: power
+
+# - platform: mqtt
+#   name: kWh - AC Quarto
+#   state_topic: "energy/kwh_ac_quarto"
+#   json_attributes_topic: "energy/kwh_ac_quarto/attributes"
+#   unit_of_measurement: 'kWh'
+#   device_class: power
+
+# - platform: mqtt
+#   name: kWh - Tomada Estúdio
+#   state_topic: "energy/kwh_tomada_estudio"
+#   json_attributes_topic: "energy/kwh_tomada_estudio/attributes"
+#   unit_of_measurement: 'kWh'
+#   device_class: power
+
+# - platform: mqtt
+#   name: kWh - All Lights
+#   state_topic: "energy/kwh_all_lights"
+#   json_attributes_topic: "energy/kwh_all_lights/attributes"
+#   unit_of_measurement: 'kWh'
+#   device_class: power
+
+# - platform: mqtt
+#   name: kWh - Geral
+#   state_topic: "energy/kwh_geral"
+#   json_attributes_topic: "energy/kwh_geral/attributes"
+#   unit_of_measurement: 'kWh'
+#   device_class: power
+

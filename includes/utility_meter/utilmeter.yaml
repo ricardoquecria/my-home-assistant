@@ -1,0 +1,111 @@
+# meter_tomada_estudio_hoje:
+#   source: sensor.kwh_tomada_estudio
+#   cycle: daily
+#   offset: '02:40'
+
+# meter_tomada_estudio_mes:
+#   source: sensor.kwh_tomada_estudio
+#   cycle: daily
+#   offset: '02:40'
+
+
+
+# meter_ac_quarto_hoje:
+#   source: sensor.kwh_ac_quarto
+#   cycle: daily
+#   offset: '02:40'
+
+# meter_ac_quarto_mes:
+#   source: sensor.kwh_ac_quarto
+#   cycle: daily
+#   offset: '02:40'
+
+
+
+# meter_tv_quarto_hoje:
+#   source: sensor.kwh_tv_quarto
+#   cycle: daily
+#   offset: '02:40'
+# meter_tv_quarto_mes:
+#   source: sensor.kwh_tv_quarto
+#   cycle: daily
+#   offset: '02:40'
+
+
+# meter_all_lights_hoje:
+#   source: sensor.kwh_all_lights
+#   cycle: daily
+#   offset: '02:40'
+# meter_all_lights_mes:
+#   source: sensor.kwh_all_lights
+#   cycle: daily
+#   offset: '02:40'
+
+
+# meter_geral_hoje:
+#   source: sensor.kwh_geral
+#   cycle: daily
+#   offset: '02:40'
+# meter_geral_mes:
+#   source: sensor.kwh_geral
+#   cycle: daily
+#   offset: '02:40'
+
+
+# meter_tomada_estudio_hoje:
+#   source: sensor.kwh_tomada_estudio
+#   cycle: daily
+
+# meter_tomada_estudio_mes:
+#   source: sensor.kwh_tomada_estudio
+#   cycle: monthly
+#   offset:
+#     days: 16
+
+
+
+# meter_ac_quarto_hoje:
+#   source: sensor.kwh_ac_quarto
+#   cycle: daily
+
+# meter_ac_quarto_mes:
+#   source: sensor.kwh_ac_quarto
+#   cycle: monthly
+#   offset:
+#     days: 16
+
+
+
+# meter_tv_quarto_hoje:
+#   source: sensor.kwh_tv_quarto
+#   cycle: daily
+
+# meter_tv_quarto_mes:
+#   source: sensor.kwh_tv_quarto
+#   cycle: monthly
+#   offset:
+#     days: 16
+
+
+
+# meter_all_lights_hoje:
+#   source: sensor.kwh_all_lights
+#   cycle: daily
+
+# meter_all_lights_mes:
+#   source: sensor.kwh_all_lights
+#   cycle: monthly
+#   offset:
+#     days: 16
+
+
+
+# meter_geral_hoje:
+#   source: sensor.kwh_geral
+#   cycle: daily
+
+# meter_geral_mes:
+#   source: sensor.kwh_geral
+#   cycle: monthly
+#   offset:
+#     days: 16

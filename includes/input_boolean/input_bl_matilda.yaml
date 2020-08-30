@@ -1,0 +1,36 @@
+  orion_acordando:
+    name: Acordando Matilda
+    initial: off
+    icon: mdi:atom
+
+  orion_plantas:
+    name: Regar plantas
+    initial: off
+    icon: mdi:leaf
+
+  orion_speedtest:
+    name: Speedtest
+    initial: off
+    icon: mdi:speedometer
+
+  orion_speedtest_update:
+    name: Speedtest update
+    initial: off
+    icon: mdi:speedometer
+
+  orion_speedtest_reload:
+    name: Speedtest reload
+    initial: off
+    icon: mdi:speedometer
+    
+  orion_jantar_quarto:
+    name: Regar plantas
+    initial: off
+    icon: mdi:leaf
+
+  orion_dormir:
+    name: Regar plantas
+    initial: off
+    icon: mdi:leaf
+
+

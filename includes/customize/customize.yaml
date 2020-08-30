@@ -1,0 +1,107 @@
+device_tracker.ricardo_phone:
+  friendly_name: GPS | Ricardo
+  icon: mdi:cellphone-android
+
+person.evellin_rossi:
+  entity_picture: ../../local/images/avatar_evi_circle.png
+person.ricardo_correia:
+  entity_picture: ../../local/images/avatar_rick_circle.png
+
+group.all_lights:
+  friendly_name: Luzes
+  icon: mdi:lightbulb-group-outline
+
+
+switch.tomada_estudio:
+  icon: mdi:power-plug
+switch.ac_quarto:
+  icon: mdi:snowflake
+sensor.banco_de_dados:
+  icon: mdi:database
+
+
+
+
+sensor.meter_geral_hoje:
+  friendly_name: Meter - Geral - Hoje
+  icon: mdi:counter
+
+sensor.meter_geral_ontem:
+  friendly_name: Meter - Geral - Ontem
+  icon: mdi:counter
+
+sensor.meter_geral_mes:
+  friendly_name: Meter - Geral - Mês
+  icon: mdi:counter
+
+sensor.meter_geral_mes_anterior:
+  friendly_name: Meter - Geral - Mês anterior
+  icon: mdi:counter
+
+
+sensor.meter_tomada_estudio_hoje:
+  friendly_name: Meter - Tomada Estúdio - Hoje
+  icon: mdi:counter
+
+sensor.meter_tomada_estudio_ontem:
+  friendly_name: Meter - Tomada Estúdio - Ontem
+  icon: mdi:counter
+
+sensor.meter_tomada_estudio_mes:
+  friendly_name: Meter - Tomada Estúdio - Mês
+  icon: mdi:counter
+
+sensor.meter_tomada_estudio_mes_anterior:
+  friendly_name: Meter - Tomada Estúdio - Mês anterior
+  icon: mdi:counter
+
+
+sensor.meter_all_lights_hoje:
+  friendly_name: Meter - All Lights - Hoje
+  icon: mdi:counter
+
+sensor.meter_all_lights_ontem:
+  friendly_name: Meter - All Lights - Ontem
+  icon: mdi:counter
+
+sensor.meter_all_lights_mes:
+  friendly_name: Meter - All Lights - Mês
+  icon: mdi:counter
+
+sensor.meter_all_lights_mes_anterior:
+  friendly_name: Meter - All Lights - Mês anterior
+  icon: mdi:counter
+
+
+sensor.meter_ac_quarto_hoje:
+  friendly_name: Meter - AC Quarto - Hoje
+  icon: mdi:counter
+
+sensor.meter_ac_quarto_ontem:
+  friendly_name: Meter - AC Quarto - Ontem
+  icon: mdi:counter
+
+sensor.meter_ac_quarto_mes:
+  friendly_name: Meter - AC Quarto - Mês
+  icon: mdi:counter
+
+sensor.meter_ac_quarto_mes_anterior:
+  friendly_name: Meter - AC Quarto - Mês anterior
+  icon: mdi:counter
+
+
+sensor.meter_tv_quarto_hoje:
+  friendly_name: Meter - TV Quarto - Hoje
+  icon: mdi:counter
+
+sensor.meter_tv_quarto_ontem:
+  friendly_name: Meter - TV Quarto - Ontem
+  icon: mdi:counter
+
+sensor.meter_tv_quarto_mes:
+  friendly_name: Meter - TV Quarto - Mês
+  icon: mdi:counter
+
+sensor.meter_tv_quarto_mes_anterior:
+  friendly_name: Meter - TV Quarto - Mês anterior
+  icon: mdi:counter

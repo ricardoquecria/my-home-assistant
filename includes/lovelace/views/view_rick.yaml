@@ -1,0 +1,66 @@
+#####     ##     ####   #    #      #####   #   ####   #    # 
+#    #   #  #   #       #    #      #    #  #  #    #  #   #  
+#    #  #    #   ####   ######      #    #  #  #       ####   
+#    #  ######       #  #    #      #####   #  #       #  #   
+#    #  #    #  #    #  #    #      #   #   #  #    #  #   #  
+#####   #    #   ####   #    #      #    #  #   ####   #    #                                                               
+
+title: Home
+path: home
+panel: true
+icon: mdi:home-circle
+cards:
+
+  - type: custom:layout-card
+    layout: vertical
+    cards:
+    
+      # Relogio
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/clock.yaml
+
+      # Lights
+      - type: custom:mod-card
+        style: !include ../styles/mod_top.yaml
+        card:
+          !include ../cards/lights.yaml
+
+      # Switchs
+      - type: custom:mod-card
+        style: !include ../styles/mod_bot.yaml
+        card:
+          !include ../cards/switchs.yaml
+
+      # Player TV
+      - type: custom:mod-card
+        style: !include ../styles/mod_top.yaml
+        card:
+          !include ../cards/player_tv.yaml
+
+      # Player Mini
+      - type: custom:mod-card
+        style: !include ../styles/mod_bot.yaml
+        card:
+          !include ../cards/player_mini.yaml
+
+      # Spotify - Rick
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/spotify_rick.yaml
+
+      # Weather
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/weather.yaml
+
+      # Calendar
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/calendar_rick.yaml
+
+

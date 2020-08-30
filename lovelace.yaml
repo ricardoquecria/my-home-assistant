@@ -1,0 +1,51 @@
+mode: yaml
+resources: !include includes/lovelace/resources.yaml
+dashboards:
+
+  lovelace-master:
+    mode: yaml
+    filename: ui-lovelace-master.yaml
+    title: Gactos Master
+    icon: mdi:view-dashboard
+    show_in_sidebar: true
+    require_admin: true
+
+  lovelace-tab:
+    mode: yaml
+    filename: ui-lovelace.yaml
+    title: Gactos Painel
+    icon: mdi:tablet-dashboard
+    show_in_sidebar: false
+    require_admin: true
+
+  lovelace-rick:
+    mode: yaml
+    filename: ui-lovelace-rick.yaml
+    title: Gactos Rick
+    icon: mdi:cellphone-android
+    show_in_sidebar: false
+    require_admin: true
+
+  lovelace-evi:
+    mode: yaml
+    filename: ui-lovelace-evi.yaml
+    title: Gactos Evi
+    icon: mdi:cellphone-iphone
+    show_in_sidebar: false
+    require_admin: true
+
+  lovelace-full:
+    mode: yaml
+    filename: ui-lovelace-full.yaml
+    title: Gactos Full
+    icon: mdi:monitor-dashboard
+    show_in_sidebar: false
+    require_admin: false
+
+  lovelace-mac:
+    mode: yaml
+    filename: ui-lovelace-mac.yaml
+    title: Gactos Mac
+    icon: mdi:laptop-mac
+    show_in_sidebar: false
+    require_admin: false

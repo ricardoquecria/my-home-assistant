@@ -1,0 +1,37 @@
+  timer_on_off:
+    name: Timer - Turn on / off
+    icon: mdi:electric-switch
+
+  timer:
+    name: Timer
+    initial: off
+    icon: mdi:progress-check
+
+  timer_tv_quarto:
+    name: Timer - TV do Quarto
+    icon: mdi:television
+
+  timer_lampadas:
+    name: Timer - Lampadas
+    icon: mdi:lightbulb-group-outline
+
+  timer_ar_quarto:
+    name: Timer - Ar do Quarto
+    icon: mdi:snowflake
+
+  timer_estudio:
+    name: Timer - Estúdio
+    icon: mdi:power-plug
+
+  timer_notebook:
+    name: Timer - Notebook
+    icon: mdi:laptop-windows
+
+  timer_macbook:
+    name: Timer - Macbook
+    icon: mdi:laptop-mac
+
+  timer_tudo:
+    name: Timer - Tudo
+    icon: mdi:devices
+

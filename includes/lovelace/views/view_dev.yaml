@@ -1,0 +1,24 @@
+title: Dev 
+path: dev
+icon: mdi:developer-board
+panel: true
+cards:
+
+  - type: custom:layout-card
+    layout: vertical
+    cards:
+    
+      # Theme Selector v2
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/energy_beta.yaml
+
+
+      - break
+
+      # Timer v1
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/energy_beta_graph.yaml

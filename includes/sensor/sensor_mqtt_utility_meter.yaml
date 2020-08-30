@@ -1,0 +1,177 @@
+#                           
+#   #    #  #    #  #    # 
+#   #   #   #    #  #    # 
+#   ####    #    #  ###### 
+#   #  #    # ## #  #    # 
+#   #   #   ##  ##  #    # 
+#   #    #  #    #  #    # 
+#
+#   O que foi usado?
+#
+#     Sensor Template - https://www.home-assistant.io/integrations/template/
+#
+#
+#   Como funciona?
+#
+#     Aqui eu uso o atributo "last_period" dos sensores gerados pela integração Utility Meter. 
+#     O "last_period" de hoje é o valor de ontem. O "last_period" desse mês é o valor do mês anterior.
+#     
+
+
+- platform: mqtt
+  name: Meter - All Lights - Hoje
+  state_topic: "energy/meter_all_lights_hoje"
+  json_attributes_topic: "energy/meter_all_lights_hoje/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - All Lights - Ontem
+  state_topic: "energy/meter_all_lights_ontem"
+  json_attributes_topic: "energy/meter_all_lights_ontem/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - All Lights - Mês
+  state_topic: "energy/meter_all_lights_mes"
+  json_attributes_topic: "energy/meter_all_lights_mes/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - All Lights - Mês anterior
+  state_topic: "energy/meter_all_lights_mes_anterior"
+  json_attributes_topic: "energy/meter_all_lights_mes_anterior/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+
+
+
+- platform: mqtt
+  name: Meter - TV Quarto - Hoje
+  state_topic: "energy/meter_tv_quarto_hoje"
+  json_attributes_topic: "energy/meter_tv_quarto_hoje/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - TV Quarto - Ontem
+  state_topic: "energy/meter_tv_quarto_ontem"
+  json_attributes_topic: "energy/meter_tv_quarto_ontem/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - TV Quarto - Mês
+  state_topic: "energy/meter_tv_quarto_mes"
+  json_attributes_topic: "energy/meter_tv_quarto_mes/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - TV Quarto - Mês anterior
+  state_topic: "energy/meter_tv_quarto_mes_anterior"
+  json_attributes_topic: "energy/meter_tv_quarto_mes_anterior/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+
+
+
+- platform: mqtt
+  name: Meter - AC Quarto - Hoje
+  state_topic: "energy/meter_ac_quarto_hoje"
+  json_attributes_topic: "energy/meter_ac_quarto_hoje/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - AC Quarto - Ontem
+  state_topic: "energy/meter_ac_quarto_ontem"
+  json_attributes_topic: "energy/meter_ac_quarto_ontem/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - AC Quarto - Mês
+  state_topic: "energy/meter_ac_quarto_mes"
+  json_attributes_topic: "energy/meter_ac_quarto_mes/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - AC Quarto - Mês anterior
+  state_topic: "energy/meter_ac_quarto_mes_anterior"
+  json_attributes_topic: "energy/meter_ac_quarto_mes_anterior/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+
+
+
+- platform: mqtt
+  name: Meter - Tomada Estúdio - Hoje
+  state_topic: "energy/meter_tomada_estudio_hoje"
+  json_attributes_topic: "energy/meter_tomada_estudio_hoje/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - Tomada Estúdio - Ontem
+  state_topic: "energy/meter_tomada_estudio_ontem"
+  json_attributes_topic: "energy/meter_tomada_estudio_ontem/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - Tomada Estúdio - Mês
+  state_topic: "energy/meter_tomada_estudio_mes"
+  json_attributes_topic: "energy/meter_tomada_estudio_mes/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - Tomada Estúdio - Mês anterior
+  state_topic: "energy/meter_tomada_estudio_mes_anterior"
+  json_attributes_topic: "energy/meter_tomada_estudio_mes_anterior/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+
+
+
+- platform: mqtt
+  name: Meter - Geral - Hoje
+  state_topic: "energy/meter_geral_hoje"
+  json_attributes_topic: "energy/meter_geral_hoje/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - Geral - Ontem
+  state_topic: "energy/meter_geral_ontem"
+  json_attributes_topic: "energy/meter_geral_ontem/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - Geral - Mês
+  state_topic: "energy/meter_geral_mes"
+  json_attributes_topic: "energy/meter_geral_mes/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+- platform: mqtt
+  name: Meter - Geral - Mês anterior
+  state_topic: "energy/meter_geral_mes_anterior"
+  json_attributes_topic: "energy/meter_geral_mes_anterior/attributes"
+  unit_of_measurement: 'kWh'
+  device_class: power
+
+
+
+
+
+
