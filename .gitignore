@@ -1,0 +1,60 @@
+# Example .gitignore file for your config dir.
+
+# You can whitelist files/folders with !, these will not be ignored.
+www/*
+!www/community
+!www/sounds
+!www/images
+
+# Ignore Folders
+.cloud
+.HA_VERSION
+.storage
+.google.token
+.vscode
+node-red
+tts
+zones
+deps
+tmp
+__pycache__
+tensorflow
+security
+
+# Extensions
+*.DS_Store
+*.uuid
+*.conf
+*.db
+*.db-journal
+*.noload
+*.txt
+*.sqlite
+*.xml
+*.log
+*.backup
+*.spotify-token-cache
+*.token
+*.old
+*.code-workspace
+
+
+# Ignore Files
+google_calendars.yaml
+secrets.yaml
+known_devices.yaml
+entity_registry.yaml
+ip_bans.yaml
+settings.json
+home-assistant_v2.db-shm
+home-assistant_v2.db-wal
+image_processing.yaml
+am_control_panel.yamllar
+security.yaml
+security_automations.yaml
+vs.code-workspace
+
+
+# For security reasons
+cameras
+camera.yaml
