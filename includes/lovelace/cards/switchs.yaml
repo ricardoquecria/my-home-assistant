@@ -118,7 +118,7 @@ cards:
       # Switch - Ventilador
       - entity: switch.geladeira
         type: "custom:button-card"
-        icon: mdi:fan
+        icon: mdi:fridge
         label: >
           [[[
             if (states['switch.geladeira'].state == "on")

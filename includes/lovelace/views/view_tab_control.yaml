@@ -78,7 +78,7 @@ cards:
 
     # Ventilador
     - entity: switch.geladeira
-      icon: mdi:fan
+      icon: mdi:fridge
       name: Ventilador
       tap_action:
         action: toggle
