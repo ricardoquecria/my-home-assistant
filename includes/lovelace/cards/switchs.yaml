@@ -90,7 +90,7 @@ cards:
       # Switch - Cafeteira
       - entity: switch.cafeteira
         type: "custom:button-card"
-        icon: mdi:coffee
+        icon: mdi:coffee-outline
         label: >
           [[[
             if (states['switch.cafeteira'].state == "on")
@@ -118,7 +118,7 @@ cards:
       # Switch - Geladeira
       - entity: switch.geladeira
         type: "custom:button-card"
-        icon: mdi:fridge
+        icon: mdi:fridge-outline
         label: >
           [[[
             if (states['switch.geladeira'].state == "on")

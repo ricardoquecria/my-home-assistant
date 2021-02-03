@@ -70,7 +70,7 @@ cards:
 
     # Cafeteira
     - entity: switch.cafeteira
-      icon: mdi:coffee
+      icon: mdi:coffee-outline
       name: Cafeteira
       tap_action:
         action: toggle
@@ -78,7 +78,7 @@ cards:
 
     # Geladeira
     - entity: switch.geladeira
-      icon: mdi:fridge
+      icon: mdi:fridge-outline
       name: Geladeira
       tap_action:
         action: toggle

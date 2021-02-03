@@ -12,7 +12,7 @@ cards:
         return "DESLIGADO";
       ]]]
     show_label: true
-    icon: mdi:coffee
+    icon: mdi:coffee-outline
     styles:
       grid:
         - grid-template-areas: '"n l i"'
