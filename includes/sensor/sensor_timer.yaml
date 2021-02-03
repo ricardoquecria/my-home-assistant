@@ -81,15 +81,15 @@
         timer: >-
           {{ state_attr('sensor.timer_ar_quarto', 'timer')}}
 
-    timer_ventilador:
-      friendly_name: 'Timer - Ventilador'
+    timer_geladeira:
+      friendly_name: 'Timer - Geladeira'
       unit_of_measurement: min
       value_template: "{% if (states.sensor.time.state) | float == 0 %}
-      {{ ((((state_attr('sensor.timer_ventilador', 'timer') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_ventilador.last_changed))) / 60) | round(0) }}
+      {{ ((((state_attr('sensor.timer_geladeira', 'timer') | float()) * 60) - (as_timestamp(now()) - as_timestamp(states.input_boolean.timer_geladeira.last_changed))) / 60) | round(0) }}
       {% endif %}"
       attribute_templates:
         timer: >-
-          {{ state_attr('sensor.timer_ventilador', 'timer')}}
+          {{ state_attr('sensor.timer_geladeira', 'timer')}}
 
     timer_cafeteira:
       friendly_name: 'Timer - Cafeteira'

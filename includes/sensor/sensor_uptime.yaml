@@ -99,9 +99,9 @@
       {% endif %}"
 
 
-# Sensor uptime - ventilador
-    uptime_ventilador:
-      friendly_name: "Uptime - ventilador"
+# Sensor uptime - geladeira
+    uptime_geladeira:
+      friendly_name: "Uptime - geladeira"
       icon_template: mdi:power-plug
       value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('switch.geladeira', 'on') %}
       {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.geladeira.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}

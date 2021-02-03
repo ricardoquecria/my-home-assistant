@@ -115,21 +115,21 @@ cards:
             - height: 120px
             - padding: 10px 5px 15px 5px
 
-      # Switch - Ventilador
+      # Switch - Geladeira
       - entity: switch.geladeira
         type: "custom:button-card"
         icon: mdi:fridge
         label: >
           [[[
             if (states['switch.geladeira'].state == "on")
-              return states['sensor.uptime_ventilador'].state;
+              return states['sensor.uptime_geladeira'].state;
           ]]]   
         show_label: true  
         tap_action:
           action: toggle
         hold_action:
           action: more-info
-        name: Ventilador
+        name: Geladeira
         size: 70%
         state:
           - value: 'unavailable'

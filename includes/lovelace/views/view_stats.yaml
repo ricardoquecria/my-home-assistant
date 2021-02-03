@@ -74,11 +74,11 @@ cards:
         card:
           !include ../cards/energy_tab_lights.yaml
 
-      # Energy Table - Ventilador
+      # Energy Table - Geladeira
       - type: custom:mod-card
         style: !include ../styles/mod_all.yaml
         card:
-          !include ../cards/energy_tab_ventilador.yaml
+          !include ../cards/energy_tab_geladeira.yaml
 
       # Energy Table - Cafeteira
       - type: custom:mod-card
