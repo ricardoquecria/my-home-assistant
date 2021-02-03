@@ -94,13 +94,6 @@ google:
 #   scan_interval:
 #     minutes: 30
 
-# python_script:
-
-# notify:
-#   - name: whatsapp
-#     platform: command_line
-#     command: 'wget $(cat) -O /dev/null'
-
 
 
 
