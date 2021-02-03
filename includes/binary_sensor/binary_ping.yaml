@@ -41,7 +41,7 @@
     scan_interval: 300
 
   - platform: ping
-    name: Ping Tomada Estúdio
+    name: Ping Cafeteira
     host: 192.168.10.107
     count: 2
     scan_interval: 300

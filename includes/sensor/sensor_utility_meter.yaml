@@ -34,15 +34,15 @@
 
 
 
-# # Sensor Extra do Utility Meter - kWh Tomada Estúdio - Ontem
-#     meter_tomada_estudio_ontem:
+# # Sensor Extra do Utility Meter - kWh Cafeteira - Ontem
+#     meter_cafeteira_ontem:
 #       unit_of_measurement: 'kWh'
-#       value_template: "{{ state_attr('sensor.meter_tomada_estudio_hoje', 'last_period') }}"
+#       value_template: "{{ state_attr('sensor.meter_cafeteira_hoje', 'last_period') }}"
 
-# # Sensor Extra do Utility Meter - kWh Tomada Estúdio - Mês anterior
-#     meter_tomada_estudio_mes_anterior:
+# # Sensor Extra do Utility Meter - kWh Cafeteira - Mês anterior
+#     meter_cafeteira_mes_anterior:
 #       unit_of_measurement: 'kWh'
-#       value_template: "{{ state_attr('sensor.meter_tomada_estudio_mes', 'last_period') }}"
+#       value_template: "{{ state_attr('sensor.meter_cafeteira_mes', 'last_period') }}"
 
 
 

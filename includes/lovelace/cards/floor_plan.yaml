@@ -33,13 +33,13 @@ elements:
       action: call-service
       service: input_boolean.turn_on
       service_data:
-        entity_id: input_boolean.tv_quarto
+        entity_id: switch.tv_quarto
     hold_action:
       action: call-service
       service: input_boolean.turn_off
       service_data:
-        entity_id: input_boolean.tv_quarto
-    entity: input_boolean.tv_quarto
+        entity_id: switch.tv_quarto
+    entity: switch.tv_quarto
     style:
       top: 21%
       left: 34%
@@ -47,7 +47,7 @@ elements:
   - type: state-icon
     tap_action:
       action: toggle
-    entity: switch.tomada_estudio
+    entity: switch.cafeteira
     style:
       top: 72%
       left: 29%

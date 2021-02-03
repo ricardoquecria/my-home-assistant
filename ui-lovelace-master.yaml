@@ -31,12 +31,12 @@ custom_header:
 title: Gactos Master
 views:
   - !include includes/lovelace/views/view_home.yaml
-  - !include includes/lovelace/views/view_controls.yaml
+  # - !include includes/lovelace/views/view_controls.yaml
   - !include includes/lovelace/views/view_spotify.yaml
   - !include includes/lovelace/views/view_stats.yaml
   - !include includes/lovelace/views/view_tools.yaml
   - !include includes/lovelace/views/view_hassos.yaml
-  - !include includes/lovelace/views/view_maps.yaml
+  # - !include includes/lovelace/views/view_maps.yaml
   # - !include includes/lovelace/views/view_tab_control.yaml
   # - !include includes/lovelace/views/view_tab_states.yaml
   # - !include includes/lovelace/views/view_tab_players.yaml

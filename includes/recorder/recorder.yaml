@@ -11,9 +11,13 @@
       - sensor.kwh_*
       - sensor.speedtest_*
     entities:
-      - input_boolean.tv_quarto
+      - switch.tv_quarto
       - input_number.ciclo
       - input_text.preco_kwh
+      - sensor.monitor_memory_use
+      - sensor.monitor_memory_free
+      - sensor.monitor_memory_use_percent
+      - sensor.monitor_processor_use_percent
     domains:
       - switch
       - media_player

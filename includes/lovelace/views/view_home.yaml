@@ -34,17 +34,23 @@ cards:
         card:
           !include ../cards/switchs.yaml
 
-      # Player TV
+      # Player TV do Quarto
       - type: custom:mod-card
         style: !include ../styles/mod_top.yaml
         card:
-          !include ../cards/player_tv.yaml
+          !include ../cards/player_tv_quarto.yaml
 
       # Player Mini
       - type: custom:mod-card
         style: !include ../styles/mod_bot.yaml
         card:
           !include ../cards/player_mini.yaml
+
+      # Player TV da Cozinha
+      # - type: custom:mod-card
+      #   style: !include ../styles/mod_bot.yaml
+      #   card:
+      #     !include ../cards/player_tv_cozinha.yaml
 
       # Spotify Buttons Main
       - type: custom:mod-card
@@ -70,7 +76,7 @@ cards:
       - type: custom:mod-card
         style: !include ../styles/mod_all.yaml
         card:
-          !include ../cards/calendar_rick.yaml
+          !include ../cards/calendar_works.yaml
 
       # - break
 

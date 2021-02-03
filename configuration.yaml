@@ -26,9 +26,9 @@ frontend:
 
 
 lovelace: !include lovelace.yaml
-device_tracker: !include_dir_merge_named includes/device_tracker/
+# device_tracker: !include_dir_merge_named includes/device_tracker/
 
-panel_iframe: !include_dir_merge_named includes/panel_iframe/
+# panel_iframe: !include_dir_merge_named includes/panel_iframe/
 
 
 ### ##    ## ######## ########  ######   ########     ###  ######## ####  #######  ##    ##  ######  
@@ -56,11 +56,11 @@ spotcast:
       sp_key: !secret spotify_evi_sp_key
 
 
-unified_remote_mac:
-  host: 192.168.0.17
+# unified_remote_mac:
+#   host: 192.168.0.17
 
-# unified_remote_pc:
-#   host: 192.168.0.56
+# # unified_remote_pc:
+# #   host: 192.168.0.56
 
 ifttt:
   key: !secret ifttt_key
@@ -89,14 +89,38 @@ google:
   client_secret: !secret google_client_secret
   track_new_calendar: true
   
-speedtestdotnet:
-  server_id: 22060
-  scan_interval:
-    minutes: 30
+# speedtestdotnet:
+#   server_id: 22060
+#   scan_interval:
+#     minutes: 30
 
-python_script:
+# python_script:
 
-notify:
-  - name: whatsapp
-    platform: command_line
-    command: 'wget $(cat) -O /dev/null'
+# notify:
+#   - name: whatsapp
+#     platform: command_line
+#     command: 'wget $(cat) -O /dev/null'
+
+# wake_on_lan:
+
+samsungtv:
+  - host: 192.168.1.127
+    name: TV do Quarto
+    turn_on_action:
+      - service: wake_on_lan.send_magic_packet
+        data:
+          mac: "4C:C9:5E:AF:EE:0B"
+
+
+# media_player:
+#   - platform: samsungtv_tizen
+#     name: TV do Quarto
+#     host: 192.168.1.127
+#     mac: "4C:C9:5E:AF:EE:0B"
+#     app_list: '{"Netflix": "11101200001", "Prime Video": "3201512006785", "Spotify": "3201606009684"}'
+#     api_key: 19e26d10-8ee9-4049-a161-8704d1e77139
+#     device_id: 757ef0be-c1b4-8b06-a299-916213f86b26
+
+
+# samsungtv:
+#   - host: 192.168.1.127

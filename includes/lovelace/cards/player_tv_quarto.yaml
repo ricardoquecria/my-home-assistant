@@ -1,0 +1,47 @@
+entity: media_player.tv_quarto
+type: custom:mini-media-player
+info: scroll
+icon: mdi:television
+artwork: cover
+toggle_power: false
+background: /local/images/bg_tv_quarto.png
+scale: 1.2
+idle_view:
+  when_idle: true
+  when_standby: true
+  when_paused: false
+hide:
+  power: false
+  runtime: false
+  sound_mode: false
+  power_state: false
+  shuffle: false
+  icon: false
+shortcuts:
+  hide_when_off: true
+  columns: 4
+  buttons:
+    - type: script
+      id: skip
+      icon: mdi:rewind-30
+      data:
+        entity: media_player.tv_quarto # Same as card entity
+        interval: -30 # Skip in seconds (change by preference)
+    - type: script
+      id: skip
+      icon: mdi:rewind-10
+      data:
+        entity: media_player.tv_quarto # Same as card entity
+        interval: -10 # Skip in seconds (change by preference)
+    - type: script
+      id: skip
+      icon: mdi:fast-forward-10
+      data:
+        entity: media_player.tv_quarto # Same as card entity
+        interval: 10 # Skip in seconds (change by preference)
+    - type: script
+      id: skip
+      icon: mdi:fast-forward-30
+      data:
+        entity: media_player.tv_quarto # Same as card entity
+        interval: 30 # Skip in seconds (change by preference)

@@ -1,39 +1,39 @@
-#                                  
-#   #    #   ####   #####  ##### 
-#   ##  ##  #    #    #      #   
-#   # ## #  #    #    #      #   
-#   #    #  #  # #    #      #   
-#   #    #  #   #     #      #   
-#   #    #   ### #    #      #   
-#                                  
-#   O que foi usado?
-#
-#     Sensor MQTT - https://www.home-assistant.io/integrations/sensor.mqtt/
-#
+# #                                  
+# #   #    #   ####   #####  ##### 
+# #   ##  ##  #    #    #      #   
+# #   # ## #  #    #    #      #   
+# #   #    #  #  # #    #      #   
+# #   #    #  #   #     #      #   
+# #   #    #   ### #    #      #   
+# #                                  
+# #   O que foi usado?
+# #
+# #     Sensor MQTT - https://www.home-assistant.io/integrations/sensor.mqtt/
+# #
 
-# Sensor do microfone do Tablet Dashboard
-- platform: mqtt
-  name: "Tab - Microphone"
-  state_topic: "ha/sensor/android_tab_microphone/attributes"
-  unit_of_measurement: '%'
-  value_template: "{{ value_json.state }}"
-  json_attributes_topic: "ha/sensor/android_tab_microphone/attributes"
+# # Sensor do microfone do Tablet Dashboard
+# - platform: mqtt
+#   name: "Tab - Microphone"
+#   state_topic: "ha/sensor/android_tab_microphone/attributes"
+#   unit_of_measurement: '%'
+#   value_template: "{{ value_json.state }}"
+#   json_attributes_topic: "ha/sensor/android_tab_microphone/attributes"
 
-# Sensor da tela do Tablet Dashboard
-- platform: mqtt
-  name: "Tab - Screen"
-  state_topic: "ha/sensor/android_tab_screen/attributes"
-  value_template: "{{ value_json.state }}"
-  json_attributes_topic: "ha/sensor/android_tab_screen/attributes"
+# # Sensor da tela do Tablet Dashboard
+# - platform: mqtt
+#   name: "Tab - Screen"
+#   state_topic: "ha/sensor/android_tab_screen/attributes"
+#   value_template: "{{ value_json.state }}"
+#   json_attributes_topic: "ha/sensor/android_tab_screen/attributes"
 
 
 
-- platform: template
-  sensors:
+# - platform: template
+#   sensors:
 
-    tab_silence:
-      friendly_name: 'Sensor - Tab Silence'
-      icon_template: mdi:account-voice
-      value_template: >-
-        {{ state_attr('sensor.tab_microphone', 'silence') }} 
+#     tab_silence:
+#       friendly_name: 'Sensor - Tab Silence'
+#       icon_template: mdi:account-voice
+#       value_template: >-
+#         {{ state_attr('sensor.tab_microphone', 'silence') }} 
   

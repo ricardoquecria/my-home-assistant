@@ -29,7 +29,7 @@ cards:
     line_width: 4
     hour24: true 
     entities: 
-      - entity: sensor.history_tomada_estudio
+      - entity: sensor.history_cafeteira
         color: var(--graph-color)
 
 

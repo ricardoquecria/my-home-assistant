@@ -12,3 +12,13 @@
     name: Speedtest
     initial: off
     icon: mdi:speedometer
+
+  ar_do_estudio_gmlab:
+    name: Ar do Estúdio
+    initial: off
+    icon: mdi:snowflake
+
+  ar_de_reuniao_gmlab:
+    name: Ar de Reunião
+    initial: off
+    icon: mdi:snowflake

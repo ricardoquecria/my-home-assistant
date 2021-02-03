@@ -27,15 +27,15 @@
           data:
             entity_id: input_boolean.pc_shutdown
 
-      tv_quarto:
-        friendly_name: TV do Quarto
-        icon_template: "mdi:television"
-        value_template: "{{ is_state('input_boolean.tv_quarto', 'on') }}"
-        turn_on:
-          service: input_boolean.turn_on
-          data:
-            entity_id: input_boolean.tv_quarto
-        turn_off:
-          service: input_boolean.turn_off
-          data:
-            entity_id: input_boolean.tv_quarto
+      # tv_quarto:
+      #   friendly_name: TV do Quarto
+      #   icon_template: "mdi:television"
+      #   value_template: "{{ is_state('switch.tv_quarto', 'on') }}"
+      #   turn_on:
+      #     service: input_boolean.turn_on
+      #     data:
+      #       entity_id: switch.tv_quarto
+      #   turn_off:
+      #     service: input_boolean.turn_off
+      #     data:
+      #       entity_id: switch.tv_quarto

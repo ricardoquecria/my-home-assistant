@@ -24,11 +24,11 @@
 
 
 
-    # kwh_tomada_estudio:
-    #   friendly_name: "kWh - Tomada Estúdio"
+    # kwh_cafeteira:
+    #   friendly_name: "kWh - Cafeteira"
     #   icon_template: mdi:timeline-clock-outline
     #   unit_of_measurement: 'kWh'
-    #   value_template: "{{ states('sensor.kwh_base_tomada_estudio') }}"
+    #   value_template: "{{ states('sensor.kwh_base_cafeteira') }}"
 
     # kwh_ac_quarto:
     #   friendly_name: "kWh - AC Quarto"
@@ -56,8 +56,8 @@
 
 
 # - platform: integration
-#   source: sensor.kwh_base_tomada_estudio
-#   name: kwh_tomada_estudio
+#   source: sensor.kwh_base_cafeteira
+#   name: kwh_cafeteira
 #   unit: kWh
 
 # - platform: integration
@@ -81,8 +81,8 @@
 #   unit: kWh
 
 # - platform: integration
-#   source: sensor.kwh_base_tomada_estudio
-#   name: kwh2_tomada_estudio
+#   source: sensor.kwh_base_cafeteira
+#   name: kwh2_cafeteira
 #   unit: kWh
 #   method: left
 
@@ -127,9 +127,9 @@
 #   device_class: power
 
 # - platform: mqtt
-#   name: kWh - Tomada Estúdio
-#   state_topic: "energy/kwh_tomada_estudio"
-#   json_attributes_topic: "energy/kwh_tomada_estudio/attributes"
+#   name: kWh - Cafeteira
+#   state_topic: "energy/kwh_cafeteira"
+#   json_attributes_topic: "energy/kwh_cafeteira/attributes"
 #   unit_of_measurement: 'kWh'
 #   device_class: power
 

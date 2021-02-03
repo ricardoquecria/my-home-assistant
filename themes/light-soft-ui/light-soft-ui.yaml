@@ -1,18 +1,35 @@
 # Thanks @JuanMTech, @thomasloven, and @N-l1.
 Light Soft UI:
   # Color
-  primary-color: "#5F9BEA"
-  light-primary-color: "#80B7FF"
-  mdc-theme-secondary: var(--primary-color)
-  accent-color: var(--primary-color)
+  primary-color: "#609ceb"
+  light-primary-color: var(--primary-color)
+  accent-color: "#60bfeb"
+  mdc-theme-secondary: var(--accent-color)
+  # More colors
+  success-color: "#77EB60"
+  info-color: var(--primary-color)
+  warning-color: "#EBEB60"
+  error-color: "#D18941"
   # Background
-  primary-background-color: "#F3F5F7"
+  primary-background-color: "#f1f4f7"
   secondary-background-color: var(--primary-background-color)
   # Text
   primary-text-color: "#4A4A4A"
   secondary-text-color: var(--primary-text-color)
+  codemirror-meta: var(--primary-text-color)
+  material-secondary-text-color: var(--secondary-text-color)
   text-primary-color: "#FFFFFF"
   disabled-text-color: "#717171"
+  # Fonts
+  paper-font-headline_-_font-family: Quicksand, Roboto, sans-serif
+  paper-font-headline_-_font-weight: "600"
+  paper-font-subhead_-_font-family: Quicksand, Roboto, sans-serif
+  paper-font-subhead_-_font-weight: "550"
+  paper-font-subhead_-_line-height: 2.2em
+  ha-card-header-font-family: Quicksand, Roboto, sans-serif
+  ha-card-header-font-weight: "600"
+  code-font-family: Cascadia Code PL, Cascadia Mono PL, Cascadia Code, Cascadia Mono, monospace
+  paper-font-common-code_-_font-family: var(--code-font-family)
   # Sidebar
   sidebar-icon-color: var(--primary-text-color)
   sidebar-text-color: var(--primary-text-color)
@@ -37,14 +54,16 @@ Light Soft UI:
   # Labels
   label-badge-background-color: var(--primary-background-color)
   label-badge-text-color: var(--primary-text-color)
-  label-badge-red: "#C7484C"
-  label-badge-green: "#6DC071"
-  label-badge-blue: "#51AAD1"
-  label-badge-yellow: "#D9B757"
-  label-badge-gray: "#5F6267"
+  label-badge-red: "#EB6065"
+  label-badge-green: "#60EB67"
+  label-badge-blue: "#60B1EB"
+  label-badge-yellow: "#EBC860"
+  label-badge-gray: "#666F80"
   # Cards
-  ha-card-border-radius: "15px"
-  ha-card-box-shadow: -5.5px -5.5px 5.5px 0 rgba(255, 255, 255, .5), 5.5px 5.5px 5.5px 0 rgba(0, 0, 0, .03)
+  ha-card-border-radius: "13.75px"
+  ha-card-box-shadow: -5.25px -5.25px 5.25px 0 rgba(255, 255, 255, .5), 5.25px 5.25px 5.25px 0 rgba(0, 0, 0, .03)
+  ha-card-border-color: var(--primary-color)
+  ha-card-border-width: 3px
   card-background-color: var(--primary-background-color)
   paper-card-background-color: var(--primary-background-color)
   paper-listbox-background-color: var(--primary-background-color)
@@ -69,20 +88,24 @@ Light Soft UI:
   primary-name-text-color: grey
   primary-state-text-color: grey
   primary-icon-color: grey
-  ha-card-box-shadow-inset: inset -5.5px -5.5px 5.5px 0 rgba(255, 255, 255, .5), inset 5.5px 5.5px 5.5px 0 rgba(0, 0, 0, .03)
-  soft-ui-pressed: var(--ha-card-box-shadow-inset)
   primary-yellow: "#FAD46B"
   dark-primary-yellow: "#DAB44B"
+  tertiary-background-color: "#DAE2EB"
+  ha-card-box-shadow-inset: inset -5.5px -5.5px 5.5px 0 rgba(255, 255, 255, .5), inset 5.5px 5.5px 5.5px 0 rgba(0, 0, 0, .03)
+  soft-ui-pressed: var(--ha-card-box-shadow-inset)
   soft-ui-shadow: var(--ha-card-box-shadow)
   red: "#eb6060"
   red-orange: "#eb8e60"
+  orange-red: "#eb9a60"
   orange: "#eba560"
   orange-yellow: "#ebc860"
+  yellow-orange: "#ebd460"
   yellow: "#ebdf60"
   yellow-green: "#c8eb60"
   green-yellow: "#b1eb60"
   green: "#60eb60"
   green-cyan: "#60eba5"
+  cyan-green: "#60ebc8"
   cyan: "#60ebeb"
   cyan-blue: "#60bceb"
   blue-cyan: "#608eeb"
@@ -112,6 +135,12 @@ Light Soft UI:
       $: |
         .dial {
           stroke: white !important;
+        }
+    ha-markdown:
+      $: |
+        h1, h2, h3, h4, h5, h6 {
+          text-align: center;
+          font-family: Quicksand, Helvetica, Roboto, sans-serif;
         }
     .: |
       * {
@@ -166,7 +195,7 @@ Light Soft UI:
         width: 95%;
         margin: 0 auto 0 5px;
       }
-      ha-card > #states > div > *:not(hui-button-row):not(hui-input-select-entity-row):not(hui-input-number-entity-row):not(hui-input-text-entity-row) {
+      ha-card > #states > div > *:not(hui-button-row):not(hui-input-select-entity-row):not(hui-input-number-entity-row):not(hui-input-text-entity-row):not(hui-cast-row) {
         display: block;
       }
       ha-card.type-media-control, ha-card.type-media-control > * {
@@ -236,19 +265,33 @@ Light Soft UI:
         .not-visible {
           display: none;
         }
+        /*Uncomment this if you want the header on the bottom
+        #selectionBar {
+          bottom: unset !important;
+        }*/
     "ha-app-layout":
       $: |
         #contentContainer {
-          padding-top: 70px;
+          padding-top: 48px !important; /*Change this to 0px if you want the header on the bottom*/
         }
+    ha-button-menu$mwc-menu$mwc-menu-surface$: |
+      .mdc-menu-surface {
+        margin: 10px;
+        box-shadow: var(--ha-card-box-shadow);
+      }
     .: |
-      app-toolbar:not(.edit-mode) {
+      app-toolbar {
         height: 0;
       }
       .edit-mode, app-header, app-toolbar {
         background-color: var(--primary-background-color) !important;
         color: var(--primary-text-color) !important;
       }
+      /*Uncomment this if you want the header on the bottom
+      app-header {
+        top: calc(100vh - 72px) !important;
+      }
+      */
       app-header.edit-mode {
         border-bottom: 2px var(--primary-color) solid;
         padding-bottom: 10px;
@@ -264,12 +307,39 @@ Light Soft UI:
       .edit-icon {
         color: var(--primary-color) !important;
       }
-      ha-button-menu {
-        top: 24px;
+      mwc-icon-button[label="Start conversation"] {
+        top: 0;
+        right: calc(48px * 1);
         z-index: 2;
-        margin-left: calc(100% - 96px);
+        position: absolute;
       }
-      app-toolbar:not(.edit-mode) > [main-title] {
+      mwc-icon-button[title="Help"] {
+        top: 0;
+        right: calc(48px * 2);
+        position: absolute;
+        z-index: 2;
+      }
+      mwc-icon-button[title="Close"] {
+        top: 0;
+        left: 0;
+        position: absolute;
+        z-index: 2;
+      }
+      mwc-icon-button#add-view {
+        position: fixed;
+        right: calc(48px * 1);
+      }
+      ha-button-menu {
+        top: 0;
+        right: 0;
+        z-index: 2;
+        margin-left: 5px;
+        position: absolute;
+        /*Uncomment this out to hide the overflow menu
+        display: none;
+        */
+      }
+      app-toolbar > [main-title] {
         display: none;
       }
       menu-button[style="visibility: hidden;"] {
@@ -281,7 +351,10 @@ Light Soft UI:
       }
       paper-tabs {
         --paper-tabs-selection-bar-color: var(--primary-color) !important;
-        margin-left: 32px !important;
+        margin-left: 48px !important;
+      }
+      app-toolbar:not(.edit-mode) > div > paper-tabs {
+        margin-left: 6px !important;
       }
       paper-tab[aria-selected="true"] > ha-icon {
         color: var(--primary-color) !important;
@@ -290,28 +363,24 @@ Light Soft UI:
         color: var(--primary-color) !important;
       }
       @media (orientation: portrait) {
-        ha-button-menu {
-          margin-left: calc(100% - 80px);
-        }
         paper-tabs {
-          margin-left: 64px !important;
-          margin-right: 32px !important;
+          margin-left: 0 !important;
+          margin-right: 48px !important;
         }
         ch-header > paper-tabs,
         app-header.edit-mode > * > paper-tabs {
           margin-left: 10px !important;
           margin-right: 10px !important;
         }
+        mwc-icon-button[label="Start conversation"] {
+          display: none !important;
+        }
+        ha-menu-button {
+          display: none !important;
+        }
       }
-      ch-header > ha-button-menu,
-      app-toolbar.edit-mode > ha-button-menu {
+      ch-header > ha-button-menu {
         top: unset;
-        margin-left: unset;
-      }
-      ch-header > ha-menu-button,
-      app-toolbar.edit-mode > ha-menu-button {
-        top: unset;
-        margin-left: unset;
       }
       ch-header > paper-tabs,
       app-header.edit-mode > paper-tabs {
@@ -320,20 +389,26 @@ Light Soft UI:
       app-toolbar a {
         color: var(--primary-text-color) !important;
       }
-  # Badges and columnas
-  card-mod-view: |
-    #badges {
-      width: 90%;
-      margin: 8px auto !important;
-    }
-    #columns {
-      flex-direction: column !important;
-      margin: 0 auto;
-      max-width: 500px;
-    }
-    #columns > .column {
-      margin: 0 15px;
-    }
+  # Badges and columns
+  card-mod-view-yaml: |
+    hui-vertical-stack-card:
+      $: |
+        .card-header {
+          text-align: center;
+        }
+    .: |
+      #badges {
+        width: 90%;
+        margin: 8px auto !important;
+      }
+      #columns {
+        flex-direction: column !important;
+        margin: 0 auto;
+        max-width: 500px;
+      }
+      #columns > .column {
+        margin: 0 15px;
+      }
   card-mod-badge-yaml: |
     .: |
       :host {
@@ -369,20 +444,21 @@ Light Soft UI:
     $: |
       .mdc-dialog {
         backdrop-filter: blur(2px);
-        background-color: #F3F5F7B2 !important;
+        background-color: #f1f4f7cc !important;
       }
       .mdc-dialog__scrim {
-        background-color: #F3F5F7B2 !important;
+        background-color: #f1f4f7cc !important;
       }
       .mdc-dialog .mdc-dialog__container .mdc-dialog__surface {
         background: var(--primary-background-color);
         border-radius: var(--ha-card-border-radius);
         box-shadow: var(--ha-card-box-shadow);
-        transform: scale(0.95);
+        transform: scale(0.9);
       }
       .mdc-dialog__content {
-        padding: 24px !important;
-        padding-bottom: 24px !important;
+        padding: 36px !important;
+        padding-bottom: 36px !important;
+        transform: scale(1.11);
       }
     ha-header-bar:
       $: |

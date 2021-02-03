@@ -52,7 +52,7 @@ cards:
 - type: horizontal-stack
   cards:
 
-    # Luz da Sala
+    # Ar do quarto
     - entity: switch.ac_quarto
       icon: mdi:snowflake
       name: Ar do quarto
@@ -60,50 +60,39 @@ cards:
         action: toggle
       type: entity-button
 
-    # Luz da Cozinha
+    # TV do quarto
     - entity: switch.tv_quarto
       icon: mdi:television
       name: TV do Quarto
       tap_action:
-        action: call-service
-        service: input_boolean.turn_on
-        service_data:
-          entity_id: switch.tv_quarto
-      hold_action:
-        action: call-service
-        service: input_boolean.turn_off
-        service_data:
-          entity_id: switch.tv_quarto
+        action: toggle
       type: entity-button
 
-    # Luz do Quarto
-    - entity: switch.tomada_estudio
-      icon: mdi:power-plug
-      name: Estúdio
+    # Cafeteira
+    - entity: switch.cafeteira
+      icon: mdi:coffee
+      name: Cafeteira
       tap_action:
         action: toggle
       type: entity-button
 
-    # Luz do Estúdio
+    # Ventilador
+    - entity: switch.ventilador
+      icon: mdi:fan
+      name: Ventilador
+      tap_action:
+        action: toggle
+      type: entity-button
+
+    # Tudo
     - entity: group.all
       icon: mdi:power
       name: Tudo
       tap_action:
-        action: call-service
-        service: homeassistant.turn_on
-        service_data:
-          entity_id: group.all
-      hold_action:
-        action: more-info
-      type: entity-button
-
-    # Luz do Banheiro
-    - entity: light.luz_do_banheiro
-      icon: mdi:lightbulb-group-outline
-      name: Lampadas
-      tap_action:
         action: toggle
       type: entity-button
+
+
 
 - type: horizontal-stack
   cards:
