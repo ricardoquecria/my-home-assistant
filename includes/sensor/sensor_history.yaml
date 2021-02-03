@@ -13,10 +13,21 @@
 #   Quanto tempo o ar do quarto ficou ligado ontem, hoje, essa semana, mês passado? Esse é o sensor que vai responder essa pergunta.
 #
 
-# Sensor History - Tomada do Estúdio
+# Sensor History - Ventilador
 - platform: history_stats
-  name: History - Tomada Estúdio
-  entity_id: switch.tomada_estudio
+  name: History - Ventilador
+  entity_id: switch.ventilador
+  state: 'on'
+  type: time
+  start: '{{ now().replace(hour=0, minute=0, second=0) }}'
+  end: '{{ now() }}'
+  # start: '{{ 0 }}'
+  # end: '{{ now() }}'
+
+# Sensor History - Cafeteira
+- platform: history_stats
+  name: History - Cafeteira
+  entity_id: switch.cafeteira
   state: 'on'
   type: time
   start: '{{ now().replace(hour=0, minute=0, second=0) }}'
@@ -36,8 +47,8 @@
 # Sensor History - TV Quarto
 - platform: history_stats
   name: History - TV Quarto
-  entity_id: media_player.tv
-  state: 'playing'
+  entity_id: switch.tv_quarto
+  state: 'on'
   type: time
   start: '{{ now().replace(hour=0, minute=0, second=0) }}'
   end: '{{ now() }}'
@@ -102,5 +113,5 @@
       friendly_name: "kWh - Geral"
       icon_template: mdi:chart-line
       unit_of_measurement: 'kWh'
-      value_template: "{{ (states('sensor.meter_ac_quarto_hoje') | float()) + (states('sensor.meter_tv_quarto_hoje') | float()) + (states('sensor.meter_all_lights_hoje') | float()) + (states('sensor.meter_tomada_estudio_hoje') | float()) }}"
+      value_template: "{{ (states('sensor.meter_ac_quarto_hoje') | float()) + (states('sensor.meter_tv_quarto_hoje') | float()) + (states('sensor.meter_all_lights_hoje') | float()) + (states('sensor.meter_ventilador_hoje') | float()) + (states('sensor.meter_cafeteira_hoje') | float()) }}"
 

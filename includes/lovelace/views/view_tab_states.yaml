@@ -21,17 +21,14 @@ cards:
           - entity: light.luz_do_banheiro
           - entity: light.luz_da_cozinha
           - entity: light.luz_da_sala
-          - entity: group.all_lighs
-          - entity: sensor.thenull
-            name: "   "
-            icon: "mdi"
+          - entity: group.all_lights
           - entity: switch.ac_quarto
-            icon: mdi:fan
-          - entity: switch.tomada_estudio
-            icon: mdi:power-plug
+            icon: mdi:snowflake
+          - entity: switch.cafeteira
+          - entity: switch.ventilador
           - entity: group.all
             icon: mdi:power
-          - entity: input_boolean.tv_quarto
+          - entity: switch.tv_quarto
           - entity: input_boolean.pc_shutdown
           - entity: input_boolean.mac_shutdown
           
@@ -48,20 +45,6 @@ cards:
           - entity: input_boolean.speedtest_update
             name: Fazer teste
 
-          - entity: sensor.thenull
-            name: "   "
-            icon: "mdi"
-          - entity: sensor.custo_energia_hoje
-            name: Hoje
-          - entity: sensor.custo_energia_ontem
-            name: Ontem
-          - entity: sensor.custo_energia_mes_atual
-            name: Mês atual
-          - entity: sensor.custo_energia_mes_anterior
-            name: Mês anterior
-          - entity: sensor.thenull
-            name: "   "
-            icon: "mdi"
 
 
   - type: horizontal-stack
@@ -81,10 +64,10 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - sensor.meter_tomada_estudio_hoje
-          - sensor.meter_tomada_estudio_ontem
-          - sensor.meter_tomada_estudio_mes
-          - sensor.meter_tomada_estudio_mes_anterior
+          - sensor.meter_cafeteira_hoje
+          - sensor.meter_cafeteira_ontem
+          - sensor.meter_cafeteira_mes
+          - sensor.meter_cafeteira_mes_anterior
 
 
   - type: horizontal-stack

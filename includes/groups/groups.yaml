@@ -50,7 +50,7 @@ all:
     - light.luz_do_quarto
     - switch.ac_quarto
     - switch.estudio
-    - input_boolean.tv_quarto
+    - switch.tv_quarto
     
 all_players:
   name: Group - All Players

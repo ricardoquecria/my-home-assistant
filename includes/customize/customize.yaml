@@ -12,7 +12,7 @@ group.all_lights:
   icon: mdi:lightbulb-group-outline
 
 
-switch.tomada_estudio:
+switch.cafeteira:
   icon: mdi:power-plug
 switch.ac_quarto:
   icon: mdi:snowflake
@@ -39,20 +39,20 @@ sensor.meter_geral_mes_anterior:
   icon: mdi:counter
 
 
-sensor.meter_tomada_estudio_hoje:
-  friendly_name: Meter - Tomada Estúdio - Hoje
+sensor.meter_cafeteira_hoje:
+  friendly_name: Meter - Cafeteira - Hoje
   icon: mdi:counter
 
-sensor.meter_tomada_estudio_ontem:
-  friendly_name: Meter - Tomada Estúdio - Ontem
+sensor.meter_cafeteira_ontem:
+  friendly_name: Meter - Cafeteira - Ontem
   icon: mdi:counter
 
-sensor.meter_tomada_estudio_mes:
-  friendly_name: Meter - Tomada Estúdio - Mês
+sensor.meter_cafeteira_mes:
+  friendly_name: Meter - Cafeteira - Mês
   icon: mdi:counter
 
-sensor.meter_tomada_estudio_mes_anterior:
-  friendly_name: Meter - Tomada Estúdio - Mês anterior
+sensor.meter_cafeteira_mes_anterior:
+  friendly_name: Meter - Cafeteira - Mês anterior
   icon: mdi:counter
 
 

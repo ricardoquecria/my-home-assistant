@@ -1,150 +1,241 @@
-type: horizontal-stack
-cards:
+type: vertical-stack
+cards: 
 
-  # Switch - AC Quarto
-  - entity: switch.ac_quarto
-    type: "custom:button-card"
-    icon: mdi:snowflake
-    label: >
-      [[[
-        if (states['switch.ac_quarto'].state == "on")
-          return states['sensor.uptime_ac_quarto'].state;
-      ]]]       
-    show_label: true           
-    tap_action:
-      action: toggle
-    hold_action:
-      action: call-service
-      service: input_boolean.toggle
-      service_data:
-        entity_id: input_boolean.var_ac_lock
-    name: Ar
-    size: 65%
-    state:
-      - value: "unavailable"
-        color: var(--primary-background-color)
-    styles:
-      label:
-        - font-size: 12px
-        - color: var(--light-primary-color)  
-      card:
-        - font-size: 16px
-        - height: 120px
-        - padding: 10px 5px 15px 5px
-      custom_fields:
-        notification:
-          - background-color: >
-              [[[
-                if (states['input_boolean.var_ac_lock'].state == "on")
-                  return "var(--primary-color)";
-                return "var(--paper-card-background-color)";
-              ]]]
-          - border-radius: 50%
-          - position: absolute
-          - left: 70%
-          - top: 10%
-          - height: 15px
-          - width: 15px
-          - font-size: 8px
-          - line-height: 20px
-    custom_fields:
-      notification: >
-        [[[ return " "; ]]]
+  - type: horizontal-stack
+    cards:
 
-  # Switch - TV Quarto
-  - entity: switch.tv_quarto
-    type: "custom:button-card"
-    label: >
-      [[[
-        if (states['switch.tv_quarto'].state == "on")
-          return states['sensor.uptime_tv_quarto'].state;
-      ]]]       
-    show_label: true   
-    tap_action:
-      action: call-service
-      service: switch.turn_on
-      service_data:
-        entity_id: switch.tv_quarto
-    hold_action:
-      action: call-service
-      service: switch.turn_off
-      service_data:
-        entity_id: switch.tv_quarto
-    name: TV
-    size: 65%
-    state:
-      - value: "unavailable"
-        color: var(--primary-background-color)
-    styles:
-      label:
-        - font-size: 12px
-        - color: var(--light-primary-color)  
-      card:
-        - font-size: 16px
-        - height: 120px
-        - padding: 10px 5px 15px 5px
+      # Switch - AC Quarto
+      - entity: switch.ac_quarto
+        type: "custom:button-card"
+        icon: mdi:snowflake
+        label: >
+          [[[
+            if (states['switch.ac_quarto'].state == "on")
+              return states['sensor.uptime_ac_quarto'].state;
+          ]]]       
+        show_label: true           
+        tap_action:
+          action: toggle
+        hold_action:
+          action: call-service
+          service: input_boolean.toggle
+          service_data:
+            entity_id: input_boolean.var_ac_lock
+        name: Ar
+        size: 65%
+        state:
+          - value: "unavailable"
+            color: var(--primary-background-color)
+        styles:
+          label:
+            - font-size: 12px
+            - color: var(--light-primary-color)  
+          card:
+            - font-size: 16px
+            - height: 120px
+            - padding: 10px 5px 15px 5px
+          custom_fields:
+            notification:
+              - background-color: >
+                  [[[
+                    if (states['input_boolean.var_ac_lock'].state == "on")
+                      return "var(--primary-color)";
+                    return "var(--paper-card-background-color)";
+                  ]]]
+              - border-radius: 50%
+              - position: absolute
+              - left: 70%
+              - top: 10%
+              - height: 15px
+              - width: 15px
+              - font-size: 8px
+              - line-height: 20px
+        custom_fields:
+          notification: >
+            [[[ return " "; ]]]
 
-  # Switch - Estúdio
-  - entity: switch.tomada_estudio
-    type: "custom:button-card"
-    icon: mdi:power-plug
-    label: >
-      [[[
-        if (states['switch.tomada_estudio'].state == "on")
-          return states['sensor.uptime_tomada_estudio'].state;
-      ]]]   
-    show_label: true  
-    tap_action:
-      action: toggle
-    hold_action:
-      action: more-info
-    name: Estúdio
-    size: 70%
-    state:
-      - value: 'unavailable'
-        color: var(--primary-background-color)
-    styles:
-      label:
-        - font-size: 12px
-        - color: var(--light-primary-color)                  
-      card:
-        - font-size: 16px
-        - height: 120px
-        - padding: 10px 5px 15px 5px
+      # Switch - TV Quarto
+      - entity: switch.tv_quarto
+        type: "custom:button-card"
+        label: >
+          [[[
+            if (states['switch.tv_quarto'].state == "on")
+              return states['sensor.uptime_tv_quarto'].state;
+          ]]]       
+        show_label: true   
+        tap_action:
+          action: call-service
+          service: switch.toggle
+          service_data:
+            entity_id: switch.tv_quarto
+        # hold_action:
+        #   action: call-service
+        #   service: switch.turn_off
+        #   service_data:
+        #     entity_id: switch.tv_quarto
+        name: TV
+        size: 65%
+        state:
+          - value: "unavailable"
+            color: var(--primary-background-color)
+        styles:
+          label:
+            - font-size: 12px
+            - color: var(--light-primary-color)  
+          card:
+            - font-size: 16px
+            - height: 120px
+            - padding: 10px 5px 15px 5px
 
-  # Switch - Luzes
-  - entity: group.all_lights
-    type: "custom:button-card"
-    tap_action:
-      action: toggle
-    hold_action:
-      action: more-info
-    name: Luzes
-    size: 80%
-    state:
-      - value: "unavailable"
-        color: var(--primary-background-color)
-    styles:
-      card:
-        - font-size: 16px
-        - height: 120px
-        - padding: 10px 5px 15px 5px
+      # Switch - Cafeteira
+      - entity: switch.cafeteira
+        type: "custom:button-card"
+        icon: mdi:coffee
+        label: >
+          [[[
+            if (states['switch.cafeteira'].state == "on")
+              return states['sensor.uptime_cafeteira'].state;
+          ]]]   
+        show_label: true  
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+        name: Cafeteira
+        size: 70%
+        state:
+          - value: 'unavailable'
+            color: var(--primary-background-color)
+        styles:
+          label:
+            - font-size: 12px
+            - color: var(--light-primary-color)                  
+          card:
+            - font-size: 16px
+            - height: 120px
+            - padding: 10px 5px 15px 5px
 
-  # Switch - Tudo
-  - entity: group.all
-    type: "custom:button-card"
-    icon: mdi:power
-    tap_action:
-      action: more-info
-    hold_action:
-      action: toggle
-    name: Tudo
-    size: 70%
-    state:
-      - value: "unavailable"
-        color: var(--primary-background-color)
-    styles:
-      card:
-        - font-size: 16px
-        - height: 120px
-        - padding: 10px 5px 15px 5px
+      # Switch - Ventilador
+      - entity: switch.ventilador
+        type: "custom:button-card"
+        icon: mdi:fan
+        label: >
+          [[[
+            if (states['switch.ventilador'].state == "on")
+              return states['sensor.uptime_ventilador'].state;
+          ]]]   
+        show_label: true  
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+        name: Ventilador
+        size: 70%
+        state:
+          - value: 'unavailable'
+            color: var(--primary-background-color)
+        styles:
+          label:
+            - font-size: 12px
+            - color: var(--light-primary-color)                  
+          card:
+            - font-size: 16px
+            - height: 120px
+            - padding: 10px 5px 15px 5px
+
+      # Switch - Luzes
+      - entity: group.all_lights
+        type: "custom:button-card"
+        tap_action:
+          action: toggle
+        hold_action:
+          action: more-info
+        name: Luzes
+        size: 80%
+        state:
+          - value: "unavailable"
+            color: var(--primary-background-color)
+        styles:
+          card:
+            - font-size: 16px
+            - height: 120px
+            - padding: 10px 5px 15px 5px
+
+      # Switch - Tudo
+      # - entity: input_boolean.ar_do_estudio_gmlab
+      #   type: "custom:button-card"
+      #   icon: mdi:snowflake
+      #   tap_action:
+      #     action: toggle
+      #   hold_action:
+      #     action: toggle
+      #   name: Ar Lab
+      #   size: 70%
+      #   state:
+      #     - value: "unavailable"
+      #       color: var(--primary-background-color)
+      #   styles:
+      #     card:
+      #       - font-size: 16px
+      #       - height: 120px
+      #       - padding: 10px 5px 15px 5px
+
+  # Spotify Buttons
+  - type: horizontal-stack
+    cards:
+
+      # Ar do Estúdio
+      - type: custom:mod-card
+        card:
+          type: 'custom:button-card'
+          entity: input_boolean.ar_do_estudio_gmlab
+          layout: icon_name
+          name: Ar do Estúdio
+          icon: mdi:snowflake
+          size: 60%
+          tap_action:
+            action: toggle
+          styles:
+            grid:
+              - grid-template-areas: '"i n"'
+              - grid-template-columns: 30% 70%
+            icon:
+              - align-self: start
+              - height: 45px
+            card:
+              - padding: 5px 0px 5px 0px
+              - height: 45px
+            name:
+              - justify-self: end
+              - padding-right: 15%
+              - font-weight: 400
+              - font-size: 16px
+
+      # Ar do Reunião
+      - type: custom:mod-card
+        card:
+          type: 'custom:button-card'
+          entity: input_boolean.ar_de_reuniao_gmlab
+          layout: icon_name
+          name: Ar de Reunião
+          icon: mdi:snowflake
+          size: 60%
+          tap_action:
+            action: toggle
+          styles:
+            grid:
+              - grid-template-areas: '"i n"'
+              - grid-template-columns: 30% 70%
+            icon:
+              - align-self: start
+              - height: 45px
+            card:
+              - padding: 5px 0px 5px 0px
+              - height: 45px
+            name:
+              - justify-self: end
+              - padding-right: 15%
+              - font-weight: 400
+              - font-size: 16px
+
+

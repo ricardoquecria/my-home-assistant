@@ -30,4 +30,11 @@ cards:
     filter:
       include:
         - name: "Sensor *"
-        - entity_id: "binary_sensor.ping_*"
+        - entity_id: "sensor.adguard_*"
+        
+        
+        
+        
+        
+        
+        

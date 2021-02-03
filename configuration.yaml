@@ -26,9 +26,9 @@ frontend:
 
 
 lovelace: !include lovelace.yaml
-device_tracker: !include_dir_merge_named includes/device_tracker/
+# device_tracker: !include_dir_merge_named includes/device_tracker/
 
-panel_iframe: !include_dir_merge_named includes/panel_iframe/
+# panel_iframe: !include_dir_merge_named includes/panel_iframe/
 
 
 ### ##    ## ######## ########  ######   ########     ###  ######## ####  #######  ##    ##  ######  
@@ -56,11 +56,11 @@ spotcast:
       sp_key: !secret spotify_evi_sp_key
 
 
-unified_remote_mac:
-  host: 192.168.0.17
+# unified_remote_mac:
+#   host: 192.168.0.17
 
-# unified_remote_pc:
-#   host: 192.168.0.56
+# # unified_remote_pc:
+# #   host: 192.168.0.56
 
 ifttt:
   key: !secret ifttt_key
@@ -89,14 +89,19 @@ google:
   client_secret: !secret google_client_secret
   track_new_calendar: true
   
-speedtestdotnet:
-  server_id: 22060
-  scan_interval:
-    minutes: 30
+# speedtestdotnet:
+#   server_id: 22060
+#   scan_interval:
+#     minutes: 30
 
-python_script:
+# python_script:
 
-notify:
-  - name: whatsapp
-    platform: command_line
-    command: 'wget $(cat) -O /dev/null'
+# notify:
+#   - name: whatsapp
+#     platform: command_line
+#     command: 'wget $(cat) -O /dev/null'
+
+
+
+
+

@@ -16,14 +16,6 @@ cards:
 
       - break 
 
-      # Server Panel
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/ha_states_devices.yaml
-
-      - break 
-
       # Floor Plan
       - type: custom:mod-card
         style: !include ../styles/mod_all.yaml

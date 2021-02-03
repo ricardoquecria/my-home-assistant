@@ -97,12 +97,19 @@
       - meter_all_lights_ontem
       - meter_all_lights_mes
       - meter_all_lights_mes_anterior
-      - meter_tomada_estudio_hoje
-      - meter_tomada_estudio_ontem
-      - meter_tomada_estudio_mes
-      - meter_tomada_estudio_mes_anterior
+      - meter_cafeteira_hoje
+      - meter_cafeteira_ontem
+      - meter_cafeteira_mes
+      - meter_cafeteira_mes_anterior
       - +
       - '#'
 
-
+  speakers:
+    name: 'Speakers'
+    icon: mdi:cast-audio
+    options:
+      - Google Home - Cozinha
+      - TV do Quarto
+      - TV da Sala
+      - Grupo - Som da Casa
 
