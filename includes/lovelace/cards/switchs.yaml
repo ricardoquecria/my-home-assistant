@@ -116,12 +116,12 @@ cards:
             - padding: 10px 5px 15px 5px
 
       # Switch - Ventilador
-      - entity: switch.ventilador
+      - entity: switch.geladeira
         type: "custom:button-card"
         icon: mdi:fan
         label: >
           [[[
-            if (states['switch.ventilador'].state == "on")
+            if (states['switch.geladeira'].state == "on")
               return states['sensor.uptime_ventilador'].state;
           ]]]   
         show_label: true  

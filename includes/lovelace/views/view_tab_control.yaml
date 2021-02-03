@@ -77,7 +77,7 @@ cards:
       type: entity-button
 
     # Ventilador
-    - entity: switch.ventilador
+    - entity: switch.geladeira
       icon: mdi:fan
       name: Ventilador
       tap_action:

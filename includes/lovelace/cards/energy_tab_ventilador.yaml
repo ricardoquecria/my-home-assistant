@@ -7,7 +7,7 @@ cards:
     name: Ventilador
     label: >
       [[[
-        if (states['switch.ventilador'].state == "on")
+        if (states['switch.geladeira'].state == "on")
           return "LIGADO";
         return "DESLIGADO";
       ]]]
@@ -41,13 +41,13 @@ cards:
         - font-size: 12px
         - opacity: >
             [[[
-              if (states['switch.ventilador'].state == "on")
+              if (states['switch.geladeira'].state == "on")
                 return "100%";
               return "30%";
             ]]]
         - background-color: >
             [[[
-              if (states['switch.ventilador'].state == "on")
+              if (states['switch.geladeira'].state == "on")
                 return "var(--color3, var(--light-primary-color))";
               return "var(--disabled-color)";
             ]]]

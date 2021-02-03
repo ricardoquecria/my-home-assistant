@@ -16,7 +16,7 @@
 # Sensor History - Ventilador
 - platform: history_stats
   name: History - Ventilador
-  entity_id: switch.ventilador
+  entity_id: switch.geladeira
   state: 'on'
   type: time
   start: '{{ now().replace(hour=0, minute=0, second=0) }}'
