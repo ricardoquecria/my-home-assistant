@@ -36,4 +36,9 @@
 #       icon_template: mdi:account-voice
 #       value_template: >-
 #         {{ state_attr('sensor.tab_microphone', 'silence') }} 
-  
+
+- platform: mqtt
+  name: Mortes em 24h
+  state_topic: "covid/24h"
+  json_attributes_topic: "covid/24h/attributes"
+  unit_of_measurement: 'mortos em 24h'

@@ -52,7 +52,7 @@
           
     meter_tendence_mes_anterior:
       friendly_name: "Meter - Tendence - Mês anterior"
-      entity_id: sensor.time
+      # entity_id: sensor.time
       icon_template: mdi:cash-usd-outline
       unit_of_measurement: 'kWh'
       value_template: "{{ ((states('sensor.meter_geral_mes_anterior') | float() / 30) * state_attr('sensor.ciclo_energia','periodo') | float()) | round(2)}}"

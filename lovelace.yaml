@@ -18,34 +18,34 @@ dashboards:
     show_in_sidebar: false
     require_admin: true
 
-  lovelace-rick:
-    mode: yaml
-    filename: ui-lovelace-rick.yaml
-    title: Gactos Rick
-    icon: mdi:cellphone-android
-    show_in_sidebar: false
-    require_admin: true
+  # lovelace-rick:
+  #   mode: yaml
+  #   filename: ui-lovelace-rick.yaml
+  #   title: Gactos Rick
+  #   icon: mdi:cellphone-android
+  #   show_in_sidebar: false
+  #   require_admin: true
 
-  lovelace-evi:
-    mode: yaml
-    filename: ui-lovelace-evi.yaml
-    title: Gactos Evi
-    icon: mdi:cellphone-iphone
-    show_in_sidebar: false
-    require_admin: true
+  # lovelace-evi:
+  #   mode: yaml
+  #   filename: ui-lovelace-evi.yaml
+  #   title: Gactos Evi
+  #   icon: mdi:cellphone-iphone
+  #   show_in_sidebar: false
+  #   require_admin: true
 
-  lovelace-full:
-    mode: yaml
-    filename: ui-lovelace-full.yaml
-    title: Gactos Full
-    icon: mdi:monitor-dashboard
-    show_in_sidebar: false
-    require_admin: false
+  # lovelace-full:
+  #   mode: yaml
+  #   filename: ui-lovelace-full.yaml
+  #   title: Gactos Full
+  #   icon: mdi:monitor-dashboard
+  #   show_in_sidebar: false
+  #   require_admin: false
 
-  lovelace-mac:
-    mode: yaml
-    filename: ui-lovelace-mac.yaml
-    title: Gactos Mac
-    icon: mdi:laptop-mac
-    show_in_sidebar: false
-    require_admin: false
+  # lovelace-mac:
+  #   mode: yaml
+  #   filename: ui-lovelace-mac.yaml
+  #   title: Gactos Mac
+  #   icon: mdi:laptop-mac
+  #   show_in_sidebar: false
+  #   require_admin: false

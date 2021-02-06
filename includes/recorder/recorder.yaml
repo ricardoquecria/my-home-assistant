@@ -18,6 +18,7 @@
       - sensor.monitor_memory_free
       - sensor.monitor_memory_use_percent
       - sensor.monitor_processor_use_percent
+      - sensor.mortes_em_24h
     domains:
       - switch
       - media_player

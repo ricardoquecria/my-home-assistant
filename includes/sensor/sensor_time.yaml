@@ -27,7 +27,7 @@
     date_full:
       friendly_name: "Date - Full"
       icon_template: mdi:calendar-today
-      entity_id: sensor.time
+      # entity_id: sensor.time
       value_template: >-
         {% set weekday = now().isoweekday() %}
         {% set month = now().month %}

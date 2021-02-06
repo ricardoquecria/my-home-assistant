@@ -95,6 +95,5 @@ google:
 #     minutes: 30
 
 
-
-
-
+# hacs:
+#   token: !secret github_token

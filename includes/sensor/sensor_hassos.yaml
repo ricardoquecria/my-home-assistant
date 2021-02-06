@@ -18,7 +18,6 @@
 # Sensor que calcula a quanto tempo o Home Assistante está rodando
 - platform: uptime
   name: Servidor online
-  unit_of_measurement: hours
 
 # Sensor para coletar o tamanho do banco de dados Maria DB
 - platform: sql
@@ -31,10 +30,10 @@
       unit_of_measurement: MB
 
 # Sensor para coletar valores sobre o uso do disco
-- platform: diskspace
-  name: Disco
-  path: "/"
-  unit_of_measure: "MB"
+# - platform: diskspace
+#   name: Disco
+#   path: "/"
+#   unit_of_measure: "MB"
 
 - platform: systemmonitor
   resources:
@@ -45,7 +44,6 @@
     - type: memory_use
     - type: memory_free
     - type: processor_use
-    - type: processor_temperature
     - type: last_boot
 
 
@@ -113,7 +111,7 @@
     devices_on:
       friendly_name: "Dispositivos ligados"
       icon_template: mdi:devices
-      entity_id: sensor.time_full
+      # entity_id: sensor.time_full
       value_template: >-
           
       attribute_templates:
