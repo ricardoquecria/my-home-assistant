@@ -96,7 +96,7 @@
       icon_template: >-
         {% set battery_level = states('sensor.battery_macbook_level')|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
-        {% if is_state_attr('sensor.battery_macbook_level', 'Battery status', 'Charging') %}
+        {% if is_state_attr('sensor.battery_macbook_level', 'battery_status', 'Charging') %}
         {% if battery_level == 'unknown' %}
           mdi:battery-unknown
         {% else %}
