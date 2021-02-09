@@ -1,9 +1,7 @@
-
- - platform: nmap_tracker
-   hosts: 
-     - 192.168.0.1-55
-   scan_options: " -F –host-timeout 10s "
-   home_interval: 3
-   consider_home: 600
-   new_device_defaults:
-     track_new_devices: false
+  platform: nmap_tracker
+  hosts: 192.168.1.1-255
+  scan_options: " -F –host-timeout 10s "
+  home_interval: 3
+  consider_home: 600
+  new_device_defaults:
+    track_new_devices: false

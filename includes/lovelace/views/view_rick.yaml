@@ -34,10 +34,10 @@ cards:
           !include ../cards/switchs.yaml
 
       # Player TV
-      - type: custom:mod-card
-        style: !include ../styles/mod_top.yaml
-        card:
-          !include ../cards/player_tv.yaml
+      # - type: custom:mod-card
+      #   style: !include ../styles/mod_top.yaml
+      #   card:
+      #     !include ../cards/player_tv.yaml
 
       # Player Mini
       - type: custom:mod-card

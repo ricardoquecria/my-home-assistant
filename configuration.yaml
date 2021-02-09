@@ -26,8 +26,15 @@ frontend:
 
 
 lovelace: !include lovelace.yaml
-# device_tracker: !include_dir_merge_named includes/device_tracker/
-
+device_tracker: !include_dir_merge_named includes/device_tracker/
+# device_tracker:
+#   - platform: nmap_tracker
+#     hosts: 192.168.1.1-255
+#     scan_options: " -F –host-timeout 10s "
+#     home_interval: 3
+#     consider_home: 600
+#     new_device_defaults:
+#       track_new_devices: true
 # panel_iframe: !include_dir_merge_named includes/panel_iframe/
 
 
@@ -57,7 +64,7 @@ spotcast:
 
 
 # unified_remote_mac:
-#   host: 192.168.0.17
+#   host: 192.168.1.37
 
 # # unified_remote_pc:
 # #   host: 192.168.0.56
