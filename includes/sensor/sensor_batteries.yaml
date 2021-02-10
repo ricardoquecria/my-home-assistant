@@ -39,7 +39,7 @@
           mdi:battery-unknown
         {% else %}
           {% if battery_round >= 100 %}
-            mdi:battery-100
+            mdi:battery
           {% elif battery_round > 0 %}
             mdi:battery-{{ battery_round }}
           {% else %}
@@ -59,7 +59,7 @@
       icon_template: >-
         {% set battery_level = states('sensor.iphone_de_evellin_battery_level')|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
-        {% if is_state('sensor.iphone_de_evellin_battery_state', 'Charging') %}
+        {% if is_state_attr('sensor.iphone_de_evellin_battery_level', 'battery_status', 'Charging') %}
         {% if battery_level == 'unknown' %}
           mdi:battery-unknown
         {% else %}
@@ -76,7 +76,7 @@
           mdi:battery-unknown
         {% else %}
           {% if battery_round >= 100 %}
-            mdi:battery-100
+            mdi:battery
           {% elif battery_round > 0 %}
             mdi:battery-{{ battery_round }}
           {% else %}
@@ -88,7 +88,7 @@
         {{states('sensor.iphone_de_evellin_battery_level')}}
       attribute_templates:
         Status: >-
-          {{states('sensor.iphone_de_evellin_battery_state') | replace("Not Charging", "Descarregando") | replace("Charging", "Carregando")  }}
+          {{ state_attr('sensor.iphone_de_evellin_battery_level', 'battery_status') | replace("NotCharging", "Descarregando") | replace("Charging", "Carregando") }}
 
     battery_macbook:
       friendly_name: "Battery - MacBook"
@@ -113,7 +113,7 @@
           mdi:battery-unknown
         {% else %}
           {% if battery_round >= 100 %}
-            mdi:battery-100
+            mdi:battery
           {% elif battery_round > 0 %}
             mdi:battery-{{ battery_round }}
           {% else %}
