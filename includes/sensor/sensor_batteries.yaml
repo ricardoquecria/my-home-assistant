@@ -51,7 +51,7 @@
         {{states('sensor.battery_rick_phone_level')}}
       attribute_templates:
         Status: >-
-          {{states('sensor.battery_rick_phone_state') | replace("discharging", "Descarregando") | replace("charging", "Carregando")  }}
+          {{states('sensor.battery_rick_phone_state') | replace("discharging", "Descarregando") | replace("charging", "Carregando") | replace("full", "Carga completa")  }}
 
     battery_evi_phone:
       friendly_name: "Battery - Evi Phone"
@@ -88,7 +88,7 @@
         {{states('sensor.iphone_de_evellin_battery_level')}}
       attribute_templates:
         Status: >-
-          {{ state_attr('sensor.iphone_de_evellin_battery_level', 'battery_status') | replace("NotCharging", "Descarregando") | replace("Charging", "Carregando") }}
+          {{ state_attr('sensor.iphone_de_evellin_battery_level', 'battery_status') | replace("NotCharging", "Descarregando") | replace("Charging", "Carregando") | replace("Charged", "Carga completa") }}
 
     battery_macbook:
       friendly_name: "Battery - MacBook"
@@ -125,7 +125,7 @@
         {{states('sensor.battery_macbook_level')}}
       attribute_templates:
         Status: >-
-          {{ state_attr('sensor.battery_macbook_level', 'battery_status') | replace("NotCharging", "Descarregando") | replace("Charging", "Carregando") }}
+          {{ state_attr('sensor.battery_macbook_level', 'battery_status') | replace("NotCharging", "Descarregando") | replace("Charging", "Carregando") | replace("Charged", "Carga completa") }}
 
 
     # # Sensor para gerar um status mais amigável da bateria em português
