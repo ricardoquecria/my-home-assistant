@@ -26,10 +26,14 @@
     name: var_speedtest
     icon: mdi:variable
 
-  var_password:
-    name: var_password
+  var_password_text:
+    name: var_password_text
     icon: mdi:variable
 
   var_password_check:
     name: var_password_check
+    icon: mdi:variable
+
+  var_password_loop:
+    name: var_password_loop
     icon: mdi:variable

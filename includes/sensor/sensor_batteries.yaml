@@ -43,7 +43,7 @@
           {% elif battery_round > 0 %}
             mdi:battery-{{ battery_round }}
           {% else %}
-            battery-alert-variant-outline
+            mdi:battery-alert-variant-outline
           {% endif %}
         {% endif %}
         {% endif %}
@@ -80,7 +80,7 @@
           {% elif battery_round > 0 %}
             mdi:battery-{{ battery_round }}
           {% else %}
-            battery-alert-variant-outline
+            mdi:battery-alert-variant-outline
           {% endif %}
         {% endif %}
         {% endif %}
@@ -117,7 +117,7 @@
           {% elif battery_round > 0 %}
             mdi:battery-{{ battery_round }}
           {% else %}
-            battery-alert-variant-outline
+            mdi:battery-alert-variant-outline
           {% endif %}
         {% endif %}
         {% endif %}
