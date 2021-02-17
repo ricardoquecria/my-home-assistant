@@ -3,11 +3,11 @@ cards:
 
   # Media Player Compact - TV 
   - type: custom:mini-media-player
-    entity: media_player.tv
+    entity: media_player.tv_quarto
     info: scroll
     icon: mdi:television
     artwork: cover
-    background: /local/images/bg_tv.png
+    background: /local/images/bg_tv_quarto.png
     scale: 1.2             
     idle_view:
       when_idle: true

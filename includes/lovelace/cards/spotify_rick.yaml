@@ -7,9 +7,13 @@ cards:
     type: custom:mini-media-player
     info: scroll
     icon: mdi:spotify
-    artwork: cover
+    artwork: full-cover
     background: /local/images/bg_spotify.png
     scale: 1.2
+    style: |
+      :host {
+        --mini-media-player-artwork-opacity: 1;
+      }
     idle_view:
       when_idle: true
       when_standby: true
@@ -20,90 +24,90 @@ cards:
       sound_mode: false
       power_state: false
       shuffle: false
-    shortcuts:
-      hide_when_off: true
-      columns: 2 # Max buttons per row
-      buttons:
-        # Start predefined playlist
-        - icon: mdi:spotify
-          type: playlist
-          name: Indie | Evi
-          id: spotify:playlist:5QJRcjB07w2h73ADwwV9kC
+    # shortcuts:
+    #   hide_when_off: true
+    #   columns: 2 # Max buttons per row
+    #   buttons:
+    #     # Start predefined playlist
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Indie | Evi
+    #       id: spotify:playlist:5QJRcjB07w2h73ADwwV9kC
           
-        - icon: mdi:spotify
-          type: playlist
-          name: Aesthetic Life | Evi
-          id: spotify:playlist:6xAEjPZ0UHpWMmTVfyYclU
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Aesthetic Life | Evi
+    #       id: spotify:playlist:6xAEjPZ0UHpWMmTVfyYclU
           
-        - icon: mdi:spotify
-          type: playlist
-          name: Nossa Playlist | Evi
-          id: spotify:playlist:1wkUavzcTs2RaZ8TnY7sCf
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Nossa Playlist | Evi
+    #       id: spotify:playlist:1wkUavzcTs2RaZ8TnY7sCf
           
-        - icon: mdi:spotify
-          type: playlist
-          name: Emo 4ever | Evi
-          id: spotify:playlist:36fm5fAUhGUiauUMOg6Tjx
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Emo 4ever | Evi
+    #       id: spotify:playlist:36fm5fAUhGUiauUMOg6Tjx
           
-        - icon: mdi:spotify
-          type: playlist
-          name: Sinestesia | Evi
-          id: spotify:playlist:4WHKzgSze8ySv1ETECdC4E
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Sinestesia | Evi
+    #       id: spotify:playlist:4WHKzgSze8ySv1ETECdC4E
           
-        - icon: mdi:spotify
-          type: playlist
-          name: Descobertas | Evi
-          id: spotify:playlist:37i9dQZEVXcMcjakuusPXI
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Descobertas | Evi
+    #       id: spotify:playlist:37i9dQZEVXcMcjakuusPXI
           
-        - icon: mdi:spotify
-          type: playlist
-          name: Good Vibes | Evi
-          id: spotify:playlist:213SDFNqqh8B939jFo4Hl5
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Good Vibes | Evi
+    #       id: spotify:playlist:213SDFNqqh8B939jFo4Hl5
           
-        - icon: mdi:spotify
-          type: playlist
-          name: Hehehehe | Evi
-          id: spotify:playlist:4N6LmnKDFWFhVv7eQ3SUVM
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Hehehehe | Evi
+    #       id: spotify:playlist:4N6LmnKDFWFhVv7eQ3SUVM
           
-        - icon: mdi:spotify
-          type: playlist
-          name: Rock n Roll Baby | Evi
-          id: spotify:playlist:5wwqjVYFakMx56KPRxs7Y1
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Rock n Roll Baby | Evi
+    #       id: spotify:playlist:5wwqjVYFakMx56KPRxs7Y1
 
-        - icon: mdi:spotify
-          type: playlist
-          name: Lo-fi | Rick
-          id: spotify:playlist:36fm5fAUhGUiauUMOg6Tjx
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Lo-fi | Rick
+    #       id: spotify:playlist:36fm5fAUhGUiauUMOg6Tjx
 
-        - icon: mdi:spotify
-          type: playlist
-          name: Mundo Líquido | Rick
-          id: spotify:playlist:4JWf3JPHi67yUQoWAtieqw
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Mundo Líquido | Rick
+    #       id: spotify:playlist:4JWf3JPHi67yUQoWAtieqw
 
-        - icon: mdi:spotify
-          type: playlist
-          name: Descobertas | Rick
-          id: sspotify:playlist:37i9dQZEVXcOlunjBXGPVh
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Descobertas | Rick
+    #       id: sspotify:playlist:37i9dQZEVXcOlunjBXGPVh
 
-        - icon: mdi:spotify
-          type: playlist
-          name: Repeat | Rick
-          id: spotify:playlist:37i9dQZF1EpyKcwPxOFQV3
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Repeat | Rick
+    #       id: spotify:playlist:37i9dQZF1EpyKcwPxOFQV3
 
-        - icon: mdi:spotify
-          type: playlist
-          name: Replay | Rick
-          id: spotify:playlist:6uvW5scdDvfth36NpS3oVy
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Replay | Rick
+    #       id: spotify:playlist:6uvW5scdDvfth36NpS3oVy
         
-        - icon: mdi:spotify
-          type: playlist
-          name: Podcasts | Rick
-          id: spotify:playlist:37i9dQZF1EnOBYmteT8p3O
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Podcasts | Rick
+    #       id: spotify:playlist:37i9dQZF1EnOBYmteT8p3O
           
-        - icon: mdi:spotify
-          type: playlist
-          name: Mais tocadas Mundo
-          id: spotify:playlist:37i9dQZEVXbMDoHDwVN2tF
+    #     - icon: mdi:spotify
+    #       type: playlist
+    #       name: Mais tocadas Mundo
+    #       id: spotify:playlist:37i9dQZEVXbMDoHDwVN2tF
 
   # Spotify Buttons
   - type: horizontal-stack

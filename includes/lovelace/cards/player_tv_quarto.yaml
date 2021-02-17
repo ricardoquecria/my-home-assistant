@@ -6,6 +6,10 @@ artwork: cover
 toggle_power: false
 background: /local/images/bg_tv_quarto.png
 scale: 1.2
+style: |
+  :host {
+    --mini-media-player-button-color: rgba(120,120,120,0.3);
+  }
 idle_view:
   when_idle: true
   when_standby: true
@@ -13,35 +17,48 @@ idle_view:
 hide:
   power: false
   runtime: false
-  sound_mode: false
+  sound_mode: true
   power_state: false
   shuffle: false
   icon: false
 shortcuts:
   hide_when_off: true
-  columns: 4
+  columns: 3
   buttons:
-    - type: script
-      id: skip
-      icon: mdi:rewind-30
-      data:
-        entity: media_player.tv_quarto # Same as card entity
-        interval: -30 # Skip in seconds (change by preference)
-    - type: script
-      id: skip
-      icon: mdi:rewind-10
-      data:
-        entity: media_player.tv_quarto # Same as card entity
-        interval: -10 # Skip in seconds (change by preference)
-    - type: script
-      id: skip
-      icon: mdi:fast-forward-10
-      data:
-        entity: media_player.tv_quarto # Same as card entity
-        interval: 10 # Skip in seconds (change by preference)
-    - type: script
-      id: skip
-      icon: mdi:fast-forward-30
-      data:
-        entity: media_player.tv_quarto # Same as card entity
-        interval: 30 # Skip in seconds (change by preference)
+    - type: source
+      id: Netflix
+      cover: /local/images/buttons/netflix.png
+    - type: source
+      id: YouTube
+      cover: /local/images/buttons/youtube.png
+    - type: source
+      id: Prime Video
+      cover: /local/images/buttons/primevideo.png
+    - type: source
+      id: Spotify
+      cover: /local/images/buttons/spotify.png
+    - type: source
+      id: GloboPlay
+      cover: /local/images/buttons/globoplay.png
+    - type: source
+      id: Disney+
+      cover: /local/images/buttons/disney.png
+    - type: source
+      id: PlayPlus
+      cover: /local/images/buttons/playplus.png
+    - type: source
+      id: Telecine
+      cover: /local/images/buttons/telecine.png
+    - type: source
+      id: Plex
+      cover: /local/images/buttons/plex.png
+
+    - type: source
+      id: Globo
+      cover: /local/images/buttons/globo.png
+    - type: source
+      id: Record
+      cover: /local/images/buttons/record.png
+    - type: source
+      id: SBT
+      cover: /local/images/buttons/sbt.png

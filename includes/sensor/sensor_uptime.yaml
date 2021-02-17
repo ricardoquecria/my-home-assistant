@@ -142,7 +142,8 @@
     uptime_server:
       friendly_name: "Servidor online"
       icon_template: mdi:clock-check-outline
-      value_template: "{% if (states.sensor.time_full.state) | float == 0 %}
+      value_template:  >-
+        {% if (states.sensor.time_full.state) | float == 0 %}
         {% set start = as_timestamp(states.sensor.servidor_online.state) %}
         {% set now = as_timestamp(now()) %}
         {% set base_sec = (now - start) | round(0, 'floor') %}
@@ -165,7 +166,30 @@
         {%- endif -%}
         {%- endif -%}
 
-      "
-
-
-
+# Sensor uptime - Server HassOS
+    uptime_host:
+      friendly_name: "Host ligado"
+      icon_template: mdi:server
+      value_template: >-
+        {% if (states.sensor.time_full.state) | float == 0 %}
+        {% set start = (as_timestamp(states.sensor.monitor_last_boot.state | default(0)) | int ) %}
+        {% set now = as_timestamp(now()) %}
+        {% set base_sec = (now - start) | round(0, 'floor') %}
+        {% set minutos = ((base_sec % 3600) / 60) | int %}
+        {% set segundos = base_sec % 60 %}
+        {% set horas = ((base_sec % 86400) / 3600) | int %}
+        {% set dias = (base_sec / 86400) | int %}
+        {%- if start > now -%}
+        Atualizando  
+        {%- else -%}
+        {%- if dias > 0 -%} 
+        {{ dias }}d - {{ horas }}h{{ minutos }}m{{ segundos }}s
+        {%- elif horas > 0 -%} 
+        {{ horas }}h{{ minutos }}m{{ segundos }}s
+        {%- elif minutos > 0 -%} 
+        {{ minutos }}m{{ segundos }}s
+        {%- else -%}
+        {{ segundos }}s
+        {%- endif -%}
+        {%- endif -%}
+        {%- endif -%}

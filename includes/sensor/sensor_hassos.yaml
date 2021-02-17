@@ -53,7 +53,7 @@
 # Sensor para deixar mais amigável o status das atualizações disponíveis no binary_sensor.updater
     hassio_update:
       friendly_name: "HassOS"
-      icon_template: mdi:update
+      icon_template: mdi:download-box-outline
       value_template: '{% if is_state("binary_sensor.updater", "on") %} Atualização disponível
       {% elif is_state("binary_sensor.updater", "off") %} Servidor atualizado
       {% endif %}

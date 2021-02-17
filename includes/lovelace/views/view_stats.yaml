@@ -70,13 +70,13 @@ cards:
 
       # Energy Table - All Lights
       - type: custom:mod-card
-        style: !include ../styles/mod_all_cond.yaml
+        style: !include ../styles/mod_all.yaml
         card:
           !include ../cards/energy_tab_lights.yaml
 
       # Energy Table - AC Quarto
       - type: custom:mod-card
-        style: !include ../styles/mod_all_cond.yaml
+        style: !include ../styles/mod_all.yaml
         card:
           !include ../cards/energy_tab_ac_quarto.yaml
 

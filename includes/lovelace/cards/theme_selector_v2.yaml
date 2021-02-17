@@ -179,3 +179,15 @@ cards:
                 - padding-right: 12%
                 - font-weight: 400
                 - font-size: 16px
+
+  - type: entities
+    style: |
+      ha-card {
+        padding: 0px 10px 5px 0px;
+      }
+      :host {
+        --paper-item-icon-color: var(--primary-color);
+      }
+    entities:
+      - entity: input_select.themes
+    show_header_toggle: false

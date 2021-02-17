@@ -35,10 +35,10 @@ cards:
           !include ../cards/switchs.yaml
 
       # Player TV do Quarto
-      # - type: custom:mod-card
-      #   style: !include ../styles/mod_top.yaml
-      #   card:
-      #     !include ../cards/player_tv_quarto.yaml
+      - type: custom:mod-card
+        style: !include ../styles/mod_top.yaml
+        card:
+          !include ../cards/player_tv_quarto.yaml
 
       # Player Mini
       - type: custom:mod-card

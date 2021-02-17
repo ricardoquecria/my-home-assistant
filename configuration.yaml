@@ -104,3 +104,7 @@ google:
 
 # hacs:
 #   token: !secret github_token
+samsungtv_smart:
+  - host: 192.168.1.35
+    app_list: '{"Netflix": "3201907018807/org.tizen.netflixapp", "Prime Video": "3201910019365/org.tizen.primevideo", "YouTube": "111299001912/9Ur5IzDKqV.TizenYouTube", "Plex": "111199000681/kIciSQlYEM.plex", "Spotify": "rJeHak5zRg.Spotify", "GloboPlay": "org.tizen.globoplayapp", "Disney+": "3201901017640/MCmYXNxgcu.DisneyPlus", "PlayPlus": "z1MNYaVwYO.PlayPlus", "Telecine": "Z07uHrNtXB.TelecinePlay"}'
+    channel_list: '{"Globo": "4", "SBT": "5@TV", "Record": "10@TV", "Band": "15@TV"}'

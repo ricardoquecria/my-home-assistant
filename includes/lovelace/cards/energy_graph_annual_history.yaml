@@ -4,9 +4,9 @@ icon: mdi:counter
 # group_by: date
 lower_bound: 0
 line_width: 4
-hours_to_show: 8640
+hours_to_show: 8760
 aggregate_func: last
-points_per_hour: 0.00138888888
+points_per_hour: 0.0013
 hour24: true
 bar_spacing: 6
 show:

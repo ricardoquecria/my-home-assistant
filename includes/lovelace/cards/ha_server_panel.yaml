@@ -37,7 +37,7 @@ cards:
       - sensor.uptime_server
       - entity: sensor.ha_restart
         name: Tempo de boot
-      - entity: sensor.monitor_last_boot
+      - entity: sensor.uptime_host
       - entity: sensor.local_ip
         name: IP do servidor
       - binary_sensor.remote_ui
