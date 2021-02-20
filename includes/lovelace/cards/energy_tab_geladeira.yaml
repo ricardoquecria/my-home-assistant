@@ -4,15 +4,15 @@ cards:
   # Título
   - type: 'custom:button-card'
     layout: icon_name
-    name: Geladeira
+    name: Ventilador
     label: >
       [[[
-        if (states['switch.geladeira'].state == "on")
+        if (states['switch.ventilador'].state == "on")
           return "LIGADO";
         return "DESLIGADO";
       ]]]
     show_label: true
-    icon: mdi:fridge-outline
+    icon: mdi:fan
     styles:
       grid:
         - grid-template-areas: '"n l i"'
@@ -41,13 +41,13 @@ cards:
         - font-size: 12px
         - opacity: >
             [[[
-              if (states['switch.geladeira'].state == "on")
+              if (states['switch.ventilador'].state == "on")
                 return "100%";
               return "30%";
             ]]]
         - background-color: >
             [[[
-              if (states['switch.geladeira'].state == "on")
+              if (states['switch.ventilador'].state == "on")
                 return "var(--color3, var(--light-primary-color))";
               return "var(--disabled-color)";
             ]]]
@@ -97,16 +97,16 @@ cards:
     cards: 
 
       # Geral - Hoje
-      - entity: sensor.meter_geladeira_hoje
+      - entity: sensor.meter_ventilador_hoje
         type: 'custom:button-card'
         name: >
           [[[
-            var kwh = states['sensor.meter_geladeira_hoje'].state;
+            var kwh = states['sensor.meter_ventilador_hoje'].state;
             return kwh + ' kWh'; 
           ]]]
         label: >
           [[[
-            var custo = states['sensor.meter_geladeira_hoje'].state * states['input_text.preco_kwh'].state;
+            var custo = states['sensor.meter_ventilador_hoje'].state * states['input_text.preco_kwh'].state;
             return 'R$ ' + (custo.toFixed(2)); 
           ]]]
         show_icon: false
@@ -127,16 +127,16 @@ cards:
             - font-size: 14px
 
       # Geral - Ontem
-      - entity: sensor.meter_geladeira_ontem
+      - entity: sensor.meter_ventilador_ontem
         type: 'custom:button-card'
         name: >
           [[[
-            var kwh = states['sensor.meter_geladeira_ontem'].state;
+            var kwh = states['sensor.meter_ventilador_ontem'].state;
             return kwh + ' kWh'; 
           ]]]
         label: >
           [[[
-            var custo = states['sensor.meter_geladeira_ontem'].state * states['input_text.preco_kwh'].state;
+            var custo = states['sensor.meter_ventilador_ontem'].state * states['input_text.preco_kwh'].state;
             return 'R$ ' + (custo.toFixed(2)); 
           ]]]
         show_icon: false
@@ -157,16 +157,16 @@ cards:
             - font-size: 14px
 
       # Geral - Mês
-      - entity: sensor.meter_geladeira_mes
+      - entity: sensor.meter_ventilador_mes
         type: 'custom:button-card'
         name: >
           [[[
-            var kwh = states['sensor.meter_geladeira_mes'].state;
+            var kwh = states['sensor.meter_ventilador_mes'].state;
             return kwh + ' kWh'; 
           ]]]
         label: >
           [[[
-            var custo = states['sensor.meter_geladeira_mes'].state * states['input_text.preco_kwh'].state;
+            var custo = states['sensor.meter_ventilador_mes'].state * states['input_text.preco_kwh'].state;
             return 'R$ ' + (custo.toFixed(2)); 
           ]]]
         show_icon: false
@@ -187,16 +187,16 @@ cards:
             - font-size: 14px
 
       # Geral - Anterior      
-      - entity: sensor.meter_geladeira_mes_anterior
+      - entity: sensor.meter_ventilador_mes_anterior
         type: 'custom:button-card'
         name: >
           [[[
-            var kwh = states['sensor.meter_geladeira_mes_anterior'].state;
+            var kwh = states['sensor.meter_ventilador_mes_anterior'].state;
             return kwh + ' kWh'; 
           ]]]
         label: >
           [[[
-            var custo = states['sensor.meter_geladeira_mes_anterior'].state * states['input_text.preco_kwh'].state;
+            var custo = states['sensor.meter_ventilador_mes_anterior'].state * states['input_text.preco_kwh'].state;
             return 'R$ ' + (custo.toFixed(2)); 
           ]]]
         show_icon: false

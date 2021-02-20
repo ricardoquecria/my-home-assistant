@@ -8,6 +8,8 @@ recorder: !include includes/recorder/recorder.yaml
 homeassistant:
   customize: !include_dir_merge_named includes/customize/
 
+dialogflow:
+
 input_boolean: !include_dir_merge_named includes/input_boolean/
 input_number: !include_dir_merge_named includes/input_number/
 input_text: !include_dir_merge_named includes/input_text/
@@ -19,23 +21,14 @@ automation: !include_dir_merge_list includes/automation/
 utility_meter: !include_dir_merge_named includes/utility_meter/
 sensor: !include_dir_merge_list includes/sensor/
 binary_sensor: !include_dir_merge_list includes/binary_sensor/
-
+intent_script: !include_dir_merge_named includes/intent_script/
+shell_command: !include_dir_merge_named includes/shell_command/
+device_tracker: !include_dir_merge_named includes/device_tracker/
 
 frontend:
   themes: !include_dir_merge_named themes
 
-
 lovelace: !include lovelace.yaml
-device_tracker: !include_dir_merge_named includes/device_tracker/
-# device_tracker:
-#   - platform: nmap_tracker
-#     hosts: 192.168.1.1-255
-#     scan_options: " -F –host-timeout 10s "
-#     home_interval: 3
-#     consider_home: 600
-#     new_device_defaults:
-#       track_new_devices: true
-# panel_iframe: !include_dir_merge_named includes/panel_iframe/
 
 
 ### ##    ## ######## ########  ######   ########     ###  ######## ####  #######  ##    ##  ######  
@@ -62,9 +55,8 @@ spotcast:
       sp_dc: !secret spotify_evi_sp_dc
       sp_key: !secret spotify_evi_sp_key
 
-
-# unified_remote_mac:
-#   host: 192.168.1.37
+unified_remote_mac:
+  host: 192.168.1.37
 
 # # unified_remote_pc:
 # #   host: 192.168.0.56
@@ -72,7 +64,6 @@ spotcast:
 ifttt:
   key: !secret ifttt_key
 
-# Text to speech
 tts:
   - platform: google_translate
 
@@ -96,15 +87,9 @@ google:
   client_secret: !secret google_client_secret
   track_new_calendar: true
   
-# speedtestdotnet:
-#   server_id: 22060
-#   scan_interval:
-#     minutes: 30
-
-
-# hacs:
-#   token: !secret github_token
 samsungtv_smart:
   - host: 192.168.1.35
     app_list: '{"Netflix": "3201907018807/org.tizen.netflixapp", "Prime Video": "3201910019365/org.tizen.primevideo", "YouTube": "111299001912/9Ur5IzDKqV.TizenYouTube", "Plex": "111199000681/kIciSQlYEM.plex", "Spotify": "rJeHak5zRg.Spotify", "GloboPlay": "org.tizen.globoplayapp", "Disney+": "3201901017640/MCmYXNxgcu.DisneyPlus", "PlayPlus": "z1MNYaVwYO.PlayPlus", "Telecine": "Z07uHrNtXB.TelecinePlay"}'
     channel_list: '{"Globo": "4", "SBT": "5@TV", "Record": "10@TV", "Band": "15@TV"}'
+
+

@@ -1,6 +1,6 @@
 
-- url: /local/atomic-calendar-revive.js
-  type: module
+# - url: /local/atomic-calendar-revive.js
+#   type: module
 
 # - url: http://192.168.0.17:8000/dist/atomic-calendar-revive.js?v1
 #   type: module

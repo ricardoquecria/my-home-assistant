@@ -28,11 +28,6 @@
     icon: mdi:script-text-outline
     initial: off
 
-  test:
-    name: Test
-    icon: mdi:power
-    initial: off
-
   notify:
     name: Notificações
     icon: mdi:bell

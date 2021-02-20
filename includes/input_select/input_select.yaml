@@ -104,12 +104,3 @@
       - +
       - '#'
 
-  speakers:
-    name: 'Speakers'
-    icon: mdi:cast-audio
-    options:
-      - Google Home - Cozinha
-      - TV do Quarto
-      - TV da Sala
-      - Grupo - Som da Casa
-

@@ -19,9 +19,9 @@
     name: Timer - Ar do Quarto
     icon: mdi:snowflake
 
-  timer_geladeira:
-    name: Timer - Geladeira
-    icon: mdi:fridge-outline
+  timer_ventilador:
+    name: Timer - Ventilador
+    icon: mdi:fan
 
   timer_cafeteira:
     name: Timer - Cafeteira

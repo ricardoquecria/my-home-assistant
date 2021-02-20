@@ -31,15 +31,153 @@ cards:
   - type: horizontal-stack
     cards:
 
+
       # Botão Play Pause
       - type: "custom:button-card"
         show_name: false
-        entity: input_boolean.tv_play
+        entity: input_boolean.tv_channel_up
         styles:
           card:
             - font-size: 12px
             - padding: 0px 0px 5px 0px
             - height: 80px
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_up
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_channel_down
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+
+  # Botões
+  - type: horizontal-stack
+    cards:
+
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_left
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_enter
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_right
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+
+  # Botões
+  - type: horizontal-stack
+    cards:
+
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_voltar
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_down
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_home
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+
+  # Botões
+  - type: horizontal-stack
+    cards:
+
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_vol_menos
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_mute
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_vol_mais
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+
+
+
+
+
+  # Botões
+  - type: horizontal-stack
+    cards:
 
       # Botão Voltar
       - type: "custom:button-card"
@@ -51,6 +189,18 @@ cards:
             - padding: 0px 0px 5px 0px
             - height: 80px
 
+      # Botão Play Pause
+      - type: "custom:button-card"
+        show_name: false
+        entity: input_boolean.tv_play
+        styles:
+          card:
+            - font-size: 12px
+            - padding: 0px 0px 5px 0px
+            - height: 80px
+
+
+
       # Botão Avançar
       - type: "custom:button-card"
         show_name: false
@@ -61,15 +211,6 @@ cards:
             - padding: 0px 0px 5px 0px
             - height: 80px
 
-      # Botão Stop
-      - type: "custom:button-card"
-        show_name: false
-        entity: input_boolean.tv_stop
-        styles:
-          card:
-            - font-size: 12px
-            - padding: 0px 0px 5px 0px
-            - height: 80px
 
   - type: horizontal-stack
     cards:
@@ -117,49 +258,6 @@ cards:
   - type: horizontal-stack
     cards:
 
-      # Botão Volume Mute
-      - type: "custom:button-card"
-        show_name: false
-        entity: input_boolean.tv_mute
-        styles:
-          card:
-            - font-size: 12px
-            - padding: 0px 0px 5px 0px
-            - height: 80px
-
-      # Botão Volume Menos
-      - type: "custom:button-card"
-        show_name: false
-        entity: input_boolean.tv_vol_menos
-        styles:
-          card:
-            - font-size: 12px
-            - padding: 0px 0px 5px 0px
-            - height: 80px
-
-      # Botão Volume Mais
-      - type: "custom:button-card"
-        show_name: false
-        entity: input_boolean.tv_vol_mais
-        styles:
-          card:
-            - font-size: 12px
-            - padding: 0px 0px 5px 0px
-            - height: 80px
-
-      # Botão Volume Máximo
-      - type: "custom:button-card"
-        show_name: false
-        entity: input_boolean.tv_vol_max
-        styles:
-          card:
-            - font-size: 12px
-            - padding: 0px 0px 5px 0px
-            - height: 80px
-
-  - type: horizontal-stack
-    cards:
-
       # Botão Desligar
       - type: "custom:button-card"
         entity: switch.tv_quarto
@@ -167,12 +265,7 @@ cards:
         show_name: false
         tap_action:
           action: call-service
-          service: switch.turn_on
-          service_data:
-            entity_id: switch.tv_quarto
-        hold_action:
-          action: call-service
-          service: switch.turn_off
+          service: switch.toggle
           service_data:
             entity_id: switch.tv_quarto
         styles:

@@ -142,30 +142,30 @@
 
 
 - platform: mqtt
-  name: Meter - Geladeira - Hoje
-  state_topic: "energy/meter_geladeira_hoje"
-  json_attributes_topic: "energy/meter_geladeira_hoje/attributes"
+  name: Meter - Ventilador - Hoje
+  state_topic: "energy/meter_ventilador_hoje"
+  json_attributes_topic: "energy/meter_ventilador_hoje/attributes"
   unit_of_measurement: 'kWh'
   device_class: power
 
 - platform: mqtt
-  name: Meter - Geladeira - Ontem
-  state_topic: "energy/meter_geladeira_ontem"
-  json_attributes_topic: "energy/meter_geladeira_ontem/attributes"
+  name: Meter - Ventilador - Ontem
+  state_topic: "energy/meter_ventilador_ontem"
+  json_attributes_topic: "energy/meter_ventilador_ontem/attributes"
   unit_of_measurement: 'kWh'
   device_class: power
 
 - platform: mqtt
-  name: Meter - Geladeira - Mês
-  state_topic: "energy/meter_geladeira_mes"
-  json_attributes_topic: "energy/meter_geladeira_mes/attributes"
+  name: Meter - Ventilador - Mês
+  state_topic: "energy/meter_ventilador_mes"
+  json_attributes_topic: "energy/meter_ventilador_mes/attributes"
   unit_of_measurement: 'kWh'
   device_class: power
 
 - platform: mqtt
-  name: Meter - Geladeira - Mês anterior
-  state_topic: "energy/meter_geladeira_mes_anterior"
-  json_attributes_topic: "energy/meter_geladeira_mes_anterior/attributes"
+  name: Meter - Ventilador - Mês anterior
+  state_topic: "energy/meter_ventilador_mes_anterior"
+  json_attributes_topic: "energy/meter_ventilador_mes_anterior/attributes"
   unit_of_measurement: 'kWh'
   device_class: power
 

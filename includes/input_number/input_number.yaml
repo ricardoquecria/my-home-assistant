@@ -14,12 +14,6 @@
     step: 50
     mode: box
 
-  teste:
-    icon: mdi:timer
-    name: Teste
-    min: 0
-    max: 180
-
   meter_value:
     icon: mdi:form-textbox-password
     name: Insira o valor

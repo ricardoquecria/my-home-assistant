@@ -17,29 +17,6 @@ all_lights_quarto:
     - light.luz_do_banheiro
     - light.luz_do_estudio
 
-
-all_persons:
-  name: Group - Pessoas
-  entities:
-    - person.evelli_rossi
-    - person.ricardo_correia
-
-tracker_evellin:
-  name: Group - Tracker Evellin
-  icon: mdi:tooltip-account
-  entities:
-    - device_tracker.evellin_mac_track
-    - device_tracker.iphone_de_evellin_rossi
-
-
-tracker_ricardo:
-  name: Group - Tracker Ricardo
-  icon: mdi:tooltip-account
-  entities:
-    - device_tracker.ricardo_mac_track
-    - device_tracker.ricardo_j5
-
-
 all:
   name: Group - Tudo
   entities:
@@ -51,6 +28,7 @@ all:
     - switch.ac_quarto
     - switch.tv_quarto
     - switch.cafeteira
+    - switch.ventilador
     
 all_players:
   name: Group - All Players

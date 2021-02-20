@@ -76,10 +76,10 @@ cards:
         action: toggle
       type: entity-button
 
-    # Geladeira
-    - entity: switch.geladeira
-      icon: mdi:fridge-outline
-      name: Geladeira
+    # Ventilador
+    - entity: switch.ventilador
+      icon: mdi:fan
+      name: Ventilador
       tap_action:
         action: toggle
       type: entity-button

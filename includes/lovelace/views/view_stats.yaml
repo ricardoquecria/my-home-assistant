@@ -86,11 +86,11 @@ cards:
         card:
           !include ../cards/energy_tab_tv_quarto.yaml
           
-      # Energy Table - Geladeira
+      # Energy Table - Ventilador
       - type: custom:mod-card
         style: !include ../styles/mod_all.yaml
         card:
-          !include ../cards/energy_tab_geladeira.yaml
+          !include ../cards/energy_tab_ventilador.yaml
 
       # Energy Table - Cafeteira
       - type: custom:mod-card

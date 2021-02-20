@@ -18,10 +18,6 @@
     initial: off
     icon: mdi:skip-next
 
-  tv_stop:
-    name: Stop
-    initial: off
-    icon: mdi:stop
 
 
 
@@ -62,7 +58,50 @@
     initial: off
     icon: mdi:volume-plus
 
-  tv_vol_max:
-    name: Máximo
+
+  tv_up:
+    name: "Cima"
     initial: off
-    icon: mdi:volume-high
+    icon: mdi:arrow-up-drop-circle-outline
+
+  tv_down:
+    name: "Baixo"
+    initial: off
+    icon: mdi:arrow-down-drop-circle-outline
+
+  tv_left:
+    name: "Esquerda"
+    initial: off
+    icon: mdi:arrow-left-drop-circle-outline
+
+  tv_right:
+    name: "Direita"
+    initial: off
+    icon: mdi:arrow-right-drop-circle-outline
+
+  tv_enter:
+    name: "Enter"
+    initial: off
+    icon: mdi:checkbox-blank-circle
+
+
+  tv_home:
+    name: "Home"
+    initial: off
+    icon: mdi:home-circle-outline
+
+  tv_voltar:
+    name: "Voltar"
+    initial: off
+    icon: mdi:undo-variant
+
+  tv_channel_up:
+    name: "Canal +"
+    initial: off
+    icon: mdi:chevron-up
+
+  tv_channel_down:
+    name: "Canal -"
+    initial: off
+    icon: mdi:chevron-down
+

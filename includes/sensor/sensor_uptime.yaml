@@ -99,15 +99,15 @@
       {% endif %}"
 
 
-# Sensor uptime - geladeira
-    uptime_geladeira:
-      friendly_name: "Uptime - geladeira"
+# Sensor uptime - ventilador
+    uptime_ventilador:
+      friendly_name: "Uptime - ventilador"
       icon_template: mdi:power-plug
-      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('switch.geladeira', 'on') %}
-      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.geladeira.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
-      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.geladeira.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.geladeira.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      value_template: "{% if (states.sensor.time.state) | float == 0 %}{% if is_state('switch.ventilador', 'on') %}
+      {% if ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ventilador.last_changed) / 60 / 60 ))) | int| round(0, 'floor') | float == 0 %}
+      {{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ventilador.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ventilador.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
       {% else %}
-      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.geladeira.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.geladeira.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.geladeira.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
+      {{ ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ventilador.last_changed) / 60 / 60 ))) | round(0, 'floor')   }}h{{ ((( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ventilador.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(2) ) - ( ((as_timestamp(utcnow())/ 60 / 60  - (as_timestamp(states.switch.ventilador.last_changed) / 60 / 60 ))) | round(2, 'floor') | round(0, 'floor') )) * 60 ) | round(0)   }}m
       {% endif %}
       {% endif %}
       {% endif %}"

@@ -29,12 +29,6 @@
       column: 'value'
       unit_of_measurement: MB
 
-# Sensor para coletar valores sobre o uso do disco
-# - platform: diskspace
-#   name: Disco
-#   path: "/"
-#   unit_of_measure: "MB"
-
 - platform: systemmonitor
   resources:
     - type: disk_use_percent

@@ -1,0 +1,23 @@
+check_speedtest:
+  speech:
+    text: >
+      A velocidade da internet é de {{ states('sensor.speedtest_download') | round(0) }} megabits para download e de {{ states('sensor.speedtest_upload') | round(0) }} megabits para upload.
+
+check_covid:
+  speech:
+    text: >
+      Hoje o Brasil registrou {{ states('sensor.mortes_em_24h') }} mortes em 24h e {{ states('sensor.brazil_coronavirus_deaths') }} mortes no total.
+
+check_energy:
+  speech:
+    text: >
+      {% set hoje_reais = (states('sensor.meter_geral_hoje') | float () * states('input_text.preco_kwh') | float() ) | round(2) %}
+      {% set hoje_kwh = states('sensor.meter_geral_hoje') %}
+      {% set ontem_reais = (states('sensor.meter_geral_ontem') | float () * states('input_text.preco_kwh') | float() ) | round(2) %}
+      {% set ontem_kwh = states('sensor.meter_geral_ontem') %}
+      {% set mes_reais = (states('sensor.meter_geral_mes') | float () * states('input_text.preco_kwh') | float() ) | round(2) %}
+      {% set mes_kwh = states('sensor.meter_geral_mes') %}
+      {% set anterior_reais = (states('sensor.meter_geral_mes_anterior') | float () * states('input_text.preco_kwh') | float() ) | round(2) %}
+      {% set anterior_kwh = states('sensor.meter_geral_mes_anterior') %}
+      {% set ciclo = states('sensor.ciclo_energia') %}
+      Estatísticas de energia: Hoje: {{ hoje_reais }} reais. Ontem: {{ ontem_reais }} reais. Esse mês: {{ mes_reais }} reais. No mês anterior: {{ anterior_reais }} reais. E estamos no {{ ciclo }} do ciclo.

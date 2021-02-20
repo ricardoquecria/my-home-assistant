@@ -25,7 +25,7 @@ cards:
           - entity: switch.ac_quarto
             icon: mdi:snowflake
           - entity: switch.cafeteira
-          - entity: switch.geladeira
+          - entity: switch.ventilador
           - entity: group.all
             icon: mdi:power
           - entity: switch.tv_quarto

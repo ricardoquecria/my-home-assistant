@@ -3,11 +3,6 @@
     icon: mdi:progress-check
     initial: off
 
-  meter_kwh_or_real:
-    name: kWh / R$
-    icon: mdi:lightning-bolt
-    initial: off
-
   speedtest_update:
     name: Speedtest
     initial: off

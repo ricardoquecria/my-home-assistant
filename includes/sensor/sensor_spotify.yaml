@@ -43,15 +43,3 @@
       # entity_id: sensor.time_full
       icon_template: mdi:spotify
       value_template: "{{ state_attr('media_player.spotify_evellin_rossi', 'media_title') }} - {{ state_attr('media_player.spotify_evellin_rossi', 'media_artist') }}"
-
-
-
-    # streaming_mini:
-    #   friendly_name: "Streaming Mini"
-    #   icon_template: mdi:cast-connected
-    #   value_template: "{{ state_attr('media_player.mini', 'app_name') }}"
-
-    # streaming_tv:
-    #   friendly_name: "Streaming TV"
-    #   icon_template: mdi:cast-connected
-    #   value_template: "{{ state_attr('media_player.tv', 'app_name') }}"
