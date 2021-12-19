@@ -21,7 +21,17 @@ class PowerOnMethod(Enum):
 
 DOMAIN = "samsungtv_smart"
 
+MIN_HA_MAJ_VER = 2021
+MIN_HA_MIN_VER = 7
+__min_ha_version__ = f"{MIN_HA_MAJ_VER}.{MIN_HA_MIN_VER}.0"
+
+DATA_OPTIONS = "options"
 WS_PREFIX = "[Home Assistant]"
+
+ATTR_DEVICE_MAC = "device_mac"
+ATTR_DEVICE_MODEL = "device_model"
+ATTR_DEVICE_NAME = "device_name"
+ATTR_DEVICE_OS = "device_os"
 
 CONF_APP_LAUNCH_METHOD = "app_launch_method"
 CONF_APP_LIST = "app_list"
@@ -30,7 +40,10 @@ CONF_CHANNEL_LIST = "channel_list"
 CONF_DEVICE_MODEL = "device_model"
 CONF_DEVICE_NAME = "device_name"
 CONF_DEVICE_OS = "device_os"
+CONF_DUMP_APPS = "dump_apps"
+CONF_EXT_POWER_ENTITY = "ext_power_entity"
 CONF_LOAD_ALL_APPS = "load_all_apps"
+CONF_LOGO_OPTION = "logo_option"
 CONF_POWER_ON_DELAY = "power_on_delay"
 CONF_POWER_ON_METHOD = "power_on_method"
 CONF_SHOW_CHANNEL_NR = "show_channel_number"
@@ -52,7 +65,7 @@ DEFAULT_APP = "TV/HDMI"
 DEFAULT_PORT = 8001
 DEFAULT_POWER_ON_DELAY = 30
 DEFAULT_SOURCE_LIST = {"TV": "KEY_TV", "HDMI": "KEY_HDMI"}
-DEFAULT_TIMEOUT = 5
+DEFAULT_TIMEOUT = 6
 
 MAX_WOL_REPEAT = 5
 
@@ -67,14 +80,18 @@ RESULT_WRONG_APIKEY = "wrong_api_key"
 SERVICE_SELECT_PICTURE_MODE = "select_picture_mode"
 SERVICE_SET_ART_MODE = "set_art_mode"
 
+SERVICE_TURN_OFF = "turn_off"
+SERVICE_TURN_ON = "turn_on"
+
 STD_APP_LIST = {
     # app_id: smartthings app id (if different and available)
-    "org.tizen.browser": "",                    # Internet
-    "11101200001": "RN1MCdNq8t.Netflix",        # Netflix
+    "org.tizen.browser": "",  # Internet
+    "11101200001": "RN1MCdNq8t.Netflix",  # Netflix
     "111299001912": "9Ur5IzDKqV.TizenYouTube",  # YouTube
-    "3201512006785": "org.tizen.ignition",      # Prime Video
-    "3201901017640": "MCmYXNxgcu.DisneyPlus",   # Disney+
-    "11091000000": "4ovn894vo9.Facebook",       # Facebook
-    "3201601007250": "QizQxC7CUf.PlayMovies",   # Google Play
-    "3201606009684": "rJeHak5zRg.Spotify",      # Spotify
+    "3201512006785": "org.tizen.ignition",  # Prime Video
+    # "3201512006785": "evKhCgZelL.AmazonIgnitionLauncher2",  # Prime Video
+    "3201901017640": "MCmYXNxgcu.DisneyPlus",  # Disney+
+    "11091000000": "4ovn894vo9.Facebook",  # Facebook
+    "3201601007250": "QizQxC7CUf.PlayMovies",  # Google Play
+    "3201606009684": "rJeHak5zRg.Spotify",  # Spotify
 }
