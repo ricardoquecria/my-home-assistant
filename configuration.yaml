@@ -2,7 +2,6 @@
 # Configure a default setup of Home Assistant (frontend, api, etc)
 default_config:
 
-
 recorder: !include includes/recorder/recorder.yaml
 
 homeassistant:
@@ -24,6 +23,8 @@ binary_sensor: !include_dir_merge_list includes/binary_sensor/
 intent_script: !include_dir_merge_named includes/intent_script/
 shell_command: !include_dir_merge_named includes/shell_command/
 device_tracker: !include_dir_merge_named includes/device_tracker/
+proximity: !include_dir_merge_named includes/proximity/
+zone: !include includes/zone/zone.yaml
 
 frontend:
   themes: !include_dir_merge_named themes
@@ -55,8 +56,8 @@ spotcast:
       sp_dc: !secret spotify_evi_sp_dc
       sp_key: !secret spotify_evi_sp_key
 
-unified_remote_mac:
-  host: 192.168.1.37
+# unified_remote_mac:
+#   host: 192.168.1.37
 
 # # unified_remote_pc:
 # #   host: 192.168.0.56

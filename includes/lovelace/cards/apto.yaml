@@ -60,8 +60,9 @@ elements:
     state_image:
       home: /local/images/apto/apto_rick.png
       For Living: /local/images/apto/transparent.png
+      'unavailable': /local/images/apto/transparent.png
       not_home: /local/images/apto/transparent.png
-      unknown: /local/images/apto/transparent.png
+      'unavailable': /local/images/apto/transparent.png
   - type: image
     entity: person.evellin_rossi
     style:
@@ -71,8 +72,9 @@ elements:
     state_image:
       home: /local/images/apto/apto_evi.png
       For Living: /local/images/apto/transparent.png
+      'unavailable': /local/images/apto/transparent.png
       not_home: /local/images/apto/transparent.png
-      unknown: /local/images/apto/transparent.png
+      'unavailable': /local/images/apto/transparent.png
   - type: image
     entity: switch.tv_quarto
     style:
@@ -93,6 +95,16 @@ elements:
       'on': /local/images/apto/neve.gif
       'off': /local/images/apto/transparent.png
       'unavailable': /local/images/apto/transparent.png
+  - type: image
+    entity: switch.ventilador
+    style:
+      left: 60%
+      top: 83%
+      width: 20%
+    state_image:
+      'on': /local/images/apto/vento.gif
+      'off': /local/images/apto/transparent.png
+      'unavailable': /local/images/apto/transparent.png 
   - type: state-icon
     entity: light.luz_da_sala
     style:
@@ -129,10 +141,10 @@ elements:
     tap_action:
       action: toggle
   - type: state-icon
-    entity: switch.cafeteira
+    entity: switch.ventilador
     style:
-      left: 57%
-      top: 40%
+      left: 50%
+      top: 79%
     tap_action:
       action: toggle
   - type: state-icon

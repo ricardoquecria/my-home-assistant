@@ -28,7 +28,7 @@ cards:
         card:
           !include ../cards/spotify_evi.yaml
 
-      - break
+      - type: custom:layout-break
 
 
       # Player Mini

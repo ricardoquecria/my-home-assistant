@@ -1,0 +1,21 @@
+id: apto
+path: apto
+icon: mdi:floor-plan
+title: Apartamento
+panel: true
+cards:
+
+  - type: custom:layout-card
+    layout: auto
+    column_width: 100%
+    max_width: 700px
+    cards:
+      - !include ../cards/floor_plan.yaml
+
+  # - type: conditional
+  #   conditions:
+  #     - entity: input_boolean.themes_mode
+  #       state: "off"
+
+  #   card:
+

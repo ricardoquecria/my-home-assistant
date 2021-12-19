@@ -17,3 +17,8 @@
     name: Ar de Reunião
     initial: off
     icon: mdi:snowflake
+
+  campainha:
+    name: Campainha
+    initial: off
+    icon: mdi:bell-ring-outline

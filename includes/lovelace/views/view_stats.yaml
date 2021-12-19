@@ -8,99 +8,97 @@
 
 title: Estatísticas
 path: estatisticas
-panel: true
+
 icon: mdi:poll-box
+# panel: true
+type: custom:vertical-layout
 cards:
 
-  - type: custom:layout-card
-    layout: vertical
-    cards:
-    
-      # Batteries
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/graph_batteries.yaml
+  # Batteries
+  - type: custom:mod-card
+    style: !include ../styles/mod_all.yaml
+    card:
+      !include ../cards/graph_batteries.yaml
 
-      # Batteries
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/graph_speedtest.yaml
+  # Batteries
+  - type: custom:mod-card
+    style: !include ../styles/mod_all.yaml
+    card:
+      !include ../cards/graph_speedtest.yaml
 
-      - break
+  - type: custom:layout-break
 
-      # Energy Graph - Title
-      - type: custom:mod-card
-        style: !include ../styles/mod_top.yaml
-        card:
-          !include ../cards/energy_title.yaml
+  # Energy Graph - Title
+  - type: custom:mod-card
+    style: !include ../styles/mod_top.yaml
+    card:
+      !include ../cards/energy_title.yaml
 
-      # Energy Graph - Monthly Cost
-      - type: custom:mod-card
-        style: !include ../styles/mod_mid.yaml
-        card:
-          !include ../cards/energy_graph_monthly_cost.yaml
+  # Energy Graph - Monthly Cost
+  - type: custom:mod-card
+    style: !include ../styles/mod_mid.yaml
+    card:
+      !include ../cards/energy_graph_monthly_cost.yaml
 
-      # Energy Graph - Dialy Cost
-      - type: custom:mod-card
-        style: !include ../styles/mod_bot_cond.yaml
-        card:
-          !include ../cards/energy_graph_dialy_cost.yaml
+  # Energy Graph - Dialy Cost
+  - type: custom:mod-card
+    style: !include ../styles/mod_bot_cond.yaml
+    card:
+      !include ../cards/energy_graph_dialy_cost.yaml
 
-      # Energy Graph - Monthly History
-      - type: custom:mod-card
-        style: !include ../styles/mod_top_cond.yaml
-        card:
-          !include ../cards/energy_graph_monthly_history.yaml
+  # Energy Graph - Monthly History
+  - type: custom:mod-card
+    style: !include ../styles/mod_top_cond.yaml
+    card:
+      !include ../cards/energy_graph_monthly_history.yaml
 
-      # Energy Graph - Annual History
-      - type: custom:mod-card
-        style: !include ../styles/mod_bot_cond.yaml
-        card:
-          !include ../cards/energy_graph_annual_history.yaml
+  # Energy Graph - Annual History
+  - type: custom:mod-card
+    style: !include ../styles/mod_bot_cond.yaml
+    card:
+      !include ../cards/energy_graph_annual_history.yaml
 
-      - break
+  - type: custom:layout-break
 
-      # Energy Table - Main
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/energy_tab_main.yaml
+  # Energy Table - Main
+  - type: custom:mod-card
+    style: !include ../styles/mod_all.yaml
+    card:
+      !include ../cards/energy_tab_main.yaml
 
-      # Energy Table - All Lights
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/energy_tab_lights.yaml
+  # Energy Table - All Lights
+  - type: custom:mod-card
+    style: !include ../styles/mod_all.yaml
+    card:
+      !include ../cards/energy_tab_lights.yaml
 
-      # Energy Table - AC Quarto
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/energy_tab_ac_quarto.yaml
+  # Energy Table - AC Quarto
+  - type: custom:mod-card
+    style: !include ../styles/mod_all.yaml
+    card:
+      !include ../cards/energy_tab_ac_quarto.yaml
 
-      # Energy Table - TV Quarto
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/energy_tab_tv_quarto.yaml
-          
-      # Energy Table - Ventilador
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/energy_tab_ventilador.yaml
+  # Energy Table - TV Quarto
+  - type: custom:mod-card
+    style: !include ../styles/mod_all.yaml
+    card:
+      !include ../cards/energy_tab_tv_quarto.yaml
+      
+  # Energy Table - Ventilador
+  # - type: custom:mod-card
+  #   style: !include ../styles/mod_all.yaml
+  #   card:
+  #     !include ../cards/energy_tab_ventilador.yaml
 
-      # Energy Table - Cafeteira
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/energy_tab_cafeteira.yaml
+  # Energy Table - Cafeteira
+  - type: custom:mod-card
+    style: !include ../styles/mod_all.yaml
+    card:
+      !include ../cards/energy_tab_cafeteira.yaml
 
 
-      # Energy Calibrate
-      - type: custom:mod-card
-        style: !include ../styles/mod_all.yaml
-        card:
-          !include ../cards/energy_calibrate.yaml
+  # Energy Calibrate
+  - type: custom:mod-card
+    style: !include ../styles/mod_all.yaml
+    card:
+      !include ../cards/energy_calibrate.yaml

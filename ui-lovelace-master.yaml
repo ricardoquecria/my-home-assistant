@@ -36,7 +36,7 @@ views:
   - !include includes/lovelace/views/view_stats.yaml
   - !include includes/lovelace/views/view_tools.yaml
   - !include includes/lovelace/views/view_hassos.yaml
-  # - !include includes/lovelace/views/view_maps.yaml
+  - !include includes/lovelace/views/view_apto.yaml
   # - !include includes/lovelace/views/view_tab_control.yaml
   # - !include includes/lovelace/views/view_tab_states.yaml
   # - !include includes/lovelace/views/view_tab_players.yaml

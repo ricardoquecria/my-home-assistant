@@ -1,0 +1,2 @@
+sensor.meter_geral_hoje:
+  device_class: energy

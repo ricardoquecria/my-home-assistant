@@ -15,7 +15,7 @@ cards:
           !include ../cards/energy_beta.yaml
 
 
-      - break
+      - type: custom:layout-break
 
       # Timer v1
       - type: custom:mod-card

@@ -116,32 +116,32 @@ cards:
             - padding: 10px 5px 15px 5px
 
       # Switch - Ventilador
-      - entity: switch.ventilador
-        type: "custom:button-card"
-        icon: mdi:fan
-        label: >
-          [[[
-            if (states['switch.ventilador'].state == "on")
-              return states['sensor.uptime_ventilador'].state;
-          ]]]   
-        show_label: true  
-        tap_action:
-          action: toggle
-        hold_action:
-          action: more-info
-        name: Ventilador
-        size: 70%
-        state:
-          - value: 'unavailable'
-            color: var(--primary-background-color)
-        styles:
-          label:
-            - font-size: 12px
-            - color: var(--light-primary-color)                  
-          card:
-            - font-size: 16px
-            - height: 120px
-            - padding: 10px 5px 15px 5px
+      # - entity: switch.ventilador
+      #   type: "custom:button-card"
+      #   icon: mdi:fan
+      #   label: >
+      #     [[[
+      #       if (states['switch.ventilador'].state == "on")
+      #         return states['sensor.uptime_ventilador'].state;
+      #     ]]]   
+      #   show_label: true  
+      #   tap_action:
+      #     action: toggle
+      #   hold_action:
+      #     action: more-info
+      #   name: Ventilador
+      #   size: 70%
+      #   state:
+      #     - value: 'unavailable'
+      #       color: var(--primary-background-color)
+      #   styles:
+      #     label:
+      #       - font-size: 12px
+      #       - color: var(--light-primary-color)                  
+      #     card:
+      #       - font-size: 16px
+      #       - height: 120px
+      #       - padding: 10px 5px 15px 5px 
 
       # Switch - Luzes
       - entity: group.all_lights

@@ -39,7 +39,7 @@ cards:
         lower_bound: 0
         upper_bound: 100
         entities:
-          - sensor.battery_macbook
+          - sensor.battery_macbook_rick
         show:
           labels: true
         color_thresholds:
@@ -50,7 +50,7 @@ cards:
 
       # Bateria J5
       - type: custom:mini-graph-card
-        name: J5 Prime
+        name: J5
         hours_to_show: 24
         points_per_hour: 2
         line_width: 10
@@ -59,7 +59,7 @@ cards:
         lower_bound: 0
         upper_bound: 100
         entities:
-          - sensor.battery_rick_phone
+          - sensor.battery_studio_phone
         show:
           labels: true
         color_thresholds:
@@ -80,13 +80,34 @@ cards:
         lower_bound: 0
         upper_bound: 100
         entities:
-          - sensor.battery_evi_phone
+          - sensor.battery_rick_phone
         show:
           labels: true
         color_thresholds:
+
           - value: 25
             color: var(--divider-color)
           - value: 80
             color: var(--graph-color)
+
+      # Bateria iPhone
+    #   - type: custom:mini-graph-card
+    #     name: iPhone
+    #     hours_to_show: 24
+    #     points_per_hour: 2
+    #     line_width: 10
+    #     font_size: 75
+    #     hour24: true
+    #     lower_bound: 0
+    #     upper_bound: 100
+    #     entities:
+    #       - sensor.battery_evi_phone
+    #     show:
+    #       labels: true
+    #     color_thresholds:
+    #       - value: 25
+    #         color: var(--divider-color)
+    #       - value: 80
+    #         color: var(--graph-color)
 
 

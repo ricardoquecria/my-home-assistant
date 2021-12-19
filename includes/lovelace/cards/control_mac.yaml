@@ -178,7 +178,11 @@ cards:
       - type: "custom:button-card"
         entity: switch.macbook
         show_name: false
-        tap_action: none
+        tap_action:
+          action: call-service
+          service: switch.turn_on
+          service_data:
+            entity_id: switch.macbook
         hold_action:
           action: call-service
           service: switch.turn_off

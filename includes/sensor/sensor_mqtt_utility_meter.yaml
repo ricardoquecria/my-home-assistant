@@ -23,28 +23,28 @@
   state_topic: "energy/meter_all_lights_hoje"
   json_attributes_topic: "energy/meter_all_lights_hoje/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - All Lights - Ontem
   state_topic: "energy/meter_all_lights_ontem"
   json_attributes_topic: "energy/meter_all_lights_ontem/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - All Lights - Mês
   state_topic: "energy/meter_all_lights_mes"
   json_attributes_topic: "energy/meter_all_lights_mes/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - All Lights - Mês anterior
   state_topic: "energy/meter_all_lights_mes_anterior"
   json_attributes_topic: "energy/meter_all_lights_mes_anterior/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 
 
@@ -54,28 +54,28 @@
   state_topic: "energy/meter_tv_quarto_hoje"
   json_attributes_topic: "energy/meter_tv_quarto_hoje/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - TV Quarto - Ontem
   state_topic: "energy/meter_tv_quarto_ontem"
   json_attributes_topic: "energy/meter_tv_quarto_ontem/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - TV Quarto - Mês
   state_topic: "energy/meter_tv_quarto_mes"
   json_attributes_topic: "energy/meter_tv_quarto_mes/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - TV Quarto - Mês anterior
   state_topic: "energy/meter_tv_quarto_mes_anterior"
   json_attributes_topic: "energy/meter_tv_quarto_mes_anterior/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 
 
@@ -85,28 +85,28 @@
   state_topic: "energy/meter_ac_quarto_hoje"
   json_attributes_topic: "energy/meter_ac_quarto_hoje/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - AC Quarto - Ontem
   state_topic: "energy/meter_ac_quarto_ontem"
   json_attributes_topic: "energy/meter_ac_quarto_ontem/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - AC Quarto - Mês
   state_topic: "energy/meter_ac_quarto_mes"
   json_attributes_topic: "energy/meter_ac_quarto_mes/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - AC Quarto - Mês anterior
   state_topic: "energy/meter_ac_quarto_mes_anterior"
   json_attributes_topic: "energy/meter_ac_quarto_mes_anterior/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 
 
@@ -116,28 +116,28 @@
   state_topic: "energy/meter_cafeteira_hoje"
   json_attributes_topic: "energy/meter_cafeteira_hoje/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - Cafeteira - Ontem
   state_topic: "energy/meter_cafeteira_ontem"
   json_attributes_topic: "energy/meter_cafeteira_ontem/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - Cafeteira - Mês
   state_topic: "energy/meter_cafeteira_mes"
   json_attributes_topic: "energy/meter_cafeteira_mes/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - Cafeteira - Mês anterior
   state_topic: "energy/meter_cafeteira_mes_anterior"
   json_attributes_topic: "energy/meter_cafeteira_mes_anterior/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 
 
@@ -146,28 +146,28 @@
   state_topic: "energy/meter_ventilador_hoje"
   json_attributes_topic: "energy/meter_ventilador_hoje/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - Ventilador - Ontem
   state_topic: "energy/meter_ventilador_ontem"
   json_attributes_topic: "energy/meter_ventilador_ontem/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - Ventilador - Mês
   state_topic: "energy/meter_ventilador_mes"
   json_attributes_topic: "energy/meter_ventilador_mes/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - Ventilador - Mês anterior
   state_topic: "energy/meter_ventilador_mes_anterior"
   json_attributes_topic: "energy/meter_ventilador_mes_anterior/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 
 
@@ -176,28 +176,28 @@
   state_topic: "energy/meter_geral_hoje"
   json_attributes_topic: "energy/meter_geral_hoje/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - Geral - Ontem
   state_topic: "energy/meter_geral_ontem"
   json_attributes_topic: "energy/meter_geral_ontem/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - Geral - Mês
   state_topic: "energy/meter_geral_mes"
   json_attributes_topic: "energy/meter_geral_mes/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 - platform: mqtt
   name: Meter - Geral - Mês anterior
   state_topic: "energy/meter_geral_mes_anterior"
   json_attributes_topic: "energy/meter_geral_mes_anterior/attributes"
   unit_of_measurement: 'kWh'
-  device_class: power
+  device_class: energy
 
 
 

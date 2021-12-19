@@ -1,0 +1,131 @@
+title: Painel Apartamento
+path: painel_apto
+icon: mdi:floor-plan
+cards:
+
+- type: picture-elements
+  image: /local/images/apto/apto_off.png
+  elements:
+    - type: image
+      entity: light.luz_da_cozinha
+      style:
+        left: 50%
+        top: 50%
+        width: 100%
+      state_image:
+        'on': /local/images/apto/apto_cozinha.png
+        'off': /local/images/apto/transparent.png
+
+    - type: image
+      entity: light.luz_do_banheiro
+      style:
+        left: 50%
+        top: 50%
+        width: 100%
+      state_image:
+        'on': /local/images/apto/apto_banheiro.png
+        'off': /local/images/apto/transparent.png
+
+    - type: image
+      entity: light.luz_da_sala
+      style:
+        left: 50%
+        top: 50%
+        width: 100%
+      state_image:
+        'on': /local/images/apto/apto_sala.png
+        'off': /local/images/apto/transparent.png
+
+    - type: image
+      entity: light.luz_do_estudio
+      style:
+        left: 50%
+        top: 50%
+        width: 100%
+      state_image:
+        'on': /local/images/apto/apto_estudio.png
+        'off': /local/images/apto/transparent.png
+
+    - type: image
+      entity: light.luz_do_quarto
+      style:
+        left: 50%
+        top: 50%
+        width: 100%
+      state_image:
+        'on': /local/images/apto/apto_quarto.png
+        'off': /local/images/apto/transparent.png
+
+    - type: image
+      entity: switch.tv_quarto
+      style:
+        left: 50%
+        top: 50%
+        width: 100%
+      state_image:
+        'on': /local/images/apto/apto_tv.png
+        'off': /local/images/apto/transparent.png
+
+    - type: state-icon
+      entity: light.luz_da_sala
+      style:
+        left: 32%
+        top: 27%
+      tap_action:
+        action: toggle
+
+    - type: state-icon
+      entity: light.luz_da_cozinha
+      style:
+        left: 73%
+        top: 48%
+      tap_action:
+        action: toggle
+
+    - type: state-icon
+      entity: light.luz_do_banheiro
+      style:
+        left: 20%
+        top: 51.3%
+      tap_action:
+        action: toggle
+
+    - type: state-icon
+      entity: light.luz_do_quarto
+      style:
+        left: 26%
+        top: 74%
+      tap_action:
+        action: toggle
+
+    - type: state-icon
+      entity: light.luz_do_estudio
+      style:
+        left: 60%
+        top: 76%
+      tap_action:
+        action: toggle
+
+    - type: state-icon
+      entity: switch.ventilador
+      style:
+        left: 50%
+        top: 79%
+      tap_action:
+        action: toggle
+
+    - type: state-icon
+      entity: switch.tv_quarto
+      style:
+        left: 26%
+        top: 64%
+      tap_action:
+        action: toggle
+        
+    - type: state-icon
+      entity: switch.ac_quarto
+      style:
+        left: 12%
+        top: 64%
+      tap_action:
+        action: toggle

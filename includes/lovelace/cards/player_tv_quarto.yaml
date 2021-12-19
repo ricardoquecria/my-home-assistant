@@ -65,118 +65,118 @@ shortcuts:
       cover: /local/images/buttons/sbt.png
 
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:chevron-up
-      data:
-        entity_id: input_boolean.tv_channel_up
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:chevron-up
+    #   data:
+    #     entity_id: input_boolean.tv_channel_up
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:arrow-up-drop-circle-outline
-      data:
-        entity_id: input_boolean.tv_up
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:arrow-up-drop-circle-outline
+    #   data:
+    #     entity_id: input_boolean.tv_up
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:chevron-down
-      data:
-        entity_id: input_boolean.tv_channel_down
-
-
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:arrow-left-drop-circle-outline
-      data:
-        entity_id: input_boolean.tv_left
-
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:checkbox-blank-circle
-      data:
-        entity_id: input_boolean.tv_enter
-
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:arrow-right-drop-circle-outline
-      data:
-        entity_id: input_boolean.tv_right
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:chevron-down
+    #   data:
+    #     entity_id: input_boolean.tv_channel_down
 
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:undo-variant
-      data:
-        entity_id: input_boolean.tv_voltar
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:arrow-left-drop-circle-outline
+    #   data:
+    #     entity_id: input_boolean.tv_left
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:arrow-down-drop-circle-outline
-      data:
-        entity_id: input_boolean.tv_down
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:checkbox-blank-circle
+    #   data:
+    #     entity_id: input_boolean.tv_enter
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:home-circle-outline
-      data:
-        entity_id: input_boolean.tv_home
-
-
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:volume-minus
-      data:
-        entity_id: input_boolean.tv_vol_menos
-
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:volume-off
-      data:
-        entity_id: input_boolean.tv_mute
-
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:volume-plus
-      data:
-        entity_id: input_boolean.tv_vol_mais
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:arrow-right-drop-circle-outline
+    #   data:
+    #     entity_id: input_boolean.tv_right
 
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:skip-previous
-      data:
-        entity_id: input_boolean.tv_previous
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:undo-variant
+    #   data:
+    #     entity_id: input_boolean.tv_voltar
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:play-pause
-      data:
-        entity_id: input_boolean.tv_play
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:arrow-down-drop-circle-outline
+    #   data:
+    #     entity_id: input_boolean.tv_down
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:skip-next
-      data:
-        entity_id: input_boolean.tv_next
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:home-circle-outline
+    #   data:
+    #     entity_id: input_boolean.tv_home
 
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:skip-previous
-      data:
-        entity_id: input_boolean.tv_previous
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:volume-minus
+    #   data:
+    #     entity_id: input_boolean.tv_vol_menos
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:play-pause
-      data:
-        entity_id: input_boolean.tv_play
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:volume-off
+    #   data:
+    #     entity_id: input_boolean.tv_mute
 
-    - type: service
-      id: input_boolean.turn_on
-      icon: mdi:skip-next
-      data:
-        entity_id: input_boolean.tv_next
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:volume-plus
+    #   data:
+    #     entity_id: input_boolean.tv_vol_mais
+
+
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:skip-previous
+    #   data:
+    #     entity_id: input_boolean.tv_previous
+
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:play-pause
+    #   data:
+    #     entity_id: input_boolean.tv_play
+
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:skip-next
+    #   data:
+    #     entity_id: input_boolean.tv_next
+
+
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:skip-previous
+    #   data:
+    #     entity_id: input_boolean.tv_previous
+
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:play-pause
+    #   data:
+    #     entity_id: input_boolean.tv_play
+
+    # - type: service
+    #   id: input_boolean.turn_on
+    #   icon: mdi:skip-next
+    #   data:
+    #     entity_id: input_boolean.tv_next
 
 
 

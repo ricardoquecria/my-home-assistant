@@ -12,8 +12,7 @@ group.all_lights:
   icon: mdi:lightbulb-group-outline
 
 
-switch.cafeteira:
-  icon: mdi:power-plug
+
 switch.ac_quarto:
   icon: mdi:snowflake
 sensor.banco_de_dados:
@@ -25,19 +24,22 @@ sensor.banco_de_dados:
 sensor.meter_geral_hoje:
   friendly_name: Meter - Geral - Hoje
   icon: mdi:counter
+  device_class: energy
 
 sensor.meter_geral_ontem:
   friendly_name: Meter - Geral - Ontem
   icon: mdi:counter
-
+  device_class: energy
+  
 sensor.meter_geral_mes:
   friendly_name: Meter - Geral - Mês
   icon: mdi:counter
-
+  device_class: energy
+  
 sensor.meter_geral_mes_anterior:
   friendly_name: Meter - Geral - Mês anterior
   icon: mdi:counter
-
+  device_class: energy
 
 sensor.meter_cafeteira_hoje:
   friendly_name: Meter - Cafeteira - Hoje
@@ -109,3 +111,7 @@ sensor.meter_tv_quarto_mes_anterior:
 sensor.mortes_em_24h:
   friendly_name: Mortes em 24h
   icon: mdi:emoticon-cry-outline
+
+switch.cafeteira:
+  friendly_name: Cafeteira
+  icon: mdi:coffee

@@ -16,9 +16,13 @@ custom_header:
   hide_config: true
   default_tab_on_refresh: false
   indicator_top: true
-  disable_sidebar: true
+  exceptions:
 
-
+    - conditions:
+        user: Izadora
+      config:
+        disable_sidebar: true
+        hide_header: true
 
 
 ##        #######  ##     ## ######## ##          ###     ######  ######## 
@@ -29,9 +33,9 @@ custom_header:
 ##       ##     ##   ## ##   ##       ##       ##     ## ##    ## ##       
 ########  #######     ###    ######## ######## ##     ##  ######  ######## 
 
-title: Gactos Full
+title: Gactos Izadora
 views:
-  - !include includes/lovelace/views/view_mac_home.yaml
-  - !include includes/lovelace/views/view_mac_players.yaml
-  - !include includes/lovelace/views/view_mac_stats.yaml
-  - !include includes/lovelace/views/view_mac_hassos.yaml
+  - !include includes/lovelace/views/view_iza.yaml
+  - !include includes/lovelace/views/view_stats.yaml
+  - !include includes/lovelace/views/view_tools.yaml
+  - !include includes/lovelace/views/view_apto.yaml

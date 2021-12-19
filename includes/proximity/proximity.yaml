@@ -1,0 +1,20 @@
+rick_home:
+  zone: home
+  devices:
+    - device_tracker.rick_phone
+  tolerance: 50
+  unit_of_measurement: m
+  
+evi_home:
+  zone: home
+  devices:
+    - device_tracker.evi_phone
+  tolerance: 50
+  unit_of_measurement: m
+
+evi_forliving:
+  zone: for_living
+  devices:
+    - device_tracker.evi_phone
+  tolerance: 50
+  unit_of_measurement: m

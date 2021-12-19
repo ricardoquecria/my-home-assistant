@@ -26,13 +26,13 @@ dashboards:
   #   show_in_sidebar: false
   #   require_admin: true
 
-  # lovelace-evi:
-  #   mode: yaml
-  #   filename: ui-lovelace-evi.yaml
-  #   title: Gactos Evi
-  #   icon: mdi:cellphone-iphone
-  #   show_in_sidebar: false
-  #   require_admin: false
+  lovelace-evi:
+    mode: yaml
+    filename: ui-lovelace-iza.yaml
+    title: Gactos Izadora
+    icon: mdi:view-dashboard
+    show_in_sidebar: false
+    require_admin: false
 
   # lovelace-full:
   #   mode: yaml

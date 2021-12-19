@@ -16,13 +16,50 @@
 - platform: template
   sensors:
 
+    battery_studio_phone:
+      friendly_name: "Battery - Rick Phone"
+      unit_of_measurement: '%'
+      icon_template: >-
+        {% set battery_level = states('sensor.battery_studio_phone_level')|int('unknown') %}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+        {% if is_state('sensor.battery_studio_phone_state', 'charging') %}
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery-charging-100
+          {% elif battery_round > 0 %}
+            mdi:battery-charging-{{ battery_round }}
+          {% else %}
+            mdi:battery-charging-outline
+          {% endif %}
+        {% endif %}
+        {% else %} 
+        {% if battery_level == 'unknown' %}
+          mdi:battery-unknown
+        {% else %}
+          {% if battery_round >= 100 %}
+            mdi:battery
+          {% elif battery_round > 0 %}
+            mdi:battery-{{ battery_round }}
+          {% else %}
+            mdi:battery-alert-variant-outline
+          {% endif %}
+        {% endif %}
+        {% endif %}
+      value_template: >-
+        {{states('sensor.battery_studio_phone_level')}}
+      attribute_templates:
+        Status: >-
+          {{states('sensor.battery_studio_phone_state') | replace("discharging", "Descarregando") | replace("charging", "Carregando") | replace("full", "Carga completa")  }}
+
     battery_rick_phone:
       friendly_name: "Battery - Rick Phone"
       unit_of_measurement: '%'
       icon_template: >-
         {% set battery_level = states('sensor.battery_rick_phone_level')|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
-        {% if is_state('sensor.battery_rick_phone_state', 'charging') %}
+        {% if is_state_attr('sensor.battery_rick_phone_level', 'battery_status', 'Charging') %}
         {% if battery_level == 'unknown' %}
           mdi:battery-unknown
         {% else %}
@@ -51,52 +88,15 @@
         {{states('sensor.battery_rick_phone_level')}}
       attribute_templates:
         Status: >-
-          {{states('sensor.battery_rick_phone_state') | replace("discharging", "Descarregando") | replace("charging", "Carregando") | replace("full", "Carga completa")  }}
+          {{ state_attr('sensor.battery_rick_phone_level', 'battery_status') | replace("NotCharging", "Descarregando") | replace("Charging", "Carregando") | replace("Charged", "Carga completa") }}
 
-    battery_evi_phone:
-      friendly_name: "Battery - Evi Phone"
-      unit_of_measurement: '%'
-      icon_template: >-
-        {% set battery_level = states('sensor.iphone_de_evellin_battery_level')|int('unknown') %}
-        {% set battery_round = (battery_level|int / 10)|int * 10 %}
-        {% if is_state_attr('sensor.iphone_de_evellin_battery_level', 'battery_status', 'Charging') %}
-        {% if battery_level == 'unknown' %}
-          mdi:battery-unknown
-        {% else %}
-          {% if battery_round >= 100 %}
-            mdi:battery-charging-100
-          {% elif battery_round > 0 %}
-            mdi:battery-charging-{{ battery_round }}
-          {% else %}
-            mdi:battery-charging-outline
-          {% endif %}
-        {% endif %}
-        {% else %} 
-        {% if battery_level == 'unknown' %}
-          mdi:battery-unknown
-        {% else %}
-          {% if battery_round >= 100 %}
-            mdi:battery
-          {% elif battery_round > 0 %}
-            mdi:battery-{{ battery_round }}
-          {% else %}
-            mdi:battery-alert-variant-outline
-          {% endif %}
-        {% endif %}
-        {% endif %}
-      value_template: >-
-        {{states('sensor.iphone_de_evellin_battery_level')}}
-      attribute_templates:
-        Status: >-
-          {{ state_attr('sensor.iphone_de_evellin_battery_level', 'battery_status') | replace("NotCharging", "Descarregando") | replace("Charging", "Carregando") | replace("Charged", "Carga completa") }}
-
-    battery_macbook:
-      friendly_name: "Battery - MacBook"
+    battery_macbook_rick:
+      friendly_name: "Battery - MacBook Rick"
       unit_of_measurement: '%'
       icon_template: >-
         {% set battery_level = states('sensor.battery_macbook_level')|int('unknown') %}
         {% set battery_round = (battery_level|int / 10)|int * 10 %}
-        {% if is_state_attr('sensor.battery_macbook_level', 'battery_status', 'Charging') %}
+        {% if is_state('sensor.macbook_rick_internal_battery_state', 'Charging') %}
         {% if battery_level == 'unknown' %}
           mdi:battery-unknown
         {% else %}
@@ -125,4 +125,4 @@
         {{states('sensor.battery_macbook_level')}}
       attribute_templates:
         Status: >-
-          {{ state_attr('sensor.battery_macbook_level', 'battery_status') | replace("NotCharging", "Descarregando") | replace("Charging", "Carregando") | replace("Charged", "Carga completa") }}
+          {{ states('sensor.macbook_rick_internal_battery_state') | replace("Not Charging", "Descarregando") | replace("Charging", "Carregando") | replace("Charged", "Carga completa") }}

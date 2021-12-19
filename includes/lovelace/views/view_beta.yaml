@@ -23,7 +23,7 @@ cards:
         card:
           !include ../cards/theme_selector_v2.yaml
 
-      - break
+      - type: custom:layout-break
 
       # Timer v1
       - type: custom:mod-card
@@ -31,7 +31,7 @@ cards:
         card:
           !include ../cards/timer_v1.yaml
 
-      # - break
+      # - type: custom:layout-break
 
       # # Timer v1
       # - type: custom:mod-card

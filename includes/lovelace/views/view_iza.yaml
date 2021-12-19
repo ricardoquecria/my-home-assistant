@@ -16,6 +16,12 @@ cards:
     layout: vertical
     cards:
     
+      # Relogio
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/clock.yaml
+
       # Weather
       - type: custom:mod-card
         style: !include ../styles/mod_all.yaml
@@ -34,26 +40,22 @@ cards:
         card:
           !include ../cards/switchs.yaml
 
-      # Player TV
-      # - type: custom:mod-card
-      #   style: !include ../styles/mod_top.yaml
-      #   card:
-      #     !include ../cards/player_tv.yaml
-
-      # Player Mini
+      # Player TV do Quarto
       - type: custom:mod-card
-        style: !include ../styles/mod_bot.yaml
+        style: !include ../styles/mod_top.yaml
         card:
-          !include ../cards/player_mini.yaml
+          !include ../cards/player_tv_quarto.yaml
 
-      # Spotify - Evi
+      # Persons
       - type: custom:mod-card
         style: !include ../styles/mod_all.yaml
         card:
-          !include ../cards/spotify_evi.yaml
+          !include ../cards/persons.yaml
 
-
-
-
+      # Calendar
+      - type: custom:mod-card
+        style: !include ../styles/mod_all.yaml
+        card:
+          !include ../cards/calendar_works.yaml
 
 

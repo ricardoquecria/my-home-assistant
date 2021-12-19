@@ -17,13 +17,15 @@ cards:
       card:
         - padding: 5px
         - height: 45px
-        - background: var(--paper-card-background-color)
       name:
         - color: var(--primary-text-color)
         - justify-self: start
         - padding-left: 10%
         - font-weight: 400
         - font-size: 20px
+
+
+
 
   # Seletor de Cores
   - type: entities

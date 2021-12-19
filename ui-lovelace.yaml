@@ -12,4 +12,5 @@ views:
   - !include includes/lovelace/views/view_tab_states.yaml
   - !include includes/lovelace/views/view_tab_players.yaml
   - !include includes/lovelace/views/view_tab_spotify.yaml
+  # - !include includes/lovelace/views/view_tab_apto.yaml
 

@@ -22,7 +22,7 @@ cards:
         card:
           !include ../cards/graph_speedtest.yaml
 
-      - break 
+      - type: custom:layout-break 
 
       # Energy Graph - Title
       - type: custom:mod-card
