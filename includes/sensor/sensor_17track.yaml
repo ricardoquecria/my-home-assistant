@@ -1,0 +1,18 @@
+- platform: seventeentrack
+  username: ricardoacorreia@outlook.com
+  password: !secret 17track
+
+
+
+- platform: template
+  sensors:
+
+    tracker_encomendas_transito:
+      unique_id: '0a7476cc-d6c1-40ba-8ae1-606518c3497f'
+      friendly_name: "Tracker - Encomendas em transito"
+      icon_template: mdi:package-variant-closed
+      value_template: "{% for package in states.sensor.seventeentrack_packages_in_transit.attributes.packages %}
+Pacote: {{ package.friendly_name }}  /  {{ package.tracking_number }}\nStatus: {{ package.info_text }}
+{% endfor %}"
+
+

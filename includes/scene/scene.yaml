@@ -1,0 +1,34 @@
+  - name: Luz do Estúdio
+    icon: mdi:lightbulb-outline
+    entities:
+      light.luz_do_estudio: on
+
+  - name: Luz do Banheiro
+    icon: mdi:lightbulb-outline
+    entities:
+      light.luz_do_banheiro: on
+
+  - name: Luz do Quarto
+    icon: mdi:lightbulb-outline
+    entities:
+      light.luz_do_quarto: on
+
+  - name: Luz da Sala
+    icon: mdi:lightbulb-outline
+    entities:
+      light.luz_da_sala: on
+
+  - name: Luz da Cozinha
+    icon: mdi:lightbulb-outline
+    entities:
+      light.luz_da_cozinha: on
+
+  - name: Ar do Quarto
+    icon: mdi:snowflake
+    entities:
+      switch.ac_quarto: on
+
+  - name: Estúdio
+    icon: mdi:led-strip
+    entities:
+      light.led_do_estudio: on

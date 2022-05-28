@@ -1,5 +1,5 @@
 # - alias: "start HassOS"
-#   initial_state: true
+#   initial_state: false
 #   trigger:
 #     platform: event
 #     event_type: service_registered
@@ -17,7 +17,7 @@
 #         - input_boolean.ha_start
 
 - alias: "set Themes - by caulecriativo.com"
-  initial_state: true
+  initial_state: false
   trigger:
     platform: state
     entity_id: input_select.themes
@@ -27,6 +27,68 @@
       name: >
         {{ trigger.to_state.state }}
 
+- alias: "luz_do_estudio"
+  initial_state: false
+  trigger:
+    platform: state
+    entity_id: scene.luz_do_estudio
+  action:
+  - service: light.toggle
+    entity_id: light.luz_do_estudio
+
+- alias: "luz_do_quarto"
+  initial_state: false
+  trigger:
+    platform: state
+    entity_id: scene.luz_do_quarto
+  action:
+  - service: light.toggle
+    entity_id: light.luz_do_quarto
+
+- alias: "luz_do_banheiro"
+  initial_state: false
+  trigger:
+    platform: state
+    entity_id: scene.luz_do_banheiro
+  action:
+  - service: light.toggle
+    entity_id: light.luz_do_banheiro
+
+- alias: "luz_da_cozinha"
+  initial_state: false
+  trigger:
+    platform: state
+    entity_id: scene.luz_da_cozinha
+  action:
+  - service: light.toggle
+    entity_id: light.luz_da_cozinha
+
+- alias: "luz_da_sala"
+  initial_state: false
+  trigger:
+    platform: state
+    entity_id: scene.luz_da_sala
+  action:
+  - service: light.toggle
+    entity_id: light.luz_da_sala
+
+- alias: "ac_quarto"
+  initial_state: false
+  trigger:
+    platform: state
+    entity_id: scene.ac_quarto
+  action:
+  - service: switch.toggle
+    entity_id: switch.ac_quarto
+
+- alias: "estudio"
+  initial_state: false
+  trigger:
+    platform: state
+    entity_id: scene.estudio
+  action:
+  - service: switch.toggle
+    entity_id: light.led_do_estudio
 
 
 # - alias: homeassistant_start

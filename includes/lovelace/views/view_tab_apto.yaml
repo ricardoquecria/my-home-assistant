@@ -107,7 +107,7 @@ cards:
         action: toggle
 
     - type: state-icon
-      entity: switch.ventilador
+      entity: light.led_do_estudio
       style:
         left: 50%
         top: 79%

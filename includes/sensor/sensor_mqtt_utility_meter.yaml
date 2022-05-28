@@ -110,62 +110,31 @@
 
 
 
-
 - platform: mqtt
-  name: Meter - Cafeteira - Hoje
-  state_topic: "energy/meter_cafeteira_hoje"
-  json_attributes_topic: "energy/meter_cafeteira_hoje/attributes"
+  name: Meter - Led do Estúdio - Hoje
+  state_topic: "energy/meter_led_do_estudio_hoje"
+  json_attributes_topic: "energy/meter_led_do_estudio_hoje/attributes"
   unit_of_measurement: 'kWh'
   device_class: energy
 
 - platform: mqtt
-  name: Meter - Cafeteira - Ontem
-  state_topic: "energy/meter_cafeteira_ontem"
-  json_attributes_topic: "energy/meter_cafeteira_ontem/attributes"
+  name: Meter - Led do Estúdio - Ontem
+  state_topic: "energy/meter_led_do_estudio_ontem"
+  json_attributes_topic: "energy/meter_led_do_estudio_ontem/attributes"
   unit_of_measurement: 'kWh'
   device_class: energy
 
 - platform: mqtt
-  name: Meter - Cafeteira - Mês
-  state_topic: "energy/meter_cafeteira_mes"
-  json_attributes_topic: "energy/meter_cafeteira_mes/attributes"
+  name: Meter - Led do Estúdio - Mês
+  state_topic: "energy/meter_led_do_estudio_mes"
+  json_attributes_topic: "energy/meter_led_do_estudio_mes/attributes"
   unit_of_measurement: 'kWh'
   device_class: energy
 
 - platform: mqtt
-  name: Meter - Cafeteira - Mês anterior
-  state_topic: "energy/meter_cafeteira_mes_anterior"
-  json_attributes_topic: "energy/meter_cafeteira_mes_anterior/attributes"
-  unit_of_measurement: 'kWh'
-  device_class: energy
-
-
-
-- platform: mqtt
-  name: Meter - Ventilador - Hoje
-  state_topic: "energy/meter_ventilador_hoje"
-  json_attributes_topic: "energy/meter_ventilador_hoje/attributes"
-  unit_of_measurement: 'kWh'
-  device_class: energy
-
-- platform: mqtt
-  name: Meter - Ventilador - Ontem
-  state_topic: "energy/meter_ventilador_ontem"
-  json_attributes_topic: "energy/meter_ventilador_ontem/attributes"
-  unit_of_measurement: 'kWh'
-  device_class: energy
-
-- platform: mqtt
-  name: Meter - Ventilador - Mês
-  state_topic: "energy/meter_ventilador_mes"
-  json_attributes_topic: "energy/meter_ventilador_mes/attributes"
-  unit_of_measurement: 'kWh'
-  device_class: energy
-
-- platform: mqtt
-  name: Meter - Ventilador - Mês anterior
-  state_topic: "energy/meter_ventilador_mes_anterior"
-  json_attributes_topic: "energy/meter_ventilador_mes_anterior/attributes"
+  name: Meter - Led do Estúdio - Mês anterior
+  state_topic: "energy/meter_led_do_estudio_mes_anterior"
+  json_attributes_topic: "energy/meter_led_do_estudio_mes_anterior/attributes"
   unit_of_measurement: 'kWh'
   device_class: energy
 

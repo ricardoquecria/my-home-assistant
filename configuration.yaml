@@ -22,9 +22,10 @@ sensor: !include_dir_merge_list includes/sensor/
 binary_sensor: !include_dir_merge_list includes/binary_sensor/
 intent_script: !include_dir_merge_named includes/intent_script/
 shell_command: !include_dir_merge_named includes/shell_command/
-device_tracker: !include_dir_merge_named includes/device_tracker/
+# device_tracker: !include_dir_merge_named includes/device_tracker/
 proximity: !include_dir_merge_named includes/proximity/
 zone: !include includes/zone/zone.yaml
+scene: !include_dir_merge_list includes/scene/
 
 frontend:
   themes: !include_dir_merge_named themes

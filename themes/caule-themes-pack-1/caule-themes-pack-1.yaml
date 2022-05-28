@@ -179,6 +179,8 @@ Caule Black Rose:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 ##########################################
 
@@ -269,6 +271,8 @@ Caule Black Purple:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -361,6 +365,8 @@ Caule Black Blue:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -453,6 +459,8 @@ Caule Black Aqua:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -545,6 +553,8 @@ Caule Black Green:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -637,6 +647,8 @@ Caule Black Yellow:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -729,6 +741,8 @@ Caule Black Orange:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -821,6 +835,8 @@ Caule Black Coral:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -913,6 +929,8 @@ Caule Black Pink:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1005,6 +1023,8 @@ Caule Black Gray:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1104,6 +1124,8 @@ Caule Black Rose Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1198,6 +1220,8 @@ Caule Black Purple Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1292,6 +1316,8 @@ Caule Black Blue Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1386,6 +1412,8 @@ Caule Black Aqua Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1480,6 +1508,8 @@ Caule Black Green Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1574,6 +1604,8 @@ Caule Black Yellow Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1668,6 +1700,8 @@ Caule Black Orange Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1762,6 +1796,8 @@ Caule Black Coral Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1856,6 +1892,8 @@ Caule Black Pink Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -1950,6 +1988,8 @@ Caule Black Gray Glass:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2048,6 +2088,8 @@ Caule Light Rose:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2140,6 +2182,8 @@ Caule Light Purple:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2232,6 +2276,8 @@ Caule Light Blue:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2324,6 +2370,8 @@ Caule Light Aqua:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2416,6 +2464,8 @@ Caule Light Green:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2508,6 +2558,8 @@ Caule Light Yellow:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2600,6 +2652,8 @@ Caule Light Orange:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2692,6 +2746,8 @@ Caule Light Coral:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2784,6 +2840,8 @@ Caule Light Pink:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2876,6 +2934,8 @@ Caule Light Gray:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -2974,6 +3034,8 @@ Caule Dark Rose:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -3066,6 +3128,8 @@ Caule Dark Purple:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -3158,6 +3222,8 @@ Caule Dark Blue:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -3250,6 +3316,8 @@ Caule Dark Aqua:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -3342,8 +3410,10 @@ Caule Dark Green:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
-
+  
 
 ##########################################
 
@@ -3434,8 +3504,11 @@ Caule Dark Yellow:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
+  
 
 ##########################################
 
@@ -3526,6 +3599,8 @@ Caule Dark Orange:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -3618,6 +3693,8 @@ Caule Dark Coral:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -3710,6 +3787,8 @@ Caule Dark Pink:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)
 
 
 
@@ -3802,3 +3881,5 @@ Caule Dark Gray:
   google-blue-500: var(--primary-color)
   accent-color: var(--light-primary-color)
   hacs-chip-color: var(--primary-color)
+  #Dev
+  mdc-text-field-fill-color: var(--ha-card-background)

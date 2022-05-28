@@ -68,18 +68,18 @@ cards:
         action: toggle
       type: entity-button
 
-    # Cafeteira
-    - entity: switch.cafeteira
-      icon: mdi:coffee-outline
-      name: Cafeteira
+    # Estúdio
+    - entity: light.led_do_estudio
+      icon: mdi:led-strip
+      name: Estúdio
       tap_action:
         action: toggle
       type: entity-button
 
-    # Ventilador
-    - entity: switch.ventilador
-      icon: mdi:fan
-      name: Ventilador
+    # Estúdio
+    - entity: light.led_do_estudio
+      icon: mdi:led-strip
+      name: Estúdio
       tap_action:
         action: toggle
       type: entity-button

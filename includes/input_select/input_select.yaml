@@ -102,10 +102,10 @@
       - meter_all_lights_ontem
       - meter_all_lights_mes
       - meter_all_lights_mes_anterior
-      - meter_cafeteira_hoje
-      - meter_cafeteira_ontem
-      - meter_cafeteira_mes
-      - meter_cafeteira_mes_anterior
+      - meter_estudio_hoje
+      - meter_estudio_ontem
+      - meter_estudio_mes
+      - meter_estudio_mes_anterior
       - +
       - '#'
 

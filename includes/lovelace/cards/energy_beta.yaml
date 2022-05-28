@@ -29,10 +29,10 @@ cards:
       }
     show_header_toggle: false
     entities:
-      - sensor.meter_cafeteira_hoje
-      - sensor.meter_cafeteira_ontem
-      - sensor.meter_cafeteira_mes
-      - sensor.meter_cafeteira_mes_anterior
+      - sensor.meter_estudio_hoje
+      - sensor.meter_estudio_ontem
+      - sensor.meter_estudio_mes
+      - sensor.meter_estudio_mes_anterior
 
 
 
@@ -102,7 +102,7 @@ cards:
       - sensor.history_luz_do_quarto
       - sensor.history_luz_do_banheiro
       - sensor.history_luz_da_cozinha
-      - sensor.history_cafeteira
+      - sensor.history_estudio
       - sensor.history_ac_quarto
       - sensor.history_tv_quarto
 
@@ -118,7 +118,7 @@ cards:
     show_header_toggle: false
     entities:
       - sensor.kwh_all_lights
-      - sensor.kwh_cafeteira
+      - sensor.kwh_estudio
       - sensor.kwh_ac_quarto
       - sensor.kwh_tv_quarto
       - sensor.kwh_geral

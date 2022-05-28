@@ -41,20 +41,20 @@ sensor.meter_geral_mes_anterior:
   icon: mdi:counter
   device_class: energy
 
-sensor.meter_cafeteira_hoje:
-  friendly_name: Meter - Cafeteira - Hoje
+sensor.meter_estudio_hoje:
+  friendly_name: Meter - Estúdio - Hoje
   icon: mdi:counter
 
-sensor.meter_cafeteira_ontem:
-  friendly_name: Meter - Cafeteira - Ontem
+sensor.meter_estudio_ontem:
+  friendly_name: Meter - Estúdio - Ontem
   icon: mdi:counter
 
-sensor.meter_cafeteira_mes:
-  friendly_name: Meter - Cafeteira - Mês
+sensor.meter_estudio_mes:
+  friendly_name: Meter - Estúdio - Mês
   icon: mdi:counter
 
-sensor.meter_cafeteira_mes_anterior:
-  friendly_name: Meter - Cafeteira - Mês anterior
+sensor.meter_estudio_mes_anterior:
+  friendly_name: Meter - Estúdio - Mês anterior
   icon: mdi:counter
 
 
@@ -112,6 +112,6 @@ sensor.mortes_em_24h:
   friendly_name: Mortes em 24h
   icon: mdi:emoticon-cry-outline
 
-switch.cafeteira:
-  friendly_name: Cafeteira
-  icon: mdi:coffee
+light.led_do_estudio:
+  friendly_name: Estúdio
+  icon: mdi:led-strip

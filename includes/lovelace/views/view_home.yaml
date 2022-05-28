@@ -38,16 +38,16 @@ cards:
       !include ../cards/player_tv_quarto.yaml
 
   # Player TV da Sala
-  - type: custom:mod-card
-    style: !include ../styles/mod_mid.yaml
-    card:
-      !include ../cards/player_tv_sala.yaml
+  # - type: custom:mod-card
+  #   style: !include ../styles/mod_mid.yaml
+  #   card:
+  #     !include ../cards/player_tv_sala.yaml
 
   # Player Mini
-  - type: custom:mod-card
-    style: !include ../styles/mod_bot.yaml
-    card:
-      !include ../cards/player_mini.yaml
+  # - type: custom:mod-card
+  #   style: !include ../styles/mod_bot.yaml
+  #   card:
+  #     !include ../cards/player_mini.yaml
 
   # Spotify Buttons Main
   - type: custom:mod-card

@@ -27,8 +27,8 @@ all:
     - light.luz_do_quarto
     - switch.ac_quarto
     - switch.tv_quarto
-    - switch.cafeteira
-    - switch.ventilador
+    - light.led_do_estudio
+    - light.led_do_estudio
     
 all_players:
   name: Group - All Players

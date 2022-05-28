@@ -129,7 +129,7 @@ elements:
     tap_action:
       action: toggle
   - type: state-icon
-    entity: switch.cafeteira
+    entity: light.led_do_estudio
     style:
       left: 57%
       top: 40%

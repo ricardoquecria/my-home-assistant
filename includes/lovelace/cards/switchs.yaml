@@ -87,49 +87,49 @@ cards:
             - height: 120px
             - padding: 10px 5px 15px 5px
 
-      # Switch - Cafeteira
-      - entity: switch.cafeteira
+      # Light - Led do Estúdio
+      - entity: light.led_do_estudio
         type: "custom:button-card"
-        icon: mdi:coffee-outline
+        icon: mdi:lightbulb-outline
         label: >
           [[[
-            if (states['switch.cafeteira'].state == "on")
-              return states['sensor.uptime_cafeteira'].state;
-          ]]]   
-        show_label: true  
+            if (states['light.led_do_estudio'].state == "on")
+              return states['sensor.uptime_led_do_estudio'].state;
+          ]]]
+        show_label: true
         tap_action:
           action: toggle
         hold_action:
           action: more-info
-        name: Cafeteira
-        size: 70%
+        name: Led Estúdio
+        size: 65%
         state:
-          - value: 'unavailable'
+          - value: "unavailable"
             color: var(--primary-background-color)
         styles:
           label:
             - font-size: 12px
-            - color: var(--light-primary-color)                  
+            - color: var(--light-primary-color)  
           card:
             - font-size: 16px
             - height: 120px
             - padding: 10px 5px 15px 5px
 
-      # Switch - Ventilador
-      # - entity: switch.ventilador
+      # Switch - Estúdio
+      # - entity: light.led_do_estudio
       #   type: "custom:button-card"
-      #   icon: mdi:fan
+      #   icon: mdi:led-strip
       #   label: >
       #     [[[
-      #       if (states['switch.ventilador'].state == "on")
-      #         return states['sensor.uptime_ventilador'].state;
+      #       if (states['light.led_do_estudio'].state == "on")
+      #         return states['sensor.uptime_estudio'].state;
       #     ]]]   
       #   show_label: true  
       #   tap_action:
       #     action: toggle
       #   hold_action:
       #     action: more-info
-      #   name: Ventilador
+      #   name: Estúdio
       #   size: 70%
       #   state:
       #     - value: 'unavailable'

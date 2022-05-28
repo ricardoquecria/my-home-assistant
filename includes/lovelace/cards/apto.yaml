@@ -96,7 +96,7 @@ elements:
       'off': /local/images/apto/transparent.png
       'unavailable': /local/images/apto/transparent.png
   - type: image
-    entity: switch.ventilador
+    entity: light.led_do_estudio
     style:
       left: 60%
       top: 83%
@@ -141,7 +141,7 @@ elements:
     tap_action:
       action: toggle
   - type: state-icon
-    entity: switch.ventilador
+    entity: light.led_do_estudio
     style:
       left: 50%
       top: 79%

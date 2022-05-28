@@ -19,13 +19,13 @@
     name: Timer - Ar do Quarto
     icon: mdi:snowflake
 
-  timer_ventilador:
-    name: Timer - Ventilador
-    icon: mdi:fan
+  timer_estudio:
+    name: Timer - Estúdio
+    icon: mdi:led-strip
 
-  timer_cafeteira:
-    name: Timer - Cafeteira
-    icon: mdi:coffee-outline
+  timer_estudio:
+    name: Timer - Estúdio
+    icon: mdi:led-strip
 
   timer_macbook:
     name: Timer - Macbook

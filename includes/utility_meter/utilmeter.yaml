@@ -1,10 +1,10 @@
-# meter_cafeteira_hoje:
-#   source: sensor.kwh_cafeteira
+# meter_estudio_hoje:
+#   source: sensor.kwh_estudio
 #   cycle: daily
 #   offset: '02:40'
 
-# meter_cafeteira_mes:
-#   source: sensor.kwh_cafeteira
+# meter_estudio_mes:
+#   source: sensor.kwh_estudio
 #   cycle: daily
 #   offset: '02:40'
 
@@ -52,12 +52,12 @@
 #   offset: '02:40'
 
 
-# meter_cafeteira_hoje:
-#   source: sensor.kwh_cafeteira
+# meter_estudio_hoje:
+#   source: sensor.kwh_estudio
 #   cycle: daily
 
-# meter_cafeteira_mes:
-#   source: sensor.kwh_cafeteira
+# meter_estudio_mes:
+#   source: sensor.kwh_estudio
 #   cycle: monthly
 #   offset:
 #     days: 16

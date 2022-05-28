@@ -9,7 +9,7 @@
 title: Estatísticas
 path: estatisticas
 
-icon: mdi:poll-box
+icon: mdi:chart-box
 # panel: true
 type: custom:vertical-layout
 cards:
@@ -84,13 +84,13 @@ cards:
     card:
       !include ../cards/energy_tab_tv_quarto.yaml
       
-  # Energy Table - Ventilador
+  # Energy Table - Estúdio
   # - type: custom:mod-card
   #   style: !include ../styles/mod_all.yaml
   #   card:
-  #     !include ../cards/energy_tab_ventilador.yaml
+  #     !include ../cards/energy_tab_estudio.yaml
 
-  # Energy Table - Cafeteira
+  # Energy Table - Estúdio
   - type: custom:mod-card
     style: !include ../styles/mod_all.yaml
     card:

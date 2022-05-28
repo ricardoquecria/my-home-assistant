@@ -1,15 +1,14 @@
 type: vertical-stack
 cards:
-
   # Título
-  - type: 'custom:button-card'
+  - type: "custom:button-card"
     layout: icon_name
     name: Baterias
     icon: mdi:battery-charging-high
     styles:
       grid:
         - grid-template-areas: '"n i"'
-        - grid-template-columns: 1fr 20% 
+        - grid-template-columns: 1fr 20%
       icon:
         - align-self: end
         - color: var(--primary-color)
@@ -24,13 +23,32 @@ cards:
         - font-weight: 400
         - font-size: 20px
 
-  # # Gráficos
+  # # Gráficos Mac Iza / Rick
   - type: horizontal-stack
     cards:
-
-      # Bateria Macbook
+      # Bateria Macbook Iza
       - type: custom:mini-graph-card
-        name: Mac
+        name: Mac Iza
+        hours_to_show: 24
+        points_per_hour: 2
+        line_width: 10
+        font_size: 75
+        hour24: true
+        lower_bound: 0
+        upper_bound: 100
+        entities:
+          - sensor.battery_macbook_iza
+        show:
+          labels: true
+        color_thresholds:
+          - value: 25
+            color: var(--divider-color)
+          - value: 80
+            color: var(--graph-color)
+
+      # Bateria Macbook Rick
+      - type: custom:mini-graph-card
+        name: Mac Rick
         hours_to_show: 24
         points_per_hour: 2
         line_width: 10
@@ -48,9 +66,74 @@ cards:
           - value: 80
             color: var(--graph-color)
 
+  # # Status Mac Iza / Rick
+  - type: horizontal-stack
+    cards:
+      # Status Mac Iza
+      - entity: sensor.meter_estudio_hoje
+        type: custom:button-card
+        name: |
+          [[[
+            var kwh = states['sensor.battery_macbook_iza'].attributes.Status;
+            return kwh; 
+          ]]]
+        label: |
+          [[[
+            var kwh = states['sensor.battery_macbook_iza'].attributes.Status;
+            return kwh; 
+          ]]]
+        show_icon: false
+        show_state: false
+        show_label: true
+        show_name: false
+        tap_action:
+          action: more-info
+        styles:
+          card:
+            - padding: 8px
+          label:
+            - font-weight: 400
+            - font-size: 15px
+            - color: var(--disabled-color)
+          name:
+            - font-weight: 500
+            - font-size: 14px
+
+      # Status Mac Rick
+      - entity: sensor.meter_estudio_hoje
+        type: custom:button-card
+        name: |
+          [[[
+            var kwh = states['sensor.battery_macbook_rick'].attributes.Status;
+            return kwh; 
+          ]]]
+        label: |
+          [[[
+            var kwh = states['sensor.battery_macbook_rick'].attributes.Status;
+            return kwh; 
+          ]]]
+        show_icon: false
+        show_state: false
+        show_label: true
+        show_name: false
+        tap_action:
+          action: more-info
+        styles:
+          card:
+            - padding: 8px
+          label:
+            - font-weight: 400
+            - font-size: 15px
+            - color: var(--disabled-color)
+          name:
+            - font-weight: 500
+            - font-size: 14px
+
+  - type: horizontal-stack
+    cards:
       # Bateria J5
       - type: custom:mini-graph-card
-        name: J5
+        name: Medula
         hours_to_show: 24
         points_per_hour: 2
         line_width: 10
@@ -59,11 +142,10 @@ cards:
         lower_bound: 0
         upper_bound: 100
         entities:
-          - sensor.battery_studio_phone
+          - sensor.battery_medula_phone
         show:
           labels: true
         color_thresholds:
-
           - value: 25
             color: var(--divider-color)
           - value: 80
@@ -71,7 +153,7 @@ cards:
 
       # Bateria iPhone
       - type: custom:mini-graph-card
-        name: iPhone
+        name: Rick
         hours_to_show: 24
         points_per_hour: 2
         line_width: 10
@@ -84,30 +166,90 @@ cards:
         show:
           labels: true
         color_thresholds:
-
           - value: 25
             color: var(--divider-color)
           - value: 80
             color: var(--graph-color)
 
-      # Bateria iPhone
-    #   - type: custom:mini-graph-card
-    #     name: iPhone
-    #     hours_to_show: 24
-    #     points_per_hour: 2
-    #     line_width: 10
-    #     font_size: 75
-    #     hour24: true
-    #     lower_bound: 0
-    #     upper_bound: 100
-    #     entities:
-    #       - sensor.battery_evi_phone
-    #     show:
-    #       labels: true
-    #     color_thresholds:
-    #       - value: 25
-    #         color: var(--divider-color)
-    #       - value: 80
-    #         color: var(--graph-color)
+      # # Bateria S20
+      # - type: custom:mini-graph-card
+      #   name: Iza
+      #   hours_to_show: 24
+      #   points_per_hour: 2
+      #   line_width: 10
+      #   font_size: 75
+      #   hour24: true
+      #   lower_bound: 0
+      #   upper_bound: 100
+      #   entities:
+      #     - sensor.battery_iza_phone
+      #   show:
+      #     labels: true
+      #   color_thresholds:
+      #     - value: 25
+      #       color: var(--divider-color)
+      #     - value: 80
+      #       color: var(--graph-color)
 
+  # # Status Medula / Rick phone
+  - type: horizontal-stack
+    cards:
+      # Status Medula Phone
+      - entity: sensor.meter_estudio_hoje
+        type: custom:button-card
+        name: |
+          [[[
+            var kwh = states['sensor.battery_medula_phone'].attributes.Status;
+            return kwh; 
+          ]]]
+        label: |
+          [[[
+            var kwh = states['sensor.battery_medula_phone'].attributes.Status;
+            return kwh; 
+          ]]]
+        show_icon: false
+        show_state: false
+        show_label: true
+        show_name: false
+        tap_action:
+          action: more-info
+        styles:
+          card:
+            - padding: 8px
+          label:
+            - font-weight: 400
+            - font-size: 15px
+            - color: var(--disabled-color)
+          name:
+            - font-weight: 500
+            - font-size: 14px
 
+      # Status Rick Phone
+      - entity: sensor.meter_estudio_hoje
+        type: custom:button-card
+        name: |
+          [[[
+            var kwh = states['sensor.battery_rick_phone'].attributes.Status;
+            return kwh; 
+          ]]]
+        label: |
+          [[[
+            var kwh = states['sensor.battery_rick_phone'].attributes.Status;
+            return kwh; 
+          ]]]
+        show_icon: false
+        show_state: false
+        show_label: true
+        show_name: false
+        tap_action:
+          action: more-info
+        styles:
+          card:
+            - padding: 8px
+          label:
+            - font-weight: 400
+            - font-size: 15px
+            - color: var(--disabled-color)
+          name:
+            - font-weight: 500
+            - font-size: 14px

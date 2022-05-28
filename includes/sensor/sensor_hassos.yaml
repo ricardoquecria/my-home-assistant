@@ -48,8 +48,33 @@
     hassio_update:
       friendly_name: "HassOS"
       icon_template: mdi:download-box-outline
-      value_template: '{% if is_state("binary_sensor.updater", "on") %} Atualização disponível
-      {% elif is_state("binary_sensor.updater", "off") %} Servidor atualizado
+      value_template: '{% if is_state("update.home_assistant_core_update", "on") %}
+      {% set update_core = true %}{% else %}{% set update_core = false %}
+      {% endif %}
+      {% if is_state("update.home_assistant_operating_system_update", "on") %}
+      {% set update_so = true %}{% else %}{% set update_so = false %}
+      {% endif %}
+      {% if is_state("update.home_assistant_supervisor_update", "on") %}
+      {% set update_sup = true %}{% else %}{% set update_sup = false %}
+      {% endif %}
+
+
+      {% if update_core == true and update_so == true and update_sup == true %}
+      Atualização disponível para Core, System e Supervisor
+      {% elif update_core == true and update_so == true and update_sup == false %}
+      Atualização disponível para Core e System
+      {% elif update_core == true and update_so == false and update_sup == true %}
+      Atualização disponível para Core e Supervisor
+      {% elif update_core == true and update_so == false and update_sup == false %}
+      Atualização disponível para Core
+      {% elif update_core == false and update_so == true and update_sup == true %}
+      Atualização disponível para System e Supervisor
+      {% elif update_core == false and update_so == true and update_sup == false %}
+      Atualização disponível para System
+      {% elif update_core == false and update_so == false and update_sup == true %}
+      Atualização disponível para Supervisor
+      {% else %}
+      Servidor atualizado
       {% endif %}
       '
       attribute_templates:

@@ -27,13 +27,14 @@
           data:
             entity_id: input_boolean.pc_shutdown
 
-      # tv_quarto:
-      #   value_template: "{{ is_state('media_player.tv_quarto', 'on') }}"
-      #   turn_on:
-      #     service: media_player.turn_on
-      #     data:
-      #       entity_id: media_player.tv_quarto
-      #   turn_off:
-      #     service: media_player.turn_off
-      #     data:
-      #       entity_id: media_player.tv_quarto
+      tv_quarto:
+        value_template: "{{ is_state('media_player.tv_quarto', 'on') }}"
+        icon_template: mdi:television
+        turn_on:
+          service: media_player.turn_on
+          data:
+            entity_id: media_player.tv_quarto
+        turn_off:
+          service: media_player.turn_off
+          data:
+            entity_id: media_player.tv_quarto

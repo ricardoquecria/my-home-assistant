@@ -41,10 +41,8 @@ cards:
       - entity: sensor.local_ip
         name: IP do servidor
       - binary_sensor.remote_ui
-      - sensor.hassio_update
       - entity: sensor.hacs_update
       - input_boolean.notify
-
 
   # Monitor
   - type: horizontal-stack
@@ -177,3 +175,28 @@ cards:
             - height: 130px
             - padding: 10px 5px 15px 5px
 
+  # Update
+  - type: entities
+    style: |
+      :host {
+        --paper-item-icon-color: var(--primary-color);
+      }
+      ha-card {
+        padding: 0px 10px 0px 0px;
+      }
+    show_header_toggle: false
+    entities:
+      - update.home_assistant_core_update
+      - update.home_assistant_operating_system_update
+      - update.home_assistant_supervisor_update
+      - update.assistant_relay_update
+      - update.file_editor_update
+      - update.mariadb_update
+      - update.mosquitto_broker_update
+      - update.node_red_update
+      - update.plex_media_server_update
+      - update.portainer_update
+      - update.samba_share_update
+      - update.spotify_connect_update
+      - update.tasmoadmin_update
+      - update.terminal_ssh_update

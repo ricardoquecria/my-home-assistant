@@ -24,8 +24,8 @@ cards:
           - entity: group.all_lights
           - entity: switch.ac_quarto
             icon: mdi:snowflake
-          - entity: switch.cafeteira
-          - entity: switch.ventilador
+          - entity: light.led_do_estudio
+          - entity: light.led_do_estudio
           - entity: group.all
             icon: mdi:power
           - entity: switch.tv_quarto
@@ -64,10 +64,10 @@ cards:
       - type: entities
         show_header_toggle: false
         entities:
-          - sensor.meter_cafeteira_hoje
-          - sensor.meter_cafeteira_ontem
-          - sensor.meter_cafeteira_mes
-          - sensor.meter_cafeteira_mes_anterior
+          - sensor.meter_estudio_hoje
+          - sensor.meter_estudio_ontem
+          - sensor.meter_estudio_mes
+          - sensor.meter_estudio_mes_anterior
 
 
   - type: horizontal-stack
